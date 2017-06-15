@@ -1,0 +1,185 @@
+div#tabs-wrapper {
+    font-family: "Arial", Geneva, sans-serif;
+    margin: 7% auto;
+    width: 100%;
+}
+
+
+/*selector one*/
+
+div#tabs-component {
+    margin: 6% auto;
+    width: 90%;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    /*justify-content: flex-start;*/
+    justify-content: flex-start;
+    max-width: 1100px;
+}
+
+/*selector two*/
+div#tabs-component div.tab-component-tab {
+    float: left;
+    width: 20%;
+    border: 2px solid rgba(0, 0, 128, 0.65);
+}
+
+div#tabs-component div.tab-component-tab:not(:first-child) {
+        border-left: none;
+}
+
+/*selector three*/
+div#tabs-component div.tab-component-tab input[type="radio"] {
+    display: none;
+}
+
+/*selector four*/
+div#tabs-component div.tab-component-tab label {
+    color: coral;
+/*    border: 2px solid navy;*/
+    padding: 14px 3%;
+    display: inline-block;
+    text-align: center;
+    border-bottom: none;
+    background-color: white;
+    cursor: pointer;
+    -webkit-transition: background .4s, padding-top .2s;
+    -moz-transition: background .4s, padding-top .2s;
+    -o-transition: background .4s, padding-top .2s;
+    -ms-transition: background .4s, padding-top .2s;
+    transition: background .4s, padding-top .2s;
+    width: 100%;
+    height: 105%;
+}
+
+
+
+div#tabs-component div.tab-component-tab label:hover {
+    background: navy;
+    color: white;
+}
+
+
+/*selector five*/
+div#tabs-component div.tab-component-tab div.content {
+    position: absolute;
+    top: 52px;
+    left: 0;
+    padding: 3%;
+    border: 2px solid rgba(0, 0, 128, 0.65);
+    margin-bottom: 100px;
+    -webkit-transition: opacity .6s;
+    -moz-transition: opacity .6s;
+    -o-transition: opacity .6s;
+    -ms-transition: opacity .6s;
+    transition: opacity .6s;
+    width: 100%;
+}
+
+/*selector six*/
+div#tabs-component div.tab-component-tab div.content img {
+    width: 100%;
+}
+
+div#tabs-component div.tab-component-tab input[type="radio"]:checked + label {
+    /*background: navy;
+    color: white;*/
+    /*border-bottom: 1px solid #f3f3f3;*/
+    position: relative;
+    z-index: 5;
+    background-color: #f3f3f3;
+    padding-bottom: 12px;
+    color: rgba(0, 0, 128, 0.77);
+}
+
+
+div#tabs-component div.tab-component-tab input[type="radio"]:checked ~ .content {
+    background-color: #f3f3f3;
+}
+
+div#tabs-component div.tab-component-tab input[type="radio"]:not(:checked) ~ .content {
+    opacity: 0;
+}
+
+
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+
+/*MEDIA QUERIES*/
+
+@media only screen and (max-width: 900px) {
+    div#tabs-component div.tab-component-tab {
+        width: 22%;
+    }
+    div#tabs-component div.tab-component-tab label {
+        font-size: .9em;
+    }
+    div#tabs-component div.tab-component-tab div.content {
+        top: 51px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+  /*  div#tabs-component {
+        justify-content: space-between;
+    }*/
+    div#tabs-component div.tab-component-tab {
+        width: 24%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    div#tabs-component div.tab-component-tab label {
+        font-size: .95em;
+    }
+    div#tabs-component div.tab-component-tab div.content {
+        top: 48px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    div#tabs-component div.tab-component-tab div.content {
+        top: 45px;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    div#tabs-component div.tab-component-tab label {
+        font-size: .8em;
+    }
+    div#tabs-component div.tab-component-tab div.content {
+        top: 42px;
+    }
+    div#tabs-component div.tab-component-tab {
+        width: 25.1%;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+
+}
+
+@media only screen and (max-width: 420px) {
+    div#tabs-component div.tab-component-tab div.content {
+        top: 42px;
+    }
+}

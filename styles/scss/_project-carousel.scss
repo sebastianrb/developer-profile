@@ -1,0 +1,234 @@
+.project-descriptions-container {
+    margin: 30px auto 0;
+    width: 91%;
+    // box-shadow: 0 0 13px 0 #908989;
+    box-shadow: 0 0 12px 0 transparentize(#908989, .22) inset;
+    height: 540px;
+    overflow: hidden;
+    position: relative;
+    min-width: 900px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 8px;
+    background: rgba(1, 1, 56, 0.07);
+
+    @media screen and (max-width: $breakpoint-medium-large) {
+          width: 100%;
+          min-width: 0;
+          font-size: .95em;
+    }
+
+    @media screen and (max-width: $breakpoint-medium) {
+          flex-flow: column nowrap;
+          padding: 20px 25px;
+          font-size: 1em;
+          height: 810px;
+    }
+
+    @media screen and (max-width: $breakpoint-smallest) {
+        height: 770px;
+    }
+
+    //child selectors
+
+    .project-descriptions-container__project-buttons {
+        width: 40%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 25px;
+        float: left;
+        // height: 96%;
+        height: 79%;
+        font-weight: 300;
+
+        @media screen and (max-width: $breakpoint-medium) {
+               width: 75%;
+               float: none;
+               height: 100%;
+               flex-basis: 95%;
+               font-size: 1.05em;
+        }
+
+        @media screen and (max-width: $breakpoint-small-medium) {
+              width: 95%;
+              font-weight: 1.1em;
+        }
+
+        @media screen and (max-width: $breakpoint-smallest) {
+            width: 100%;
+            padding: 25px 0 15px;
+        }
+    }
+
+    .project-descriptions-container__project-button {
+        // margin: 10px 0;
+        padding: 10px 20px;
+        // background: transparentize($primary-color, .2);
+        background: transparent;
+        width: 100%;
+        // color: white;
+        color: rgba(1,1,56,1);
+        font-weight: bolder;
+        transition: all .3s;
+        cursor: pointer;
+        border-left: 7px solid $primary-color;
+        font-size: inherit;
+        font-family: inherit;
+        border-top: none;
+        border-right: none;
+        border-bottom: none;
+        text-align: left;
+        // border-bottom-right-radius: 5px;
+        // border-top-right-radius: 5px;
+        flex-basis: 100%;
+        border-bottom: none;
+        margin-bottom: 0;
+
+        &.selected {
+            background: linear-gradient(to right, $secondary-color, transparent);
+            border-left: 7px solid rgb(255, 230, 221);
+            // transform: translateX(20px);
+            border-bottom: none;
+            color: white;
+            font-weight: 700;
+        }
+
+        &.selected:hover {
+            background: linear-gradient(to right, $secondary-color, transparent);
+        }
+
+        &.selected-disabled {
+            pointer-events: none;
+        }
+
+        &:hover {
+            // background: $primary-color;
+            // border-left: 6px solid white;
+            background: transparentize($primary-color, .1);
+            border-left: 7px solid rgb(255, 230, 221);
+            color: white;
+        }
+
+        @media screen and (max-width: $breakpoint-medium) {
+            margin: 5px 0;
+            text-align: center;
+            border-left: none;
+
+            &.selected {
+                background: linear-gradient(to right, $secondary-color, transparent);
+                border-left: 7px solid transparentize($primary-color, .3);
+                transform: translateX(0);
+            }
+
+            // &:hover {
+            //     background: transparentize($primary-color, .2);
+            //     border-left: none;
+            // }
+
+            // &.selected:hover {
+            //     border-left: 8px solid transparentize($primary-color, .3);
+            // }
+        }
+    }
+
+    .project-descriptions-container__project-button[data-project-id="2"] {
+        pointer-events: none;
+        opacity: .5;
+    }
+
+    .project-descriptions-container__project-descriptions {
+        float: right;
+        width: 60%;
+        height: 100%;
+        position: relative;
+
+        @media screen and (max-width: $breakpoint-medium) {
+               width: 100%;
+               float: none;
+               display: flex;
+               flex-flow: column nowrap;
+               justify-content: space-around;
+               flex-basis: 95%;
+        }
+    }
+
+    .project-descriptions-container__project-description {
+        padding: 45px 25px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .5s;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        justify-content: center;
+        opacity: 0;
+        height: 100%;
+
+        &.description-selected {
+            opacity: 1;
+            z-index: 10;
+        }
+
+        @media screen and (max-width: $breakpoint-medium) {
+            // height: auto;
+            padding: 0 0 20px;
+        }
+    }
+
+    .project-descriptions-container__project-image-container {
+        margin: 0 auto;
+        width: 50%;
+        // border: 2px solid $primary-color;
+        height: auto;
+        background: none;
+        overflow: hidden;
+        background: $primary-color;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 12px 0px rgba(0, 0, 0, 0.2);
+
+        .project-descriptions-container__project-image {
+            width: 101%;
+            object-fit: cover;
+            vertical-align: top;
+            background: none;
+
+            @media screen and (max-width: $breakpoint-medium) {
+                object-position: 0 1px;
+            }
+        }
+
+        @media screen and (min-width: $breakpoint-medium + 1) {
+          min-width: 265px;
+        }
+
+        @media screen and (max-width: $breakpoint-medium-large) {
+              width: 45%;
+        }
+
+        @media screen and (max-width: $breakpoint-medium) {
+            width: 45%;
+        }
+
+        @media screen and (max-width: $breakpoint-small) {
+            width: 65%;
+        }
+
+    }
+
+    .project-descriptions-container__project-title {
+        margin-top: 0;
+    }
+
+    .project-descriptions-container__project-overview-text {
+        font-size: .95em;
+        margin-top: 0;
+    }
+}

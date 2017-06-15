@@ -1,0 +1,196 @@
+//carousel styles
+
+// .carousel {
+//     margin-bottom: 20px;
+// }
+
+.carousel.carousel--fade {
+    width: 60%;
+    position: relative;
+    height: auto;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    height: auto;
+    // border: 1px solid lightgray;
+
+    @media screen and (max-width: $breakpoint-small-medium) {
+       width: 71%;
+    }
+
+    //  @media screen and (max-width: $breakpoint-small) {
+    //    top: -10px;
+    // }
+
+    @media screen and (max-width: $breakpoint-extra-small) {
+      width: 78%
+    }
+
+}
+
+
+.carousel--fade__image-view  {
+    width: 100%;
+    position: relative;
+    height: auto;
+    display: flex;
+    /* display: flex; */
+    /* -webkit-box-pack: justify; */
+    /* -webkit-justify-content: space-between; */
+    -ms-flex-pack: justify;
+    /* justify-content: space-between; */
+    /* -webkit-box-align: center; */
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    /* align-items: center; */
+}
+
+
+.carousel--fade__image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+    vertical-align: top;
+    width: 100%;
+    z-index: 10;
+}
+
+.carousel--fade__image-container {
+    opacity: 0;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+
+
+.carousel--fade__image {
+    border-style: none;
+    vertical-align: top;
+    width: 100%;
+}
+
+
+
+//bullets
+.carousel--fade__bullets {
+    width: 100%;
+    height: 22px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: transparentize($secondary-color, .7);
+    z-index: 51;
+
+    @media screen and (max-width: $breakpoint-smallest) {
+          display: none;
+    }
+}
+
+.carousel--fade__bullet-container {
+    width: 30%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.carousel--fade__bullet--bullet {
+    height: 12px;
+    width: 12px;
+    background: $primary-color;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition: background .1s;
+    transition: background .1s;
+}
+
+.carousel--fade__bullet--bullet:hover {
+    background: $secondary-color;
+}
+
+
+//nav arrows
+.carousel--fade__arrow-prev,
+.carousel--fade__arrow-next {
+    font-size: 1.3em;
+    top: 45%;
+    position: absolute;
+    color: transparentize($secondary-color, .2);
+    z-index: 50;
+    cursor: pointer;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    padding: 20px;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @media screen and (max-width: $breakpoint-extra-small) {
+      top: auto;
+      bottom: -66px;
+    }
+}
+
+
+[class^="carousel--fade__arrow-"]:hover {
+    @media screen and (min-width: $breakpoint-medium) {
+          background: transparentize($secondary-color, .5);
+          color: transparentize(white, .1);
+    }
+}
+
+
+
+.carousel--fade__arrow-prev{
+    left: -22%;
+
+    @media screen and (max-width: $breakpoint-extra-small) {
+      left: 0;
+    }
+}
+
+.carousel--fade__arrow-next {
+    right: -22%;
+
+    @media screen and (max-width: $breakpoint-extra-small) {
+      right: 0;
+    }
+}
+
+.fa-chevron-left {
+    margin-left: -5px;
+    margin-top: 3px;
+}
+
+.fa-chevron-right {
+    margin-right: -5px;
+    margin-top: 3px;
+}
+
+
+
+
+//variable/javascript classes
+.carousel--fade__image-container-selected {
+    position: static;
+    z-index: 20;
+    opacity: 1;
+}
+
+.carousel--fade__bullet--bullet-selected{
+    background: $secondary-color;
+}
+
+

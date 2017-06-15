@@ -1,0 +1,569 @@
+/*Tooltips*/
+div#business-card-wrapper [data-tooltip]:after {
+    background: rgba(0, 0, 0, .9);
+    border-radius: 3px;
+    color: white;
+    content: attr(data-tooltip);
+    font-size: 12px;
+    padding: .5em 1em;
+    white-space: nowrap;
+    margin-bottom: 11px;
+}
+
+div#business-card-wrapper [data-tooltip]:before {
+    background: url('../misc-images/down-arrow.svg') no-repeat;
+    background-size: 17px;
+    background-position: 50% 50%;
+    height: 30px;
+    width: 18px;
+    content: "";
+    top: -25px;
+}
+
+div#business-card-wrapper [data-tooltip]:after, div#business-card-wrapper [data-tooltip]:before
+ {
+    opacity: 0;
+    -webkit-transition: all .18s ease-out .05s;
+    -moz-transition: all .18s ease-out .05s;
+    -o-transition: all .18s ease-out .05s;
+    -ms-transition: all .18s ease-out .05s;
+    transition: all .18s ease-out .05s;
+    bottom: 100%;
+    position: absolute;
+    -webkit-transform: translate(-50%, 10px);
+    -moz-transform: translate(-50%, 10px);
+    -o-transform: translate(-50%, 10px);
+    -ms-transform: translate(-50%, 10px);
+    transform: translate(-50%, 10px);
+}
+
+div#business-card-wrapper [data-tooltip]:hover:after, div#business-card-wrapper [data-tooltip]:hover:before {
+    opacity: 1;
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+}
+
+/*Business card styles*/
+div#business-card-wrapper {
+    font-family: "Roboto", Geneva, sans-serif;
+    font-size: 1em;
+    margin: 5% auto;
+    font-weight: lighter;
+}
+
+div#business-card-wrapper div.business-card {
+    margin: 20px auto 50px;
+    width: 700px;
+    min-width: 500px;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -o-perspective: 1000px;
+    -ms-perspective: 1000px;
+    perspective: 1000px;
+    font-family: Roboto;
+}
+
+div#business-card-wrapper div.business-card input[type="checkbox"] {
+    display: none;
+}
+
+div#business-card-wrapper div.business-card label {
+    cursor: auto;
+    background: transparent;
+    border-bottom: 0;
+}
+
+div#business-card-wrapper div.business-card label article.content {
+    height: auto;
+    padding: 55px 70px 80px;
+    box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3), 0px 0px 0px 0px rgba(255,255,255,0.9) inset, 5px 5px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transition: transform .6s, box-shadow .4s;
+    -moz-transition: transform .6s, box-shadow .4s;
+    -o-transition: transform .6s, box-shadow .4s;
+    -ms-transition: transform .6s, box-shadow .4s;
+    transition: transform .6s, box-shadow .4s;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    position: relative;
+    text-align: left;
+}
+
+div#business-card-wrapper div.business-card input[type="checkbox"]:checked + label article.front {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+
+div#business-card-wrapper div.business-card input[type="checkbox"]:checked + label article.back:hover {
+    -webkit-transform: rotateX(-30deg);
+    -moz-transform: rotateX(-30deg);
+    -o-transform: rotateX(-30deg);
+    -ms-transform: rotateX(-30deg);
+    transform: rotateX(-30deg);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3), 0px 0px 0px 0px rgba(255,255,255,0.9) inset, 8px -11px 11px rgba(0,0,0,0.1);
+}
+
+div#business-card-wrapper div.business-card label article.back {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    -webkit-transition: transform .6s, box-shadow .5s;
+    -moz-transition: transform .6s, box-shadow .5s;
+    -o-transition: transform .6s, box-shadow .5s;
+    -ms-transition: transform .6s, box-shadow .5s;
+    transition: transform .6s, box-shadow .5s;
+    -webkit-transform: rotateX(-179.9deg);
+    -moz-transform: rotateX(-179.9deg);
+    -o-transform: rotateX(-179.9deg);
+    -ms-transform: rotateX(-179.9deg);
+    transform: rotateX(-179.9deg);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3), 0px 0px 0px 0px rgba(255,255,255,0.9) inset, 5px 5px 8px rgba(0,0,0,0.1);
+    background: transparent url("../Business-Card-Assets/business_card_back.jpg") no-repeat center center;
+    background-size: 100%;
+}
+
+/*div#business-card-wrapper div.business-card label article.content.front,
+div#business-card-wrapper div.business-card label article.content.back {
+    max-height: 500px;
+}*/
+
+
+div#business-card-wrapper div.business-card label article.front div.text1{
+    color: white;
+    width: 90%;
+    cursor: default;
+}
+
+
+div#business-card-wrapper div.business-card label article.content div.text1 h1#name {
+    font-size: 2em;
+    margin-bottom: 0;
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+div#business-card-wrapper div.business-card label article.content div.text1 h4#position {
+    font-size: .9em;
+    margin-top: 5px;
+    color: rgba(255, 255, 255, .7);
+    margin-bottom: 35px;
+    font-weight: 400;
+}
+
+div#business-card-wrapper div.business-card label article.content div.text1 p.description {
+    font-size: 1em;
+    line-height: 1.5;
+    color: white;
+    width: 100%;
+    margin: 10px auto 0;
+}
+
+div#business-card-wrapper div.business-card label article.content div.text1 p.contact.email {
+    color: rgb(248, 146, 229);
+    margin: 20px 0;
+    width: 100%;
+    font-size: .9em;
+}
+
+div#business-card-wrapper div.business-card label article.content div.text1 p.contact.email a {
+    color: inherit;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    -ms-transition: all .2s;
+    transition: all .2s;
+}
+
+div#business-card-wrapper div.business-card label article.content div.text1 p.contact.email a:hover {
+    color: white;
+}
+
+div#business-card-wrapper div.business-card label article.content img#flip-icon {
+    cursor: pointer;
+    width: 40px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+div#business-card-wrapper img#encyclopedia-icon {
+    margin-top: 11px;
+    width: 40px;
+    float: left;
+    position: relative;
+    z-index: 100;
+}
+
+
+div#business-card-wrapper div#encyclopedia-text {
+    width: auto;
+    float: left;
+    padding: 5px;
+    font-size: .9em;
+    margin-top: 3px;
+    color: white;
+    z-index: 100;
+    position: relative;
+}
+
+
+div#business-card-wrapper img#encyclopedia-icon:hover ~ div#encyclopedia-text h4,
+div#business-card-wrapper img#encyclopedia-icon:hover ~ div#encyclopedia-text p,
+div#business-card-wrapper div#encyclopedia-text:hover h4,
+div#business-card-wrapper div#encyclopedia-text:hover p {
+    color: white;
+}
+
+div#business-card-wrapper div#encyclopedia-text:after{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: transparent;
+    -webkit-transition: width .5s ease, background-color .3s ease;
+    -moz-transition: width .5s ease, background-color .3s ease;
+    -o-transition: width .5s ease, background-color .3s ease;
+    -ms-transition: width .5s ease, background-color .3s ease;
+    transition: width .5s ease, background-color .3s ease;
+    position: relative;
+    right: 2px;
+    top: 9px;
+    border-radius: 4px;
+}
+
+div#business-card-wrapper img#encyclopedia-icon:hover ~ div#encyclopedia-text::after,
+div#business-card-wrapper div#encyclopedia-text:hover::after {
+    width: 100%;
+    background: #f94c0c;
+}
+
+
+div#business-card-wrapper div#encyclopedia-text h4 {
+    margin: 5px 10px;
+    font-size: .9em;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+    color: rgb(248, 146, 229);
+}
+
+div#business-card-wrapper div#encyclopedia-text p {
+    margin: 5px 10px;
+    color: rgb(248, 146, 229);
+    font-size: .9em;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+
+
+div#business-card-wrapper div#icons {
+    position: relative;
+    top: 20px;
+    text-align: right;
+    left: 20px;
+    padding-right: 10px;
+}
+
+div#business-card-wrapper div#icons div[data-tooltip] {
+    display: inline-block;
+    margin-left: 30px;
+    position: relative;
+}
+
+div#business-card-wrapper div#icons div[data-tooltip="Facebook"]::before,
+div#business-card-wrapper div#icons div[data-tooltip="Facebook"]:after {
+    left: 47.3%;
+}
+
+div#business-card-wrapper div#icons div[data-tooltip="GitHub"]::before,
+div#business-card-wrapper div#icons div[data-tooltip="GitHub"]:after {
+    left: 50%;
+}
+
+div#business-card-wrapper div#icons div[data-tooltip="LinkedIn"]::before,
+div#business-card-wrapper div#icons div[data-tooltip="LinkedIn"]:after {
+    left: 50%;
+}
+
+div#business-card-wrapper div#icons .icon:hover:after, div#icons .icon:hover:before, div#icons .icon:after, div#icons .icon:before {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+}
+
+
+
+div#business-card-wrapper div.business-card label article.front {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    height: 100%;
+    background: transparent url(../Business-Card-Assets/DigitalBusinessCard_Assets/bg1.png) no-repeat center center;
+    background-size: cover;
+}
+
+
+div#business-card-wrapper div.business-card input[type="checkbox"]:checked + label article.back {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+
+div#business-card-wrapper div.business-card label article.back div.text1 {
+    width: 100%;
+    float: none;
+}
+
+div#business-card-wrapper div.business-card a {
+    text-decoration: none;
+}
+
+
+
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+
+/*MEDIA QUERIES*/
+
+@media only screen and (max-width: 900px) {
+    div#business-card-wrapper {
+        margin: 8% auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    div#business-card-wrapper div.business-card {
+        width: 92%;
+        font-size: .85em;
+    }
+
+}
+
+@media only screen and (max-width: 720px) {
+    div#business-card-wrapper div#icons div[data-tooltip] {
+        margin-left: 4%;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 680px) {
+    div#business-card-wrapper div.business-card label article.content {
+        padding-bottom: 72px;
+    }
+    div#business-card-wrapper div#icons {
+        top: 13px;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    div#business-card-wrapper div.business-card {
+        font-size: .8em;
+    }
+    div#business-card-wrapper div.business-card label article.content {
+        padding: 8% 8% 10%;
+    }
+    div#business-card-wrapper img#encyclopedia-icon {
+        width: 35px;
+    }
+    div#business-card-wrapper div#icons {
+        padding-right: 2%;
+        top: 10px;
+        width: 95%;
+    }
+    div#business-card-wrapper div#icons div[data-tooltip]::after,
+    div#business-card-wrapper div#icons div[data-tooltip]::before {
+        content: none;
+    }
+    div#business-card-wrapper div#encyclopedia-text::after {
+        content: none;
+    }
+    div#business-card-wrapper div.business-card label article.content div.text1 h4#position {
+        margin-bottom: 6%;
+    }
+    div#business-card-wrapper div#encyclopedia-text h4,
+    div#business-card-wrapper div#encyclopedia-text p {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    div#business-card-wrapper div#encyclopedia-text {
+        padding: 0;
+        font-size: .95em;
+        width: 85%;
+        padding-top: 3px;
+    }
+    div#business-card-wrapper div.business-card label article.content img#flip-icon {
+        width: 30px;
+    }
+    div#business-card-wrapper div.business-card label article.content div.text1 h1#name {
+        width: 100%;
+    }
+    div#business-card-encyclopedia {
+        width: 50%;
+    }
+    div#business-card-wrapper img#encyclopedia-icon {
+        width: 15%;
+    }
+    div#business-card-wrapper div.business-card label article.content {
+        padding: 8% 7% 10%;
+    }
+    div#business-card-wrapper div.business-card img.icon {
+        width: 90%;
+    }
+    div#business-card-wrapper div.business-card {
+        font-size: .75em;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    div#business-card-wrapper div.business-card label article.content div.text1 p.description {
+        display: none;
+    }
+    div#business-card-wrapper div.business-card {
+        min-width: 0;
+        width: 90%;
+    }
+    div#business-card-wrapper div.business-card label article.content {
+        padding: 6% 6% 10%;
+        font-size: .9em;
+    }
+    div#business-card-wrapper div.business-card img.icon {
+        width: 80%;
+    }
+    div#business-card-wrapper div.business-card label article.content img#flip-icon {
+        width: 25px;
+        right: 4%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    div#business-card-wrapper div.business-card {
+        width: 100%;
+    }
+    div#business-card-wrapper div#icons div[data-tooltip] {
+        margin-left: 3%;
+    }
+    div#business-card-wrapper div#encyclopedia-text h4,
+    div#business-card-wrapper div#encyclopedia-text p {
+        margin-left: 3%;
+    }
+    div#business-card-wrapper div#icons {
+        padding-right: 0;
+    }
+    div#business-card-wrapper div.business-card {
+        font-size: .7em;
+    }
+    div#business-card-wrapper div.business-card img.icon {
+        width: 72%;
+    }
+    div#business-card-wrapper div.business-card label article.content {
+        font-size: 1em;
+        border-radius: 0;
+    }
+    div#business-card-wrapper div.business-card label article.content div.text1 h4#position {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    /*div#business-card-wrapper div.business-card {
+        font-size: .83em;
+    }
+    div#business-card-wrapper div#encyclopedia-text {
+        font-size: .95em;
+    }*/
+    div#business-card-wrapper div#icons div[data-tooltip] {
+        margin-left: 2%;
+    }
+    div#business-card-wrapper div.business-card label article.content {
+        padding: 6% 5% 10%;
+    }
+    div#business-card-wrapper div.business-card img.icon {
+        width: 77%;
+    }
+    div#business-card-wrapper div#encyclopedia-text h4, div#business-card-wrapper div#encyclopedia-text p {
+        width: 110%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    div#business-card-wrapper {
+        font-size: 1.1em;
+    }
+    div#business-card-wrapper div#icons {
+        padding-right: 2%;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    div#business-card-wrapper div.business-card img.icon {
+        width: 70%;
+    }
+    div#business-card-wrapper div#icons div[data-tooltip] {
+        margin-left: 1%;
+    }
+    div#business-card-wrapper div#encyclopedia-text {
+        font-size: .87em;
+    }
+    div#business-card-wrapper div.business-card label article.content div.text1 h1#name {
+        font-size: 1.9em;
+    }
+}

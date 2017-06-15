@@ -1,0 +1,620 @@
+/*Tooltips*/
+div#business-card-wrapper [data-tooltip]:after {
+    background: rgba(0, 0, 0, .9);
+    border-radius: 3px;
+    color: white;
+    content: attr(data-tooltip);
+    font-size: 12px;
+    padding: .5em 1em;
+    white-space: nowrap;
+    margin-bottom: 11px;
+    font-weight: bold;
+}
+
+div#business-card-wrapper [data-tooltip]:before {
+    background: url('../images/down-arrow.svg') no-repeat;
+    background-size: 17px;
+    background-position: 50% 50%;
+    height: 30px;
+    width: 18px;
+    content: "";
+    top: -30px;
+}
+
+div#business-card-wrapper [data-tooltip]:after, div#business-card-wrapper [data-tooltip]:before
+ {
+    opacity: 0;
+    -webkit-transition: all .18s ease-out .05s;
+    -moz-transition: all .18s ease-out .05s;
+    -o-transition: all .18s ease-out .05s;
+    -ms-transition: all .18s ease-out .05s;
+    transition: all .18s ease-out .05s;
+    bottom: 115%;
+    position: absolute;
+    -webkit-transform: translate(-50%, 10px);
+    -moz-transform: translate(-50%, 10px);
+    -o-transform: translate(-50%, 10px);
+    -ms-transform: translate(-50%, 10px);
+    transform: translate(-50%, 10px);
+}
+
+div#business-card-wrapper [data-tooltip]:hover:after, div#business-card-wrapper [data-tooltip]:hover:before {
+    opacity: 1;
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+}
+
+/*Business card styles*/
+div#business-card-wrapper {
+    font-family: "Roboto", Geneva, sans-serif;
+    font-size: 1em;
+    margin: 20px auto;
+    // font-weight: lighter;
+    transition: transform .4s;
+
+    &:hover {
+        // div.business-card label article.front div.text1 {
+        //     color: white;
+        // }
+
+        div.business-card label article.content img#flip-icon {
+            transform: rotateZ(360deg);
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-medium) {
+        font-size: 1.1em;
+        margin: 0;
+    }
+}
+
+div#business-card-wrapper div.business-card {
+    margin: 20px auto 5px;
+    width: 700px;
+    min-width: 480px;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -o-perspective: 1000px;
+    -ms-perspective: 1000px;
+    perspective: 1000px;
+    font-family: Roboto;
+
+    @media screen and (max-width: $breakpoint-small-medium + 30) {
+         min-width: 0;
+         width: auto;
+    }
+
+    // @media screen and (max-width: $breakpoint-small) {
+    //       min-width: 0;
+    // }
+}
+
+div#business-card-wrapper div.business-card input[type="checkbox"] {
+    display: none;
+}
+
+div#business-card-wrapper div.business-card label {
+    cursor: auto;
+    background: transparent;
+    border-bottom: 0;
+}
+
+div#business-card-wrapper div.business-card label article.content {
+    height: auto;
+    padding: 50px 60px;
+    box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3), 0px 0px 0px 0px rgba(255,255,255,0.9) inset, 5px 5px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transition: transform .6s, box-shadow .4s;
+    -moz-transition: transform .6s, box-shadow .4s;
+    -o-transition: transform .6s, box-shadow .4s;
+    -ms-transition: transform .6s, box-shadow .4s;
+    transition: transform .6s, box-shadow .4s;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    position: relative;
+    text-align: left;
+
+    @media screen and (max-width: $breakpoint-small) {
+          padding: 8% 8% 10%;
+    }
+
+    @media screen and (max-width: $breakpoint-smallest) {
+          padding: 7% 6% 7%;
+    }
+}
+
+div#business-card-wrapper div.business-card input[type="checkbox"]:checked + label article.front {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+
+div#business-card-wrapper div.business-card input[type="checkbox"]:checked + label article.back:hover {
+    -webkit-transform: rotateX(-30deg);
+    -moz-transform: rotateX(-30deg);
+    -o-transform: rotateX(-30deg);
+    -ms-transform: rotateX(-30deg);
+    transform: rotateX(-30deg);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3), 0px 0px 0px 0px rgba(255,255,255,0.9) inset, 8px -11px 11px rgba(0,0,0,0.1);
+}
+
+div#business-card-wrapper div.business-card label article.back {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    -webkit-transition: transform .6s, box-shadow .5s;
+    -moz-transition: transform .6s, box-shadow .5s;
+    -o-transition: transform .6s, box-shadow .5s;
+    -ms-transition: transform .6s, box-shadow .5s;
+    transition: transform .6s, box-shadow .5s;
+    -webkit-transform: rotateX(-179.9deg);
+    -moz-transform: rotateX(-179.9deg);
+    -o-transform: rotateX(-179.9deg);
+    -ms-transform: rotateX(-179.9deg);
+    transform: rotateX(-179.9deg);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3), 0px 0px 0px 0px rgba(255,255,255,0.9) inset, 5px 5px 8px rgba(0,0,0,0.1);
+    background: transparent url("../images/about-me-image-15.jpeg") no-repeat center center;
+    background-size: cover;
+}
+
+
+div#business-card-wrapper div.business-card label article.front div.text1 {
+    // color: white;
+    color: white;
+    font-weight: bolder;
+    width: 99%;
+    cursor: default;
+    transition: all .2s;
+    position: relative;
+
+    @media screen and (max-width: $breakpoint-small-medium) {
+          width: 90%;
+          font-size: .9em;
+          color: white;
+          font-weight: bold;
+    }
+
+    @media screen and (max-width: $breakpoint-extra-small) {
+          font-size: .8em;
+    }
+}
+
+
+div#business-card-wrapper div.business-card label article.content div.text1 h1#name {
+    font-size: 1.85em;
+    margin-bottom: 0;
+    margin-top: 0;
+    // font-weight: 300;
+    line-height: 1.5;
+
+    @media screen and (max-width: $breakpoint-small) {
+          font-size: 1.5em;
+    }
+
+    @media screen and (max-width: $breakpoint-smallest) {
+       font-size: 1.3em;
+    }
+}
+
+div#business-card-wrapper div.business-card label article.content div.text1 h4#position {
+    font-size: .95em;
+    margin-top: 5px;
+    // color: rgba(255, 255, 255, .6);
+    margin-bottom: 35px;
+
+    @media screen and (max-width: $breakpoint-smallest) {
+       font-size: .85em;
+    }
+}
+
+div#business-card-wrapper div.business-card label article.content div.text1 p.description {
+    font-size: 1em;
+    line-height: 1.5;
+    width: 100%;
+    margin: 10px auto 20px;
+
+    @media screen and (max-width: $breakpoint-small) {
+          display: none;
+    }
+}
+
+div#business-card-wrapper div.business-card label article.content div.text1 p.contact.email {
+    color: rgb(248, 146, 229);
+    margin: 20px 0;
+    width: 100%;
+    font-size: .9em;
+}
+
+div#business-card-wrapper div.business-card label article.content div.text1 p.contact.email a {
+    color: inherit;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    -ms-transition: all .2s;
+    transition: all .2s;
+}
+
+// div#business-card-wrapper div.business-card label article.content div.text1 p.contact.email a:hover {
+//     color: white;
+// }
+
+div#business-card-wrapper div.business-card label article.content img#flip-icon {
+    // cursor: pointer;
+    width: 40px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    transition: transform .4s;
+
+    @media screen and (max-width: $breakpoint-small) {
+          width: 30px;
+          right: 20px;
+    }
+
+    @media screen and (max-width: $breakpoint-smallest) {
+       width: 25px;
+       right: 15px;
+    }
+}
+
+div#business-card-wrapper div.business-card label article.content .flip-icon-back {
+    // cursor: pointer;
+    width: 40px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    transition: transform .4s;
+
+    @media screen and (max-width: $breakpoint-small) {
+          width: 30px;
+          right: 20px;
+    }
+
+    @media screen and (max-width: $breakpoint-smallest) {
+       width: 25px;
+       right: 15px;
+    }
+}
+
+
+
+div#business-card-encyclopedia {
+    width: 100%;
+    margin: 40px auto;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: $breakpoint-small-medium) {
+          margin: 10px auto 25px;
+    }
+
+    @media screen and (max-width: $breakpoint-extra-small) {
+          margin: 10px auto;
+    }
+}
+
+
+div#business-card-encyclopedia .contact.email {
+    font-size: 1em;
+}
+
+div#business-card-wrapper img#encyclopedia-icon {
+    margin-top: 12px;
+    width: 35px;
+    float: left;
+    position: relative;
+    z-index: 100;
+
+    @media screen and (max-width: $breakpoint-small-medium) {
+          width: 29px;
+    }
+
+    @media screen and (max-width: $breakpoint-extra-small) {
+          width: 25px;
+    }
+
+    @media screen and (max-width: $breakpoint-smallest) {
+       width: 20px;
+    }
+
+}
+
+div#business-card-wrapper div.business-card img.icon {
+    width: 100%;
+}
+
+
+div#business-card-wrapper div#encyclopedia-text {
+    width: auto;
+    float: left;
+    padding: 5px;
+    font-size: .9em;
+    margin-top: 3px;
+    color: white;
+    z-index: 100;
+    position: relative;
+}
+
+
+// div#business-card-wrapper img#encyclopedia-icon:hover ~ div#encyclopedia-text h4,
+// div#business-card-wrapper img#encyclopedia-icon:hover ~ div#encyclopedia-text p,
+// div#business-card-wrapper div#encyclopedia-text:hover h4,
+// div#business-card-wrapper div#encyclopedia-text:hover p {
+//     color: white;
+// }
+
+div#business-card-wrapper div#encyclopedia-text:after{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: transparent;
+    -webkit-transition: width .5s ease, background-color .3s ease;
+    -moz-transition: width .5s ease, background-color .3s ease;
+    -o-transition: width .5s ease, background-color .3s ease;
+    -ms-transition: width .5s ease, background-color .3s ease;
+    transition: width .5s ease, background-color .3s ease;
+    position: absolute;
+    left: 8px;
+    top: 45px;
+    border-radius: 4px;
+}
+
+div#business-card-wrapper img#encyclopedia-icon:hover ~ div#encyclopedia-text::after,
+div#business-card-wrapper div#encyclopedia-text:hover::after {
+    width: 100%;
+    background: #f94c0c;
+}
+
+
+
+div#business-card-wrapper div#encyclopedia-text p {
+    margin: 5px 10px;
+    // color: rgb(248, 146, 229);
+    color: white;
+    font-size: .95em;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+    font-size: 1.1em;
+    font-weight: 500;
+    letter-spacing: 2px;
+
+    // &:hover {
+    //     font-weight: 800;
+    // }
+
+    @media screen and (max-width: $breakpoint-small-medium) {
+          font-size: 1em;
+    }
+
+    @media screen and (max-width: $breakpoint-extra-small) {
+          font-size: .90em;
+          margin-top: 3px;
+          font-weight: bold;
+    }
+}
+
+
+div#business-card-wrapper div#icons {
+    margin-top: 30px;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+    @media screen and (max-width: $breakpoint-small-medium) {
+          margin: 0;
+    }
+}
+
+div#business-card-wrapper div#icons div[data-tooltip] {
+    display: inline-block;
+    position: relative;
+    //experiment
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    border: 2px solid $secondary-color-muted;
+
+    @media screen and (max-width: $breakpoint-medium) {
+        height: 42px;
+        width: 42px;
+    }
+
+    @media screen and (max-width: $breakpoint-small) {
+        font-size: .9em;
+        height: 37px;
+        width: 37px;
+    }
+
+    @media screen and (max-width: $breakpoint-extra-small) {
+        height: 32px;
+        width: 32px;
+    }
+
+    @media screen and (max-width: $breakpoint-smallest) {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+div#business-card-wrapper div#icons div[data-tooltip="Facebook"]::before,
+div#business-card-wrapper div#icons div[data-tooltip="Facebook"]:after {
+    left: 47.3%;
+}
+
+div#business-card-wrapper div#icons div[data-tooltip="GitHub"]::before,
+div#business-card-wrapper div#icons div[data-tooltip="GitHub"]:after {
+    left: 50%;
+}
+
+div#business-card-wrapper div#icons div[data-tooltip="LinkedIn"]::before,
+div#business-card-wrapper div#icons div[data-tooltip="LinkedIn"]:after {
+    left: 50%;
+}
+
+div#business-card-wrapper div#icons .icon:hover:after, div#icons .icon:hover:before, div#icons .icon:after, div#icons .icon:before {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+}
+
+
+
+div#business-card-wrapper div.business-card label article.front {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    height: 100%;
+    // background: transparent url("../../component-files/DigitalBusinessCard_Assets/bg1.png") no-repeat center center;
+    background: transparent url("../images/card-paint.jpg") no-repeat center center;
+    background-size: cover;
+    overflow: auto;
+    position: relative;
+}
+
+
+div#business-card-wrapper div.business-card input[type="checkbox"]:checked + label article.back {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+
+div#business-card-wrapper div.business-card label article.back div.text1 {
+    width: 100%;
+    float: none;
+}
+
+div#business-card-wrapper div.business-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+div#business-card-wrapper div.business-card .business-card__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(1, 1, 56, 0.35);
+}
+
+
+
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+
+/*MEDIA QUERIES*/
+
+// @media only screen and (max-width: 900px) {
+//     div#business-card-wrapper {
+//         margin: 8% auto;
+//     }
+// }
+
+@media only screen and (max-width: $breakpoint-small-medium) {
+    div#business-card-wrapper div.business-card {
+        width: 98%;
+        // font-size: .85em;
+    }
+
+}
+
+// @media only screen and (max-width: 768px) and (min-width: 680px) {
+//     div#business-card-wrapper div.business-card label article.content {
+//         padding-bottom: 72px;
+//     }
+//     div#business-card-wrapper div#icons {
+//         top: 13px;
+//     }
+// }
+
+@media only screen and (max-width: 680px) {
+    div#business-card-wrapper div.business-card {
+        font-size: 1em;
+    }
+    // div#business-card-wrapper div.business-card label article.content {
+    //     padding: 8% 8% 10%;
+    // }
+    // div#business-card-wrapper div#icons {
+    //     padding-right: 2%;
+    //     top: 10px;
+    //     width: 95%;
+    // }
+    div#business-card-wrapper div#icons div[data-tooltip]::after,
+    div#business-card-wrapper div#icons div[data-tooltip]::before {
+        content: none;
+    }
+    div#business-card-wrapper div#encyclopedia-text::after {
+        content: none;
+    }
+    div#business-card-wrapper div.business-card label article.content div.text1 h4#position {
+        margin-bottom: 6%;
+    }
+    div#business-card-wrapper div#encyclopedia-text h4,
+    div#business-card-wrapper div#encyclopedia-text p {
+        margin-right: 0;
+    }
+}
+

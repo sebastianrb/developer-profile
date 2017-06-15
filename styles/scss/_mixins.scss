@@ -1,0 +1,128 @@
+// vendor prefixes
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+
+  #{$property}: $value;
+}
+
+@mixin background-image($url, $repeat, $size, $position) {
+  background-image: url($url);
+  background-repeat: $repeat;
+  background-size: $size;
+  background-position: $position;
+}
+
+// gradients
+@mixin background-gradient($start-color, $end-color, $orientation) {
+    background: $start-color;
+
+    @if $orientation == 'right' {
+      background: linear-gradient(to right, $start-color, $end-color);
+    } @else if $orientation == 'left' {
+      background: linear-gradient(to left, $start-color, $end-color);
+    } @else if $orientation == 'top' {
+      background: linear-gradient(to top, $start-color, $end-color);
+    } @else if $orientation == 'bottom' {
+      background: linear-gradient(to top, $start-color, $end-color);
+    } @else if $orientation == "circle" {
+      background: radial-gradient(circle, $start-color, $end-color);
+    } @else if $orientation == "ellipse" {
+      background: radial-gradient(ellipse at center, $start-color, $end-color);
+    }
+}
+
+// border radius
+@mixin border-radius-separate($top-left-radius, $top-right-radius, $bottom-right-radius, $bottom-left-radius) {
+    border-top-left-radius: $top-left-radius;
+    border-top-right-radius: $top-right-radius;
+    border-bottom-right-radius: $bottom-right-radius;
+    border-bottom-left-radius: $bottom-left-radius;
+}
+
+// box shadow
+@mixin shadow($h, $v, $blur, $spread, $color, $inset: false) {
+    @if $inset == true {
+        box-shadow: $h $v $blur $spread $color inset;
+    } @else {
+        box-shadow: $h $v $blur $spread $color;
+    }
+}
+
+// media queries
+@mixin mquery($width, $ratio: false) {
+    @if $ratio {
+        @media
+            only screen and (max-width: $width) and  (min--moz-device-pixel-ratio: $ratio),
+            only screen and (max-width: $width) and  (-webkit-min-device-pixel-ratio: $ratio),
+            only screen and (max-width: $width) and  (min-device-pixel-ratio: $ratio) {
+            @content;
+        }
+    } @else {
+        @media only screen and (max-width: $width) {
+            @content;
+        }
+    }
+}
+
+// positioning
+@mixin position($type, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $type;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+// size
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+// transformations
+@mixin transform($transformation){
+  @include prefix(transform, $transformation, 'webkit' 'ms' 'o' 'moz');
+}
+
+@mixin transition($property, $time, $timing-function: ease-in-out) {
+    @include prefix(transition, $property $time $timing-function, 'webkit' 'ms' 'o' 'moz');
+}
+
+// underline hover effect
+@mixin underline-hover($color, $top) {
+  &:after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: 0;
+      margin: 0 auto;
+      background: transparent;
+      -webkit-transition: width .4s ease, background-color .3s ease;
+      -moz-transition: width .4s ease, background-color .3s ease;
+      -o-transition: width .4s ease, background-color .3s ease;
+      -ms-transition: width .4s ease, background-color .3s ease;
+      transition: width .4s ease, background-color .3s ease;
+      position: relative;
+      right: 0;
+      top: $top;
+      border-radius: 2%;
+  }
+  &:hover:after {
+    width: 100%;
+    background: $secondaryColor;
+  }
+}
+
+// animation delay
+@mixin animation-delay($seconds) {
+  animation-delay: $seconds;
+}
+
+//basic flex
+@mixin basic-flex($direction, $wrap, $justify) {
+  display: flex;
+  flex-flow: $direction $wrap;
+  justify-content: $justify;
+}

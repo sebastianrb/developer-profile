@@ -1,0 +1,395 @@
+div#products-wrapper {
+    width: 75%;
+    height: auto;
+    margin: 5% auto;
+    background: white;
+    padding: 30px;
+    border-radius: 4px;
+    color: rgba(0, 0, 128, 0.6);
+    text-align: left;
+}
+
+#products-wrapper h1 {
+    border-bottom: 5px solid rgba(0, 0, 128, 0.8);
+    padding-bottom: 20px;
+    margin-bottom: 0;
+}
+
+div#products-wrapper button {
+    padding: 10px 10px;
+    color: white;
+    width: 100%;
+    height: 40px;
+    border: none;
+    padding: 10px 10px;
+    background: #0CA90C;
+    font-size: .9em;
+    cursor: pointer;
+    border-radius: 3px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+}
+
+div#products-wrapper .add:hover {
+    background-color: #0c6f0c;
+}
+
+div#products-wrapper .button:active {
+    border-bottom: none;
+    position: relative;
+    top: 3px;
+    /*margin-bottom: 4px;*/
+    /*border-bottom: 3px solid rgba(255, 255, 255, 0);*/
+}
+
+div#products-wrapper .delete-button {
+    background: #E42626;
+    margin-top: 10px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+}
+
+div#products-wrapper .delete-button:hover {
+    background-color: #a51b1b;
+}
+
+div#products-wrapper .buy {
+    float: right;
+    width: 29%;
+    margin-top: 2%;
+    text-align: justify;
+}
+
+
+div#products-wrapper .product {
+    width: 100%;
+    border-bottom: 3px solid rgba(156, 155, 218, 0.41);
+    padding: 35px 1%;
+    position: relative;
+    z-index: 10;
+}
+
+
+div#products-wrapper .product::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: rgb(156, 155, 218);
+    -webkit-transition: width .6s ease, background-color .5s ease;
+    -moz-transition: width .6s ease, background-color .5s ease;
+    -o-transition: width .6s ease, background-color .5s ease;
+    -ms-transition: width .6s ease, background-color .5s ease;
+    transition: width .6s ease, background-color .5s ease;
+    display: block;
+    position: relative;
+    top: 38px;
+    left: -1%;
+    border-radius: 2px;
+}
+
+div#products-wrapper .product:hover::after {
+    width: 102%;
+    background-color: rgba(0, 0, 128, 0.4);
+}
+
+div#products-wrapper .product:hover .description {
+    color: rgba(0, 0, 128, 0.9);
+}
+
+
+div#products-wrapper .description {
+    width: 45%;
+    -webkit-transition: color .3s;
+    -moz-transition: color .3s;
+    -o-transition: color .3s;
+    -ms-transition: color .3s;
+}
+
+div#products-wrapper input.quantity,
+div#products-wrapper input.promoCode {
+    display: inline-block;
+    margin-bottom: 21px;
+    width: 60%;
+    margin-left: 5px;
+    margin-right: 0;
+    font-size: .9em;
+    border-radius: 1px;
+    padding: 5px;
+    border: 2px solid navy;
+    color: rgba(0, 0, 128, 0.8);
+}
+
+div#products-wrapper .description,
+div#products-wrapper .productImage {
+    float: left;
+}
+
+div#products-wrapper .product:after,
+div#products-wrapper #basket:after {
+  content: "";
+  display: block;
+  clear: left;
+}
+
+div#products-wrapper .productImage {
+    height: 150px;
+    margin-left: 4%;
+    display: inline-block;
+    /* vertical-align: middle; */
+    position: absolute;
+    top: 20%;
+}
+
+div#products-wrapper .quantCaption,
+div#products-wrapper .promoCaption {
+    display: inline-block;
+}
+
+div#products-wrapper div#basket {
+    height: auto;
+    width: 100%;
+    margin-top: 30px;
+    padding: 0px;
+    display: none;
+    border: 3px solid rgba(59, 124, 173, 0.71);
+    border-radius: 2px;
+}
+
+div#products-wrapper .basketTotal {
+    width: 40%;
+    border-right: 2px solid rgba(128, 128, 128, 0.39);
+    float: left;
+    padding: 40px;
+    /* height: 126px; */
+    text-align: center;
+    background: rgba(173, 216, 230, 0.23);
+    color: navy;
+    font-size: 1em;
+}
+
+div#products-wrapper .basketButtons {
+    width: 60%;
+    float: right;
+    padding: 5%;
+    text-align: justify;
+}
+
+div#products-wrapper .keepShopping,
+div#products-wrapper .checkOut,
+div#products-wrapper #enterCode {
+    margin-bottom: 10px;
+    background: rgb(8, 30, 121);
+}
+
+div#products-wrapper .checkOut {
+    background-color: #0CA90C;
+}
+
+div#products-wrapper .basketTotal img {
+    height: 40px;
+    display: block;
+    margin: 0;
+    position: relative;
+    left: 40%;
+}
+
+div#products-wrapper .basketTotal h4 {
+    margin-top: 15px;
+    text-align: center;
+}
+
+div#products-wrapper .basketTotal h4,
+div#products-wrapper .basketTotal p {
+    display: inline-block;
+}
+
+div#products-wrapper input.promoCode {
+    width: 62%;
+}
+
+div#products-wrapper .basketTotal h4 {
+    margin-bottom: 0px;
+    display: block;
+}
+
+div#products-wrapper div#basket.cartHide {
+    display: none;
+}
+
+div#products-wrapper div#basket.cartShow {
+    display: block;
+}
+
+div#products-wrapper #toggle {
+    margin-top: 30px;
+    background-color: rgb(59, 124, 173);
+}
+
+div#products-wrapper div#scotchBasketList {
+    margin-bottom: 35px;
+}
+
+div#products-wrapper div#scotchBasketList ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+div#products-wrapper #cartList + h4 {
+    margin-top: 10px;
+}
+
+div#products-wrapper #scotchBasketList + h4 {
+    margin-top: -5px;
+}
+
+div#products-wrapper div#basket:focus {
+    outline: none;
+}
+
+/*Media queries*/
+
+/*design works until around 900px*/
+
+@media only screen and (max-width: 1260px) {
+    div#products-wrapper input.promoCode {
+        width: 58%;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    div#products-wrapper {
+        width: 90%;
+    }
+    div#products-wrapper .buy {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    div#products-wrapper input.promoCode {
+        width: 55%;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    div#products-wrapper {
+        width: 90%;
+    }
+    div#products-wrapper .buy {
+        width: 32%;
+    }
+    div#products-wrapper #basket {
+        font-size: .9em;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    div#products-wrapper .basketButtons {
+        width: 100%;
+        float: none;
+    }
+    div#products-wrapper .basketTotal {
+        width: 100%;
+        float: none;
+        border-right: none;
+    }
+    div#products-wrapper .basketTotal img {
+        left: 0;
+        margin: 0 auto;
+    }
+    div#products-wrapper input.promoCode {
+        width: 65%;
+    }
+}
+
+
+
+@media only screen and (max-width: 860px) {
+    div#products-wrapper {
+        padding: 30px 0;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    div#products-wrapper {
+        margin-top: 10%;
+    }
+    div#products-wrapper {
+        width: 100%;
+        padding-top: 0;
+    }
+    div#products-wrapper h1 {
+        border-bottom: 5px solid rgba(0, 0, 128, 0.8);
+        margin-bottom: 0%;
+        padding: 3% 2% 2%;
+        text-align: center;
+        background: white;
+        margin-top: 5%;
+        color: rgba(0, 0, 128, 0.8);
+        font-weight: 300;
+        border-top: 5px solid rgba(0, 0, 128, 0.8);
+    }
+    div#products-wrapper .product {
+        padding: 35px 5% 50px;
+    }
+    div#products-wrapper .description {
+        width: 80%;
+    }
+    div#products-wrapper .productImage {
+         height: auto;
+        margin-left: 4%;
+        display: inline-block;
+        position: absolute;
+        top: 10%;
+        width: 15%;
+        margin-top: 5%;
+    }
+    div#products-wrapper .buy {
+        float: none;
+        width: 100%;
+        clear: both;
+        margin-top: 25%;
+        text-align: justify;
+    }
+    div#products-wrapper .product::after {
+        content: none;
+    }
+    div#products-wrapper div#basket {
+        border-left: none;
+        border-right: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    div#products-wrapper .productImage {
+        margin-top: 7%;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    div#products-wrapper .productImage {
+        margin-left: 2%;
+        top: 16%;
+        width: 17%;
+        margin-top: 7%;
+    }
+}
+
+
+
+@media only screen and (max-width: 400px) {
+    div#products-wrapper input.promoCode {
+        width: 60%;
+    }
+    div#products-wrapper .productImage {
+        margin-left: 1%;
+        top: 16%;
+        width: 18%;
+        margin-top: 12%;
+    }
+}

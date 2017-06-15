@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profile</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon"
+              type="image/png"
+              href="https://s-media-cache-ak0.pinimg.com/originals/a9/e0/19/a9e01984a9cdadd57b0fd3e0985fb2fc.png">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+        <link rel="stylesheet" href="./dest/styles/main.min.css"/>
+        <script src="https://use.fontawesome.com/3c2bdfb862.js"></script>
+    </head>
+    <body>
+        <header class="header fade-in">
+            <div class="header__overlay">
+                <div class="header__title-container">
+                    <div class="header__titles load-hidden">
+                        <h2 class="header__main-title">Sebastian Ramirez-Brunner</h2>
+                        <p class="header__main-subtitle">Developer Profile</p>
+                    </div>
+                </div>
+                <div class="header__nav-bar-container">
+                    <nav class="header__main-nav">
+                        <ul class="header__nav-list load-hidden">
+                            <li class="header__nav-item nav-item-1" data-destination="1"><a href="#" title="About Me" class="header__nav-link">About Me</a></li>
+                            <li class="header__nav-item nav-item-2" data-destination="2"><a href="#" title="Projects" class="header__nav-link">Projects</a></li>
+                            <!-- <li class="header__nav-item nav-item-3" data-destination="3"><a href="#" title="Aliquam tincidunt mauris eu risus" class="header__nav-link">Photography</a></li> -->
+                            <li class="header__nav-item nav-item-4" data-destination="4"><a href="#" title="Skills" class="header__nav-link">Skills</a></li>
+                            <li class="header__nav-item nav-item-5" data-destination="5"><a href="#" title="Contact" class="header__nav-link">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <p class="header__photo-info-button load-hidden">
+                <i class="fa fa-picture-o" aria-hidden="true"></i>
+            </p>
+            <div class="header__photo-info-popup">
+                Photo: Gulf of Alaska<br />
+                Photographer: Sebastian Ramirez-Brunner
+            </div>
+        </header>
+        <main>
+            <div class="top-arrow">
+              <img src="./dest/images/up-arrow.svg">
+            </div>
+            <div class="image-modal">
+                <div class="image-modal__content">
+                    <div class="image-modal__modal-image">
+                    </div>
+                    <div class="image-modal__modal-text">
+                        <p class="image-modal__modal-text-content">Description</p>
+                    </div>
+                </div>
+                <div class="image-modal__close-modal"></div>
+                <div class="image-modal__image-navigation-arrow right-arrow"></div>
+                <div class="image-modal__image-navigation-arrow left-arrow"></div>
+            </div>
+
+            <section class="section header-section section--about-me" data-destination="1">
+                <h3 class="section__header">About Me</h3>
+                <h3 class="section__subheader">Overview</h3>
+                <p class="section__description">Welcome! I am a New York-based front-end web developer who loves building complex, beautiful, and intuitive user interfaces. I was first exposed to the world of web development while working as a Junior Front-end Developer at Afinium, a tech startup. Since then, I have undertaken intensive study of front-end technologies as a student at Bov Academy, a development training program. I am passionate about travel and geography, and in the future I hope to work on web applications that utilize geolocation technologies and mapping.</p>
+
+                <p class="section__description"><!-- I was born in London but raised in the suburbs of New York City. My family moved to Colorado when I was in high school, which cultivated my interest in the outdoors, skiing, and nature photography.  -->I grew up in the suburbs of New York City and moved to Colorado when I was a teenager. After high school, I attended Dartmouth College and studied Economics and Arabic, and furthermore was fortunate enough to study both Arabic and Spanish abroad in Morocco and Mexico, respectively. Outside of web development, my interests and passions include photography (the header image is one of my photos), travel, cooking, languages, running, skiing, and weightlifting.</p>
+
+                <h3 class="section__subheader">Photo Gallery</h3>
+                <p class="section__description">Below is a photo gallery comprising an assortment of images of me and my friends and family. Click or touch an image in the gallery to see more.</p>
+                <div class="section--about-me__image-grid">
+                    <div class="section--about-me__image-grid-container">
+                        <img src="./dest/images/about-me-image-1.jpeg" class="section--about-me__image-grid-image">
+                        <!-- <div class="section--about-me__tooltip">Tooltip PLaceholder</div> -->
+                    </div>
+                    <div class="section--about-me__image-grid-container">
+                        <img src="./dest/images/about-me-image-2.jpeg" class="section--about-me__image-grid-image">
+                        <!-- <div class="section--about-me__tooltip">Tooltip PLaceholder</div> -->
+                    </div>
+                    <div class="section--about-me__image-grid-container">
+                        <img src="./dest/images/about-me-image-3.jpeg" class="section--about-me__image-grid-image">
+                        <!-- <div class="section--about-me__tooltip">Tooltip PLaceholder</div> -->
+                    </div>
+                    <div class="section--about-me__image-grid-container">
+                        <img src="./dest/images/about-me-image-4.jpeg" class="section--about-me__image-grid-image">
+                        <!-- <div class="section--about-me__tooltip">Tooltip PLaceholder</div> -->
+                    </div>
+                    <div class="section--about-me__image-grid-container">
+                        <img src="./dest/images/about-me-image-5.jpeg" class="section--about-me__image-grid-image">
+                        <!-- <div class="section--about-me__tooltip">Tooltip PLaceholder</div> -->
+                    </div>
+                    <div class="section--about-me__image-grid-container">
+                        <img src="./dest/images/about-me-image-6.jpeg" class="section--about-me__image-grid-image">
+                        <!-- <div class="section--about-me__tooltip">Tooltip PLaceholder</div> -->
+                    </div>
+                    <div class="section--about-me__image-grid-container">
+                        <img src="./dest/images/about-me-image-7.jpeg" class="section--about-me__image-grid-image">
+                        <!-- <div class="section--about-me__tooltip">Tooltip PLaceholder</div> -->
+                    </div>
+                    <div class="section--about-me__image-grid-container">
+                        <img src="./dest/images/about-me-image-8.jpeg" class="section--about-me__image-grid-image">
+                        <!-- <div class="section--about-me__tooltip">Tooltip PLaceholder</div> -->
+                    </div>
+                    <div class="section--about-me__image-grid-container">
+                        <img src="./dest/images/about-me-image-9.jpeg" class="section--about-me__image-grid-image">
+                        <!-- <div class="section--about-me__tooltip">Tooltip PLaceholder</div> -->
+                    </div>
+                    <div class="section--about-me__image-grid-container">
+                        <img src="./dest/images/about-me-image-10.jpeg" class="section--about-me__image-grid-image">
+                        <!-- <div class="section--about-me__tooltip">Tooltip PLaceholder</div> -->
+                    </div>
+                    <div class="section--about-me__image-grid-container">
+                        <img src="./dest/images/about-me-image-11.jpeg" class="section--about-me__image-grid-image">
+                        <!-- <div class="section--about-me__tooltip">Tooltip PLaceholder</div> -->
+                    </div>
+                    <div class="section--about-me__image-grid-container">
+                        <img src="./dest/images/about-me-image-12.jpeg" class="section--about-me__image-grid-image">
+                        <!-- <div class="section--about-me__tooltip">Tooltip PLaceholder</div> -->
+                    </div>
+                    <div class="section--about-me__image-grid-container">
+                        <img src="./dest/images/about-me-image-13.jpeg" class="section--about-me__image-grid-image">
+                        <!-- <div class="section--about-me__tooltip">Tooltip PLaceholder</div> -->
+                    </div>
+                    <div class="section--about-me__image-grid-container">
+                        <img src="./dest/images/about-me-image-14.jpeg" class="section--about-me__image-grid-image">
+                        <!-- <div class="section--about-me__tooltip">Tooltip PLaceholder</div> -->
+                    </div>
+                    <div class="section--about-me__image-grid-container">
+                        <img src="./dest/images/about-me-image-15.jpeg" class="section--about-me__image-grid-image">
+                        <!-- <div class="section--about-me__tooltip">Tooltip PLaceholder</div> -->
+                    </div>
+                </div>
+
+                <h3 class="section__subheader">Some of my Interests</h3>
+                <p class="section__description">Here, you can learn about some of my interests and passions outside of web development. Hover over the buttons below to see descriptions of each.</p>
+                <div class="section--about-me__interest-popups">
+                    <!-- interest popup 1 -->
+                    <!-- folding popup -->
+                    <div class="evo_c-expand-and-fold-out-popup-demo-wrapper">
+                      <ul class="evo_c-expand-and-fold-out-popup">
+                        <li class="evo_c-expand-and-fold-out-popup__popup-button" ontouchstart="">
+                          <p class="evo_c-expand-and-fold-out-popup__text-spacer">Photography</p>
+                          <div class="evo_c-expand-and-fold-out-popup__popup">
+                            <p class="evo_c-expand-and-fold-out-popup__button-text">Photography</p>
+                            <div class="evo_c-expand-and-fold-out-popup__popup-corner"></div>
+                            <div class="evo_c-expand-and-fold-out-popup__popup-text fold-popup-photography">
+                            <p class="evo_c-expand-and-fold-out-popup__popup-caption">I am an amateur photographer and have been practicing since I was in high school. I have compiled a portfolio of photographs, some of which you can view here:</p>
+
+
+                            <!-- carousel -->
+                            <div class="carousel carousel--fade">
+                              <div class="carousel--fade__arrow-prev carousel--fade__nav-button">
+                                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                              </div>
+                              <div class="carousel--fade__image-view">
+                                <div class="carousel--fade__image-container carousel--fade__image-container-selected">
+                                  <img src="./dest/images/photo-portfolio-mountains.jpg" class="carousel--fade__image">
+                                </div>
+                                <div class="carousel--fade__image-container carousel--fade__image-container">
+                                  <img src="./dest/images/photo-portfolio-lightning.jpg" class="carousel--fade__image">
+                                </div>
+                                <div class="carousel--fade__image-container">
+                                  <img src="./dest/images/photo-portfolio-tree.jpg" class="carousel--fade__image">
+                                </div>
+                                <div class="carousel--fade__image-container">
+                                  <img src="./dest/images/photo-portfolio-house.jpg" class="carousel--fade__image">
+                                </div>
+                              </div>
+                              <div class="carousel--fade__arrow-next carousel--fade__nav-button">
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                              </div>
+                              <div class="carousel--fade__bullets">
+                                <div class="carousel--fade__bullet-container">
+                                  <div class="carousel--fade__bullet carousel--fade__bullet--bullet carousel--fade__bullet--bullet--1 carousel--fade__bullet--bullet-selected"></div>
+                                  <div class="carousel--fade__bullet carousel--fade__bullet--bullet carousel--fade__bullet--bullet--2"></div>
+                                  <div class="carousel--fade__bullet carousel--fade__bullet--bullet carousel--fade__bullet--bullet--3"></div>
+                                  <div class="carousel--fade__bullet carousel--fade__bullet--bullet carousel--fade__bullet--bullet--4"></div>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+
+
+                            </div>
+                            <div class="evo_c-expand-and-fold-out-popup__popup-header card-container">
+                              <div class="flip-card">
+                                <div class="flip-card__side flip-card__front">
+                                  <p class="flip-card__header-text">Photography</p>
+                                  <span class="popup-mobile-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- interest popup 2 -->
+                    <!-- folding popup -->
+                    <div class="evo_c-expand-and-fold-out-popup-demo-wrapper">
+                      <ul class="evo_c-expand-and-fold-out-popup">
+                        <li class="evo_c-expand-and-fold-out-popup__popup-button" ontouchstart="">
+                          <p class="evo_c-expand-and-fold-out-popup__text-spacer">Running</p>
+                          <div class="evo_c-expand-and-fold-out-popup__popup">
+                            <p class="evo_c-expand-and-fold-out-popup__button-text">Running</p>
+                            <div class="evo_c-expand-and-fold-out-popup__popup-corner"></div>
+                            <div class="evo_c-expand-and-fold-out-popup__popup-text fold-popup-normal">
+                            <img class="evo_c-expand-and-fold-out-popup__popup-image evo_c-expand-and-fold-out-popup__popup-image--running" src="./dest/images/running.JPG" alt="placeholder+image">
+                            <p class="evo_c-expand-and-fold-out-popup__popup-caption">I have been running competitively since college. I've competed in three half marathons and a handful of smaller races, and intend to try to do one half marathon per year for as long as I can.</p>
+                            </div>
+                            <div class="evo_c-expand-and-fold-out-popup__popup-header card-container">
+                              <div class="flip-card">
+                                <div class="flip-card__side flip-card__front">
+                                  <p class="flip-card__header-text">Running</p>
+                                  <span class="popup-mobile-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- interest popup 3 -->
+                    <!-- folding popup -->
+                    <div class="evo_c-expand-and-fold-out-popup-demo-wrapper">
+                      <ul class="evo_c-expand-and-fold-out-popup evo_c-expand-and-fold-out-popup--travel">
+                        <li class="evo_c-expand-and-fold-out-popup__popup-button" ontouchstart="">
+                          <p class="evo_c-expand-and-fold-out-popup__text-spacer">Travel</p>
+                          <div class="evo_c-expand-and-fold-out-popup__popup">
+                            <p class="evo_c-expand-and-fold-out-popup__button-text">Travel</p>
+                            <div class="evo_c-expand-and-fold-out-popup__popup-corner"></div>
+                            <div class="evo_c-expand-and-fold-out-popup__popup-text fold-popup-normal">
+                            <img class="evo_c-expand-and-fold-out-popup__popup-image" src="./dest/images/desert.jpg" alt="placeholder+image">
+                            <p class="evo_c-expand-and-fold-out-popup__popup-caption">I love traveling and foreign languages. As noted in the introduction, I was able to study abroad in Mexico and Morocco when I was in college. These days, I try to get around as much as possible (my favorite places to visit are currently Spain and France!)</p>
+                            </div>
+                            <div class="evo_c-expand-and-fold-out-popup__popup-header card-container">
+                              <div class="flip-card">
+                                <div class="flip-card__side flip-card__front">
+                                  <p class="flip-card__header-text">Travel</p>
+                                  <span class="popup-mobile-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section class="section section--parallax">
+                <div class="parallax-overlay">
+                    <p class="parallax-overlay__info-button" ontouchstart="">
+                        <i class="fa fa-info" aria-hidden="true"></i>
+                    </p>
+                    <div class="parallax-overlay__info-button-popup"><p><span class="fun-fact">Fun Fact</span>My fiancée and I love France. Though I am just in the process of learning French, my fiancée lived in Paris for three years and is already fluent.</p></div>
+                </div>
+                <div class="parallax-container parallax-2">
+                    <div class="parallax"></div>
+                </div>
+            </section>
+
+
+            <section class="section section--projects normal-section" data-destination="2">
+                <h3 class="section__header">Front-end Development Projects</h3>
+<!--                 <h3 class="section__subheader">Major Works</h3> -->
+                <h3 class="section__subheader">My Portfolio</h3>
+                <p class="section__description">Below is a link to my professional front-end development portfolio. The portfolio page contains links to and descriptions of select major projects I've worked on (including this profile).</p>
+                <a href="https://sebastianrb.github.io/portfolio/" target="_blank" class="section--projects__portfolio-button">Go to my portfolio</a>
+
+                <h3 class="section__subheader">Portfolio Project Overviews</h3>
+                <p class="section__description">If you'd rather not visit my portfolio page now, you can still read an overview of my portfolio projects below to learn more about them.</p>
+                <p class="section__description">Note - these are the same descriptions that can be found on my portfolio page; if you'd like to see the actual projects in action, please head over to the portfolio by clicking the button above.</p>
+
+                <div class="project-descriptions-container">
+                    <div class="project-descriptions-container__project-buttons">
+                        <button class="project-descriptions-container__project-button" data-project-id="2">Developer Profile (this site)</button>
+                        <button class="project-descriptions-container__project-button selected" data-project-id="1">Bov Academy Student Site</button>
+                        <button class="project-descriptions-container__project-button" data-project-id="2.5">Vue.js Photo Gallery</button>
+                        <button class="project-descriptions-container__project-button" data-project-id="3">Evolution UI Framework</button>
+                        <button class="project-descriptions-container__project-button" data-project-id="4">Tic Tac Toe</button>
+                        <button class="project-descriptions-container__project-button" data-project-id="5">Jigsaw Puzzle</button>
+             <!--            <button class="project-descriptions-container__project-button" data-project-id="6">Select Minor Projects</button> -->
+                    </div>
+                    <div class="project-descriptions-container__project-descriptions">
+                        <div class="project-descriptions-container__project-description project-description--1 description-selected" data-project-description-id="1">
+                            <h3 class="project-descriptions-container__project-title">Bov Academy Student Site</h3>
+                            <p class="project-descriptions-container__project-overview-text">I am a lead developer on the team that built the student profile site for Bov Academy. The site contains profiles for the school's student body and heavily utilizes multimedia and various animation effects. We built the site using vanilla JavaScript.</p>
+                            <div class="project-descriptions-container__project-image-container">
+                                <img src="./dest/images/student-site.png" alt="placeholder+image" class="project-descriptions-container__project-image">
+                            </div>
+                        </div>
+                        <div class="project-descriptions-container__project-description project-description--2point5" data-project-description-id="2.5">
+                            <h3 class="project-descriptions-container__project-title">Vue.js Photo Gallery</h3>
+                            <p class="project-descriptions-container__project-overview-text">This project is a photo gallery featuring some of my amateur photography work. The application is built using the Vue.js JavaScript framework.</p>
+                            <div class="project-descriptions-container__project-image-container">
+                                <img src="./dest/images/vue-gallery.png" alt="placeholder+image" class="project-descriptions-container__project-image">
+                            </div>
+                        </div>
+                        <div class="project-descriptions-container__project-description project-description--3" data-project-description-id="3">
+                            <h3 class="project-descriptions-container__project-title">Evolution UI Framework </h3>
+                            <p class="project-descriptions-container__project-overview-text">Evolution UI is an open-source front-end framework comprising a library of innovative, unique web components, as well as a collection of standard components. I have contributed to and helped develop the project, and I now serve as a core maintainer.</p>
+                            <div class="project-descriptions-container__project-image-container">
+                                <img src="./dest/images/evolution.png" alt="placeholder+image" class="project-descriptions-container__project-image">
+                            </div>
+                        </div>
+                        <div class="project-descriptions-container__project-description project-description--4" data-project-description-id="4">
+                            <h3 class="project-descriptions-container__project-title">Tic Tac Toe</h3>
+                            <p class="project-descriptions-container__project-overview-text">This is a fully functional game of Tic Tac Toe played against the computer. The computer is moderately intelligent and will often try to block the player when the player is nearing victory. In addition, the computer will sometimes move first to keep things fair and interesting.</p>
+                            <div class="project-descriptions-container__project-image-container">
+                                <img src="./dest/images/tic-tac-toe.png" alt="placeholder+image" class="project-descriptions-container__project-image">
+                            </div>
+                        </div>
+                        <div class="project-descriptions-container__project-description project-description--5" data-project-description-id="5">
+                            <h3 class="project-descriptions-container__project-title">Jigsaw Puzzle</h3>
+                            <p class="project-descriptions-container__project-overview-text">This is a working jigsaw puzzle. The user can ask for hints, reset the game as needed, and increase the difficulty. Be warned: the puzzle is fairly challenging, so pay close attention to the three hints!</p>
+                            <div class="project-descriptions-container__project-image-container">
+                                <img src="./dest/images/jigsaw.png" alt="placeholder+image" class="project-descriptions-container__project-image">
+                            </div>
+                        </div>
+                        <div class="project-descriptions-container__project-description project-description--6" data-project-description-id="6">
+                            <h3 class="project-descriptions-container__project-title">Select Minor Projects</h3>
+                            <p class="project-descriptions-container__project-overview-text">The portfolio includes a selection of minor projects. These projects are relatively small in scale and less complex than the others, but nonetheless exhibit important technologies and development techniques. They include a Handlebars photo album, an AJAX fact generator, and a Regex link harvester.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="section section--parallax">
+                <div class="parallax-overlay">
+                    <p class="parallax-overlay__info-button" ontouchstart="">
+                        <i class="fa fa-info" aria-hidden="true"></i>
+                    </p>
+                    <div class="parallax-overlay__info-button-popup"><p><span class="fun-fact">Fun Fact</span>I am an avid skier. Every year my college friends and I do a big ski trip out west.</p></div>
+                </div>
+                <div class="parallax-container parallax-3">
+                    <div class="parallax"></div>
+                </div>
+            </section>
+
+
+            <section class="section normal-section section normal-section--skills" data-destination="4">
+                <h3 class="section__header">Web Development Skillset</h3>
+
+                <p class="section__description">This sections provides an overview of my technical skillset organized by technology type.</p>
+                <div class="skills-graphs">
+                    <div class="skills-line-chart">
+                        <div class="line-chart-frontend">90%</div>
+                        <div class="line-chart-backend">10%</div>
+                    </div>
+                    <div class="skills-bar-charts">
+                        <div class="bar-chart bar-chart-frontend">
+                        <!-- <div class="bar-chart__coming-soon-overlay"></div> -->
+                            <table>
+                                <caption>Core Front-end Technologies</caption>
+                                <tbody>
+                                    <tr>
+                                        <th>JavaScript</th>
+                                        <td ontouchstart="" class="skill-collapsed" data-tooltip="Expert"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>HTML5/CSS3</th>
+                                        <td ontouchstart="" class="skill-collapsed" data-tooltip="Expert"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>jQuery</th>
+                                        <td ontouchstart="" class="skill-collapsed" data-tooltip="Proficient"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Vue.js</th>
+                                        <td ontouchstart="" class="skill-collapsed" data-tooltip="Proficient"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>React.js</th>
+                                        <td ontouchstart="" class="skill-collapsed" data-tooltip="Learning"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="bar-chart-frontend-y-axis">
+                                <div>
+                                    <p>Expert</p>
+                                </div>
+                                <div>
+                                    <p>Proficient</p>
+                                </div>
+                                <div>
+                                    <p>Competent</p>
+                                </div>
+                                <div>
+                                    <p>Learning</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bar-chart bar-chart-other">
+                            <table>
+                                <caption id="other-caption">Ancillary Technologies</caption>
+                                <tbody>
+                                    <tr>
+                                        <th>Git</th>
+                                        <td ontouchstart="" class="skill-collapsed" data-tooltip="Expert"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Command Line</th>
+                                        <td ontouchstart="" class="skill-collapsed" data-tooltip="Expert"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Task Runners</th>
+                                        <td ontouchstart="" class="skill-collapsed" data-tooltip="Proficient"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>JS Templating</th>
+                                        <td ontouchstart="" class="skill-collapsed" data-tooltip="Competent"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="bar-chart-other-y-axis">
+                                <div>
+                                    <p>Expert</p>
+                                </div>
+                                <div>
+                                    <p>Proficient</p>
+                                </div>
+                                <div>
+                                    <p>Competent</p>
+                                </div>
+                                <div>
+                                    <p>Learning</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bar-chart bar-chart-backend">
+                            <div class="bar-chart__coming-soon-overlay">
+                                <p class="bar-chart__coming-soon-text">
+                                    <i class="fa fa-info" aria-hidden="true"></i>
+                                </p>
+                                <div class="bar-chart__coming-soon-popup">I intend to learn about back-end web development technologies soon.</div>
+                                <p class="bar-chart__coming-soon-text-mobile">
+                                    Coming Soon...
+                                </p>
+                            </div>
+                            <table>
+                                <caption id="backend-caption">Backend Development</caption>
+                                <tbody>
+                                    <tr>
+                                        <th>NodeJS</th>
+                                        <td ontouchstart="" data-tooltip="Learning"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>MySQL</th>
+                                        <td ontouchstart="" data-tooltip="Learning"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Python</th>
+                                        <td ontouchstart="" data-tooltip="Learning"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>PHP</th>
+                                        <td ontouchstart="" data-tooltip="Learning"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="bar-chart-backend-y-axis">
+                                <div>
+                                    <p>Expert</p>
+                                </div>
+                                <div>
+                                    <p>Proficient</p>
+                                </div>
+                                <div>
+                                    <p>Competent</p>
+                                </div>
+                                <div>
+                                    <p>Learning</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="section section--parallax">
+                <div class="parallax-overlay">
+                    <p class="parallax-overlay__info-button" ontouchstart="">
+                        <i class="fa fa-info" aria-hidden="true"></i>
+                    </p>
+                    <div class="parallax-overlay__info-button-popup"><p><span class="fun-fact">Fun Fact</span>I am a big fan of whiskey, and Scotch in particular.</p></div>
+                </div>
+                <div class="parallax-container parallax-1">
+                    <div class="parallax"></div>
+                </div>
+            </section>
+
+            <section class="section normal-section" data-destination="5">
+                <h3 class="section__header">Contact</h3>
+                <p class="section__description">Below is a "business card" that contains some of my contact information. Please feel free to get in touch!</p>
+
+                <p class="section__description">(Click or touch the card to flip it over!)</p>
+
+                <div id="business-card-wrapper">
+                    <div class="business-card">
+                        <input type="checkbox" name="card-check" id="card-check">
+                        <label for="card-check">
+                            <article class="content front">
+                                <div class="business-card__overlay"></div>
+                                <div class="text1">
+                                    <h1 id="name">Sebastian Ramirez-Brunner</h1>
+                                    <h4 id="position">Front-end Developer</h4>
+                                    <p class="description">NYC-based developer who loves building elegent, functional user interfaces <!-- After graduation, I hope to work on applications that incorporate geolocation functionality and APIs. --></p>
+                                    <!-- <p class="contact email"><a href="mailto:sebastian.r.rb@gmail.com?Subject=Hey">sebastian.r.rb@gmail.com</a></p> -->
+                                </div>
+                                <img id="flip-icon" src="component-files/DigitalBusinessCard_Assets/flip-icon.svg">
+                                <div id="business-card-encyclopedia">
+                                    <a href="mailto:sebastian.r.rb@gmail.com?Subject=Hey there" target="_blank" id="encyclopedia-container-link">
+                                        <img id="encyclopedia-icon" src="./dest/images/mail.svg">
+                                        <div id="encyclopedia-text">
+                                <!--             <h4>Sebastian Ramirez-Brunner</h4> -->
+                                            <p class="contact email"><!-- <a href="mailto:sebastian.r.rb@gmail.com?Subject=Hey"> -->sebastian.r.rb@gmail.com<!-- </a> --></p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div id="icons">
+                                    <div data-tooltip="Facebook"><a href="https://www.facebook.com/sebastian.ramirezbrunner" target="_blank"><img src="./component-files/DigitalBusinessCard_Assets/facebook.png" alt="Facebook" class="icon"></a></div>
+                                    <div data-tooltip="GitHub"><a href="https://github.com/sebastianrb" target="_blank"><img src="./component-files/DigitalBusinessCard_Assets/github1.png" alt="GitHub" class="icon"></a></div>
+                                    <div data-tooltip="LinkedIn"><a href="https://www.linkedin.com/in/sebastian-ramirez-brunner-7544b08a?trk=hp-identity-name" target="_blank"><img src="./component-files/DigitalBusinessCard_Assets/linkedin.png" alt="Linkedin" class="icon"></a></div>
+                                </div>
+                            </article>
+                            <article class="content back">
+                                <img src="old-project-files/Business-Card-Assets/DigitalBusinessCard_Assets/flip-icon.svg" alt="placeholder+image" class="flip-icon-back">
+                            </article>
+                        </label>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+        <div class="mobile-menu-button">
+            <div class="mobile-menu-button__menu-line"></div>
+            <div class="mobile-menu-button__menu-line"></div>
+            <div class="mobile-menu-button__menu-line"></div>
+        </div>
+        <footer class="footer">
+            <h4 class="footer_header">&copy; 2017</h4>
+            <h4 class="footer_header">Site developed by Sebastian Ramirez-Brunner</h4>
+        </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script defer type="text/javascript" src="./dest/scripts/main.min.js"></script>
+    </body>
+</html>

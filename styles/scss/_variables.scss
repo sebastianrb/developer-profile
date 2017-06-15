@@ -1,0 +1,42 @@
+// colors
+$primary-color: #010138;
+$secondary-color: #f94c0c;
+$secondary-color-muted: #d4643b;
+$carousel-indicators: rgba(211,211,211,.5);
+$carousel-bullet-hover: #aaaaaa;
+$contact-panel-light-blue: #4686e6;
+$contact-panel-dark-blue: #185abd;
+$about-me-dark-gray: rgba(211, 211, 211, 0.21);
+$about-me-light-gray: rgba(169, 169, 169, 0.56);
+$tooltip-background: rgba(0, 0, 0, .9);
+$carousel-next-prev-background: rgba(255, 255, 255, 0.6);
+$carousel-next-prev-background-hover: rgba(249, 76, 12, .5);
+$contact-panal-border: rgba(1, 1, 56, 0.70);
+$contact-panel-pink: rgb(248, 146, 229);
+$mobile-menu-blue: #03034a;
+$mobile-menu-drawer: rgba(1,1,56,.7);
+$open-project-blue: rgba(1,1,56,.8);
+$project-label-hover-background: rgba(211, 211, 211, 0.6);
+$box-shadow-black: rgba(0, 0, 0, 0.3);
+$tab-content-paragraph-color: rgba(1,1,56,.6);
+$front-end-bar-color: rgb(1, 1, 56);
+
+//border radius
+$three-radius: 3px;
+$four-radius: 4px;
+
+//fonts
+$font-stack: 16px * 1.2 "Libre Franklin", "Hind Madurai", "Arial", Geneva, sans-serif;
+
+//other
+$max-width: 1500px;
+
+
+//break points
+$breakpoint-large: 1200px;
+$breakpoint-medium-large: 1000px;
+$breakpoint-medium: 900px;
+$breakpoint-small-medium: 750px;
+$breakpoint-small: 600px;
+$breakpoint-extra-small: 500px;
+$breakpoint-smallest: 400px;

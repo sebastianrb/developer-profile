@@ -1,0 +1,2800 @@
+/*general project styles*/
+
+/*alternative blue? #03034a*/
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    color: #010138;
+    font-family: "Libre Franklin", "Hind Madurai", "Arial", Geneva, sans-serif;
+    font-size: 1.2em;
+    margin: 0 auto;
+    max-width: 1500px;
+    overflow-x: hidden;
+    font-weight: 300;
+}
+
+main {
+    padding-bottom: 40px;
+    min-height: 800px;
+    position: relative;
+}
+
+.spacer {
+    position: relative;
+}
+
+footer {
+    width: 100%;
+    padding: 25px;
+    text-align: center;
+    background: navy;
+    margin-top: 5px;
+    background: #010138;
+    color: rgb(199, 199, 199);
+    position: relative;
+    top: 34%;
+    box-shadow: 2px 0px 14px 0px rgba(0,0,0, .5);
+    height: 110px;
+}
+
+header {
+    /*background: linear-gradient(to right, rgba(2, 2, 62, .81) 10%, rgba(255, 255, 255, .1)), url(./portfolio-banner.jpg) no-repeat;*/
+    /*background: linear-gradient(to right, rgba(2, 2, 62, .81) 10%, rgba(255, 255, 255, .1)), url(./portfolio-banner.jpg) no-repeat;*/
+    /*background: linear-gradient(to right, rgba(23, 23, 25, 0.90) 15%, rgba(255, 255, 255, .1)), url(./portfolio-banner.jpg) no-repeat;*/
+    background: url(../images/portfolio-banner-smaller.jpg) no-repeat;
+    background-size: cover;
+    color: #c7c7c7;
+    margin: 0 0;
+    overflow: auto;
+    position: relative;
+    height: 210px;
+    box-shadow: 2px 0px 13px 0px rgba(0,0,0, .5);
+    margin-bottom: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*GENERAL STYLES*/
+
+header div.name {
+    float: left;
+    height: 100%;
+    padding: 55px 50px 50px;
+    background: rgba(1,1,56,.7);
+    letter-spacing: 1px;
+}
+
+header div.search-container {
+    float: right;
+    position: relative;
+    background: rgba(0,0,0,.6);
+    padding: 25px 0 21px;
+    box-sizing: inherit;
+    width: 23%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    border-bottom-left-radius: 3px;
+}
+
+header div.search-container label[for="modal-check"],
+header#main-header div.modal label[for*="modal-project"] {
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    border: 2px solid white;
+    color: white;
+    margin-left: 10px;
+    padding: 8px 13px;
+    cursor: pointer;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+    font-size: .7em;
+}
+
+header div.search-container #modal label[for="modal-check"],
+header#main-header div.modal label[for*="modal-project"] {
+    border: none;
+    margin: 0;
+    width: 60px;
+    height: 60px;
+    background: transparent url("./misc-images/x-mark.svg") no-repeat;
+    background-size: 27px;
+    background-position: 50% 50%;
+    color: transparent;
+    position: absolute;
+    z-index: 1060;
+    right: 30px;
+    top: 20px;
+}
+
+header div.search-container label[for="modal-check"]:hover {
+    color: #ea521a;
+    border-color: #ea521a;
+}
+
+header div.search-container input#modal-check,
+.modal-project-check {
+    display: none;
+}
+
+
+header div.search-container input#search-box {
+    border: none;
+    height: 25px;
+    margin: 5px;
+    width: 50%;
+    padding: 10px 35px 12px 2px;
+    font-size: .8em;
+    background: transparent url("./misc-images/magnifying-glass.svg") no-repeat;
+    background-size: 15px;
+    background-position: 95% 25%;
+    border-bottom: 2px solid #c7c7c7;
+    color: white;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    -ms-transition: all .2s;
+    transition: all .2s;
+}
+
+header div.search-container input#search-box:focus,
+header div.search-container input#search-box:valid {
+    outline: none;
+    border-bottom: 2px solid white;
+}
+
+
+header div.search-container label[for="search-box"] {
+    position: absolute;
+    right: 69%;
+    top: 29%;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+    cursor: text;
+}
+
+header div.search-container input#search-box:focus + label,
+header div.search-container input#search-box:valid + label {
+    color: darkgray;
+    top: 9%;
+    right: 75%;
+    font-size: .7em;
+    opacity: 0;
+}
+
+header div.search-container #modal,
+header#main-header div.modal,
+div#mobile-menu div.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(1,1,56,.9);
+    -webkit-transition: opacity .4s;
+    -moz-transition: opacity .4s;
+    -o-transition: opacity .4s;
+    -ms-transition: opacity .4s;
+    transition: opacity .4s;
+    left: 0;
+    top: 0;
+    z-index: -500;
+}
+
+div#mobile-menu div.modal {
+    background-color: rgba(1,1,56,0.7);
+}
+
+
+
+header div.search-container input#modal-check:checked ~ #modal,
+div#mobile-menu input[type="checkbox"]:checked ~ div.modal {
+    opacity: .9;
+    z-index: 1050;
+}
+
+header#main-header input[id*="modal-project"]:checked + div.modal {
+    opacity: 1;
+    z-index: 1050;
+}
+
+header div.search-container #modal h3,
+header#main-header div.modal h3 {
+    margin-top: 20%;
+    font-size: 2em;
+    color: transparent;
+}
+
+header#main-header div.modal h3 {
+    color: #ad0e0e;
+    padding: 3% 0 0;
+    line-height: 1;
+    font-size: 1.6em;
+    margin: 0;
+}
+
+header div.search-container input#modal-check:checked ~ #modal h3,
+header#main-header input[id*="modal-project"]:checked + div.modal h3 {
+    color: #ad0e0e;
+    padding: 6% 7%;
+    line-height: 1.5;
+}
+
+header#main-header input[id*="modal-project"]:checked + div.modal h3 {
+    padding: 40px 0 0;
+    line-height: 1;
+}
+
+
+header div.name h1 {
+    font-weight: 100;
+    margin: 10px 0 0;
+    font-size: 1.8em;
+}
+
+header div.name h3 {
+    margin-top: 0;
+    /*color: #ea521a;*/
+    color: #f94c0c;
+}
+
+div.sections {
+    text-align: justify;
+    padding: 20px 50px;
+}
+
+div.sections:after {
+  content: '';
+  width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+  display: inline-block;
+}
+
+div.tab {
+    display: inline-block;
+   /* width: 21%;
+    padding: 20px 15px;*/
+    text-align: center;
+/*    position: relative;*/
+    width: 22%;
+    padding: 20px 1%;
+}
+
+div.tab label {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+    margin-right: 10px;
+    text-align: center;
+    width: 100%;
+    border-bottom: 4px solid lightgray;
+    padding: 15px 0 6px;
+    cursor: pointer;
+    background: white;
+    -webkit-transition: background-position .6s, color .3s, border-radius 1s;
+    -moz-transition: background-position .6s, color .3s, border-radius 1s;
+    -o-transition: background-position .6s, color .3s, border-radius 1s;
+    -ms-transition: background-position .6s, color .3s, border-radius 1s;
+    transition: background-position .6s, color .3s, border-radius 1s;
+    color: #010138;
+    font-size: 1.1em;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid transparent;
+    letter-spacing: 3px;
+    z-index: 100;
+    background: rgba(255, 255, 255, 1) url(../images/label-background-gradient.jpg) no-repeat;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    font-weight: bold;
+    /*background-position: 129%;*/
+    /*background-position: -28%;*/
+    background-position: -31%;
+    background-color: white;
+}
+
+
+div.tab input {
+    display: none;
+}
+
+div.tab div.content {
+    position: absolute;
+    left: 6%;
+    padding: 40px 45px 40px 30px;
+    opacity: 0;
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    -ms-transition: opacity .5s;
+    transition: opacity .5s;
+    margin-top: 60px;
+    width: 88%;
+    background: radial-gradient(at 50% 70%, white, rgba(211, 211, 211, 0.70));
+    border-radius: 3px;
+    /*box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);*/
+    box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.3) inset;
+}
+
+div.tab label[for="skills-radio"] ~ div.content {
+    padding-bottom: 70px;
+}
+
+div.tab label[for="about-radio"] ~ div.content {
+    min-height: 810px;
+    padding-left: 55px;
+}
+
+div.tab label[for="contact-radio"] ~ div.content {
+    height: 90%;
+}
+
+div.tab div.content p {
+    font-size: 1.1em;
+    color: rgba(1,1,56,.6);
+    width: 75%;
+    margin: 15px auto 30px;
+}
+
+div.tab div.content h3 {
+    font-size: 1.6em;
+    margin: 13px auto 5px;
+    letter-spacing: 1px;
+}
+
+
+label.section-label:after{
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    margin: 0 auto;
+    background: transparent;
+    -webkit-transition: width .4s ease, background-color .3s ease;
+    -moz-transition: width .4s ease, background-color .3s ease;
+    -o-transition: width .4s ease, background-color .3s ease;
+    -ms-transition: width .4s ease, background-color .3s ease;
+    transition: width .4s ease, background-color .3s ease;
+    position: relative;
+    right: 0;
+    top: 9px;
+    border-radius: 2%;
+}
+label.section-label:hover:after {
+    width: 100%;
+    background: #010138;
+}
+
+div.tab input[type="radio"]:checked + label::after {
+    background-color: transparent;
+    transition: background-color .01s;
+}
+
+
+div.tab input[type="radio"]:checked + label {
+    border: none;
+    border-bottom: 4px solid #010138;
+    color: white;
+    /*background: rgba(255, 255, 255, 1) url(../images/label-background-gradient.jpg) no-repeat;*/
+    background: linear-gradient(to right, rgba(1, 1, 56, 0.4), rgba(1, 1, 56, .1)), url(../images/label-background-gradient.jpg) no-repeat;
+    font-weight: 200;
+    /*background-position: 7%;*/
+    /*background-position: 50%;*/
+    background-position: 40%;
+    -webkit-transition: background-position 1s, color .3s, box-shadow .3s;
+    -moz-transition: background-position 1s, color .3s, box-shadow .3s;
+    -o-transition: background-position 1s, color .3s, box-shadow .3s;
+    -ms-transition: background-position 1s, color .3s, box-shadow .3s;
+    transition: background-position 1s, color .3s, box-shadow .3s;
+    /* border-radius: 6px; */
+    box-shadow: 0 0 8px 3px #003b7c inset;
+}
+
+div.tab div.arrow {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    position: relative;
+    bottom: 10px;
+    opacity: 0;
+    -webkit-transition: bottom .4s, opacity .3s ease-in;
+    -moz-transition: bottom .4s, opacity .3s ease-in;
+    -o-transition: bottom .4s, opacity .3s ease-in;
+    -ms-transition: bottom .4s, opacity .3s ease-in;
+    transition: bottom .4s, opacity .3s ease-in;
+}
+
+div.tab input[type="radio"]:checked ~ div.arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #010138;
+    position: relative;
+    top: 81%;
+    left: 45%;
+    margin: 0;
+    opacity: 1;
+    bottom: 0;
+}
+
+
+div.tab input[type="radio"]:checked ~ div.content {
+    opacity: 1;
+    z-index: 1000;
+}
+
+/*PROJECTS TAB STYLING*/
+
+div#projects-tabs {
+    width: 96%;
+    margin: 60px auto 0;
+    text-align: left;
+    position: relative;
+    height: 530px;
+}
+
+div#projects-tabs div.project-tab label {
+    width: 30%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    font-size: 1em;
+    color: rgba(1,1,56,.7);
+    border: none;
+    border-left: 3px solid transparent;
+    -webkit-transition: border-left .3s;
+    -moz-transition: border-left .3s;
+    -o-transition: border-left .3s;
+    -ms-transition: border-left .3s;
+    transition: border-left .3s;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+}
+
+div#projects-tabs div.project-tab label::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #010138;
+    opacity: 0;
+    position: absolute;
+    left: -12px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+
+div#projects-tabs div.project-tab label:hover::before {
+    opacity: 1;
+    left: 0;
+}
+
+div#projects-tabs div.project-tab label:hover {
+    background: rgba(211, 211, 211, 0.6);
+}
+
+
+div#projects-tabs div.project-tab input[type="radio"]:checked + label {
+    background: white;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    border: none;
+    box-shadow: 0px 0px 6px 0px #b3b2b2;
+    /*color: #ea521a;*/
+    color: #f94c0c;
+    border-left: 3px solid #010138;
+    z-index: auto;
+    font-weight: 500;
+}
+
+
+div#projects-tabs div.project-tab input[type="radio"]:checked + label::before {
+    opacity: 1;
+    left: 0;
+}
+
+
+div#projects-tabs div.project-tab input[type="radio"]:checked + label::after {
+    content: "";
+    height: 100%;
+    width: 7px;
+    background: white;
+    position: absolute;
+    left: 98%;
+    z-index: 1001;
+    top: 0;
+}
+
+
+div#projects-tabs div.project-tab div.content {
+    top: 0;
+    width: 71%;
+    right: 0;
+    left: 30%;
+    margin: 0;
+    padding: 10px 35px;
+    background: white;
+    border-radius: 0;
+    height: 500px;
+    box-shadow: none;
+    border: none;
+    box-shadow: 0px 0px 6px 0px #b3b2b2;
+}
+
+
+
+
+/*CAROUSEL STYLING*/
+
+div#projects-tabs div.project-tab .carousel {
+    position: relative;
+    margin-top: 26px;
+    height: 100%;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 90%;
+}
+
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: opacity .4s;
+    -moz-transition: opacity .4s;
+    -o-transition: opacity .4s;
+    -ms-transition: opacity .4s;
+    transition: opacity .4s;
+    z-index: 10;
+}
+
+div#projects-tabs div.project-tab .carousel-open:checked + .carousel-item {
+    opacity: 1;
+    z-index: 100;
+}
+
+
+div#projects-tabs div.project-tab .carousel label.carousel-control {
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    -webkit-transition: background .2s;
+    -moz-transition: background .2s;
+    -o-transition: background .2s;
+    -ms-transition: background .2s;
+    transition: background .2s;
+}
+
+div#projects-tabs div.project-tab .carousel label.carousel-control::before,
+div#projects-tabs div.project-tab .carousel .carousel-bullet::before {
+    display: none;
+}
+
+div#projects-tabs div.project-tab .carousel label.carousel-control.next {
+    background: rgba(255, 255, 255, 0.6) url("./misc-images/next.svg") no-repeat;
+    background-position: 50% 50%;
+    background-size: 50%;
+}
+
+div#projects-tabs div.project-tab .carousel label:hover {
+    background: none;
+}
+
+div#projects-tabs div.project-tab .carousel label.carousel-control.prev {
+    background: rgba(255, 255, 255, 0.6) url("./misc-images/back.svg") no-repeat;
+    background-position: 39% 50%;
+    background-size: 50%;
+}
+
+div#projects-tabs div.project-tab .carousel label.carousel-control:hover {
+    background-color: rgba(249, 76, 12, .5);
+}
+
+
+.carousel-control.prev {
+    left: 2%;
+}
+
+.carousel-control.next {
+    right: 1%;
+}
+
+div#projects-tabs div.project-tab .carousel #carousel-1-project-2:checked ~ .control-1,
+div#projects-tabs div.project-tab .carousel #carousel-2-project-2:checked ~ .control-2,
+div#projects-tabs div.project-tab .carousel #carousel-3-project-2:checked ~ .control-3,
+div#projects-tabs div.project-tab .carousel #carousel-4-project-2:checked ~ .control-4,
+div#projects-tabs div.project-tab .carousel #carousel-1-project-1:checked ~ .control-1,
+div#projects-tabs div.project-tab .carousel #carousel-2-project-1:checked ~ .control-2,
+div#projects-tabs div.project-tab .carousel #carousel-3-project-1:checked ~ .control-3,
+div#projects-tabs div.project-tab .carousel #carousel-4-project-1:checked ~ .control-4,
+div#projects-tabs div.project-tab .carousel #carousel-1-project-3:checked ~ .control-1,
+div#projects-tabs div.project-tab .carousel #carousel-2-project-3:checked ~ .control-2,
+div#projects-tabs div.project-tab .carousel #carousel-3-project-3:checked ~ .control-3,
+div#projects-tabs div.project-tab .carousel #carousel-4-project-3:checked ~ .control-4,
+div#projects-tabs div.project-tab .carousel #carousel-1-project-4:checked ~ .control-1,
+div#projects-tabs div.project-tab .carousel #carousel-2-project-4:checked ~ .control-2,
+div#projects-tabs div.project-tab .carousel #carousel-3-project-4:checked ~ .control-3,
+div#projects-tabs div.project-tab .carousel #carousel-1-project-5:checked ~ .control-1,
+div#projects-tabs div.project-tab .carousel #carousel-2-project-5:checked ~ .control-2,
+div#projects-tabs div.project-tab .carousel #carousel-3-project-5:checked ~ .control-3,
+div#projects-tabs div.project-tab .carousel #carousel-4-project-5:checked ~ .control-4,
+div#projects-tabs div.project-tab .carousel #carousel-1-project-6:checked ~ .control-1,
+div#projects-tabs div.project-tab .carousel #carousel-2-project-6:checked ~ .control-2,
+div#projects-tabs div.project-tab .carousel #carousel-3-project-6:checked ~ .control-3,
+div#projects-tabs div.project-tab .carousel #carousel-4-project-6:checked ~ .control-4,
+div#projects-tabs div.project-tab .carousel #carousel-1-project-7:checked ~ .control-1,
+div#projects-tabs div.project-tab .carousel #carousel-2-project-7:checked ~ .control-2,
+div#projects-tabs div.project-tab .carousel #carousel-3-project-7:checked ~ .control-3,
+div#projects-tabs div.project-tab .carousel #carousel-4-project-7:checked ~ .control-4
+ {
+    display: block;
+}
+
+div#projects-tabs div.project-tab .carousel .carousel-indicators {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    height: 50px;
+    background: rgba(211,211,211,.5);
+    border-radius: 3px;
+}
+
+div#projects-tabs div.project-tab .carousel .carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+div#projects-tabs div.project-tab .carousel .carousel-bullet {
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+    color: #010138;
+    padding-top: 5px;
+}
+
+div#projects-tabs div.project-tab .carousel .carousel-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel-1-project-2:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2-project-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3-project-2:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet,
+#carousel-4-project-2:checked ~ .control-4 ~ .carousel-indicators li:nth-child(4) .carousel-bullet,
+#carousel-1-project-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2-project-1:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3-project-1:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet,
+#carousel-4-project-1:checked ~ .control-4 ~ .carousel-indicators li:nth-child(4) .carousel-bullet,
+#carousel-1-project-3:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2-project-3:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3-project-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet,
+#carousel-4-project-3:checked ~ .control-4 ~ .carousel-indicators li:nth-child(4) .carousel-bullet,
+#carousel-1-project-4:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2-project-4:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3-project-4:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet,
+#carousel-1-project-5:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2-project-5:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3-project-5:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet,
+#carousel-4-project-5:checked ~ .control-4 ~ .carousel-indicators li:nth-child(4) .carousel-bullet,
+#carousel-1-project-6:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2-project-6:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3-project-6:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet,
+#carousel-4-project-6:checked ~ .control-4 ~ .carousel-indicators li:nth-child(4) .carousel-bullet,
+#carousel-1-project-7:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2-project-7:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3-project-7:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet,
+#carousel-4-project-7:checked ~ .control-4 ~ .carousel-indicators li:nth-child(4) .carousel-bullet    {
+    /*color: #ea521a;*/
+    color: #f94c0c;
+}
+
+
+.carousel .project-description-container {
+    padding: 5px 8px;
+    text-align: left;
+}
+
+
+div.tab div.content .carousel .project-description-container h3 {
+    font-size: 1.1em;
+    margin: 3% auto 10px;
+}
+
+div.tab div.content .carousel .project-description-container h3,
+div.tab div.content .carousel .project-description-container p {
+    width: 80%;
+}
+
+div.tab div.content .carousel .project-description-container p {
+    margin: 10px auto;
+    font-size: .9em;
+}
+
+div.tab div.content .carousel .project-description-container p a {
+    background: transparent url("./misc-images/github-sign.svg") no-repeat;
+    background-size: 30px;
+    background-position: 0% 50%;
+    padding: 15px 20px 15px 40px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+
+div.tab div.content .carousel .project-description-container p.link-to-github {
+    margin-top: 25px;
+}
+
+div.tab div.content .carousel .project-description-container p a:hover {
+    /*color: #ea521a;*/
+    color: #f94c0c;
+}
+
+
+div.tab div.content .carousel .carousel-item img {
+    width: 100%;
+}
+
+div.tab div.content .carousel .carousel-item img.calculator {
+    margin: 20px auto;
+    display: block;
+}
+
+div.tab div.content .carousel .project-description-container p.link-to-github:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    -webkit-transition: width .5s ease, background-color .4s ease;
+    -moz-transition: width .5s ease, background-color .4s ease;
+    -o-transition: width .5s ease, background-color .4s ease;
+    -ms-transition: width .5s ease, background-color .4s ease;
+    transition: width .5s ease, background-color .4s ease;
+    position: relative;
+    top: 10px;
+}
+div.tab div.content .carousel .project-description-container p.link-to-github:hover:after {
+    width: 14.5em;
+    /*background: #ea521a;*/
+    background: #f94c0c;
+}
+
+/*SKILS GRAPH STYLING*/
+
+.skills-graphs {
+    width: 100%;
+    margin: 3rem auto 20px;
+    position: relative;
+}
+
+.skills-line-chart {
+    color: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    width: 70%;
+    height: 1.8rem;
+    margin: 0 auto 7rem;
+}
+
+.line-chart-backend, .line-chart-frontend {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.line-chart-frontend {
+    padding-left: .6rem;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    width: 90%;
+    background-color: rgb(1, 1, 56);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.line-chart-backend {
+    padding-right: .6rem;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    width: 10%;
+    background-color: #f94c0c;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.skills-bar-charts {
+    width: 80%;
+    height: 100%;
+    margin: 6rem auto 5rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+div.tab div.content .bar-chart-backend-y-axis>div p, div.tab div.content .bar-chart-frontend-y-axis>div p {
+    width: 200px;
+    text-align: right;
+    position: absolute;
+    left: -13rem;
+    top: 0;
+}
+
+.bar-chart-backend, .bar-chart-frontend {
+    width: 40%;
+    height: 185px;
+    position: relative;
+}
+
+.skills-graphs table caption {
+    font-size: .9em;
+    font-weight: bold;
+    width: 100%;
+    caption-side: top;
+    position: relative;
+    top: -55px;
+}
+
+.skills-graphs table caption#backend-caption {
+    color: #f94c0c;
+}
+
+.bar-chart-backend table, .bar-chart-frontend table {
+    position: relative;
+    width: 100%;
+    height: 175px;
+}
+
+
+.bar-chart-backend table tr, .bar-chart-frontend table tr {
+    height: 180px;
+    border-bottom: 1px solid silver;
+}
+
+.bar-chart-backend table tr:nth-child(1), .bar-chart-frontend table tr:nth-child(1) {
+    left: 0;
+}
+
+.bar-chart-backend table tr:nth-child(2), .bar-chart-frontend table tr:nth-child(2) {
+    left: 20%;
+}
+
+.bar-chart-backend table tr:nth-child(3), .bar-chart-frontend table tr:nth-child(3) {
+    left: 40%;
+}
+
+.bar-chart-backend table tr:nth-child(4), .bar-chart-frontend table tr:nth-child(4) {
+    left: 60%;
+}
+
+.bar-chart-backend table tr:nth-child(5), .bar-chart-frontend table tr:nth-child(5) {
+    left: 80%;
+}
+
+.bar-chart-backend table th, .bar-chart-frontend table th {
+    bottom: 5%;
+    text-align: left;
+    -webkit-transform: rotate(40deg) translateX(3rem);
+    -moz-transform: rotate(40deg) translateX(3rem);
+    -o-transform: rotate(40deg) translateX(3rem);
+    -ms-transform: rotate(40deg) translateX(3rem);
+    transform: rotate(40deg) translateX(3rem);
+    font-weight: 400;
+    color: rgba(0,0,0,.8);
+    font-size: .7500000002rem;
+}
+
+
+.bar-chart-frontend table tr:nth-child(1) td {
+    height: 50%;
+    background-color: navy;
+}
+
+.bar-chart-frontend table tr:nth-child(2) td {
+    height: 100%;
+    background-color: navy;
+}
+
+.bar-chart-frontend table tr:nth-child(3) td {
+    height: 25%;
+    background-color: navy;
+}
+
+.bar-chart-frontend table tr:nth-child(4) td {
+    height: 25%;
+    background-color: navy;
+}
+
+.bar-chart-frontend table tr:nth-child(5) td {
+    height: 25%;
+    background-color: navy;
+}
+
+.bar-chart-backend table tr:nth-child(1) td {
+    height: 25%;
+    background-color: navy;
+}
+
+.bar-chart-backend table tr:nth-child(2) td {
+    height: 25%;
+    background-color: navy;
+}
+
+.bar-chart-backend table tr:nth-child(3) td {
+    height: 25%;
+    background-color: navy;
+}
+
+.bar-chart-backend table tr:nth-child(4) td {
+    height: 25%;
+    background-color: navy;
+}
+
+.bar-chart-backend table tr:nth-child(5) td {
+    height: 25%;
+    background-color: navy;
+}
+
+
+.bar-chart-backend table td, .bar-chart-backend table th, .bar-chart-backend table tr, .bar-chart-frontend table td, .bar-chart-frontend table th, .bar-chart-frontend table tr {
+    position: absolute;
+    bottom: 0;
+    width: 20%;
+    font-weight: bold;
+    color: rgba(1, 1, 56, 0.701961);
+}
+
+.bar-chart-backend table td, .bar-chart-frontend table td {
+    z-index: 3;
+    width: 50%;
+    left: 25%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    cursor: help;
+}
+
+[data-tooltip]:after {
+    background: rgba(0, 0, 0, .9);
+    border-radius: 3px;
+    color: white;
+    content: attr(data-tooltip);
+    font-size: 12px;
+    padding: .5em 1em;
+    white-space: nowrap;
+    margin-bottom: 11px;
+}
+
+[data-tooltip]:before {
+    background: url('./misc-images/down-arrow.svg') no-repeat;
+    background-size: 17px;
+    background-position: 50% 50%;
+    height: 30px;
+    width: 18px;
+    content: "";
+    top: -25px;
+}
+
+[data-tooltip]:after, [data-tooltip]:before
+ {
+    opacity: 0;
+    -webkit-transition: all .18s ease-out .05s;
+    -moz-transition: all .18s ease-out .05s;
+    -o-transition: all .18s ease-out .05s;
+    -ms-transition: all .18s ease-out .05s;
+    transition: all .18s ease-out .05s;
+    bottom: 100%;
+    position: absolute;
+    -webkit-transform: translate(-50%, 10px);
+    -moz-transform: translate(-50%, 10px);
+    -o-transform: translate(-50%, 10px);
+    -ms-transform: translate(-50%, 10px);
+    transform: translate(-50%, 10px);
+}
+
+[data-tooltip]:hover:after, [data-tooltip]:hover:before {
+    opacity: 1;
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+}
+
+.bar-chart-frontend-y-axis,
+.bar-chart-backend-y-axis {
+    font-size: .65em;
+    position: absolute;
+    width: 100%;
+    height: 175px;
+    top: 0;
+}
+
+.bar-chart-backend-y-axis>div, .bar-chart-frontend-y-axis>div {
+    position: relative;
+    height: 45px;
+}
+
+
+/*ABOUT ME GALLERY*/
+
+div.sections div.tab div#about-me-gallery {
+    margin: 25px 20px 0 0;
+    width: 47%;
+    position: relative;
+    float: left;
+}
+
+div.tab div#about-me-gallery div.tab-about-me-gallery {
+    display: inline-block;
+    width: 21%;
+    padding: 20px;
+}
+
+div.tab div#about-me-gallery div.tab-about-me-gallery input[type="radio"] {
+    display: none;
+}
+
+div.tab div#about-me-gallery div.thumbnails-background {
+    background: #010138;
+    height: 100px;
+    padding: 35px 25px 30px 25px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+div.tab div#about-me-gallery label {
+    position: relative;
+    z-index: 3;
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    border: 2px solid black;
+    margin: 5px;
+    cursor: pointer;
+    -webkit-transition: transform .1s, border .2s;
+    -moz-transition: transform .1s, border .2s;
+    -o-transition: transform .1s, border .2s;
+    -ms-transition: transform .1s, border .2s;
+    transition: transform .1s, border .2s;
+    box-shadow: none;
+    margin-bottom: 0;
+    min-width: 73px;
+}
+
+div.tab div#about-me-gallery label:hover {
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+}
+
+.image-gallery-about-me.clearfix {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+}
+
+div.tab div#about-me-gallery label[for="about-me-picture-1"] {
+    background: transparent url("./about-me-images/about-me-image-1-thumbnail.jpg") no-repeat;
+    background-size: contain;
+}
+
+
+div.tab div#about-me-gallery label[for="about-me-picture-2"] {
+    background: transparent url("./about-me-images/about-me-image-2-thumbnail.jpg") no-repeat;
+    background-size: cover;
+}
+
+div.tab div#about-me-gallery label[for="about-me-picture-3"] {
+    background: transparent url("./about-me-images/about-me-image-3-thumbnail.jpg") no-repeat;
+    background-size: cover;
+}
+
+div.tab div#about-me-gallery label[for="about-me-picture-4"] {
+    background: transparent url("./about-me-images/about-me-image-4-thumbnail.jpg") no-repeat;
+    background-size: cover;
+}
+
+div.tab div#about-me-gallery label[for="about-me-picture-5"] {
+    background: transparent url("./about-me-images/about-me-image-5.jpg") no-repeat;
+    background-size: contain;
+}
+
+div.tab div#about-me-gallery label[for="about-me-picture-1"],
+div.tab div#about-me-gallery label[for="about-me-picture-2"]
+div.tab div#about-me-gallery label[for="about-me-picture-3"]
+div.tab div#about-me-gallery label[for="about-me-picture-4"]
+div.tab div#about-me-gallery label[for="about-me-picture-5"] {
+    background-size: cover;
+}
+
+div.tab div#about-me-gallery label[data-tooltip]:hover:after, div.tab div#about-me-gallery label[data-tooltip]:hover:before {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -70%);
+    -moz-transform: translate(-50%, -70%);
+    -o-transform: translate(-50%, -70%);
+    -ms-transform: translate(-50%, -70%);
+    transform: translate(-50%, -70%);
+    letter-spacing: 0px;
+    font-size: .5em;
+}
+
+div.tab div#about-me-gallery label[data-tooltip]:after {
+    font-size: .5em;
+    letter-spacing: 0px;
+}
+
+div.tab div#about-me-gallery label[data-tooltip]:hover:before {
+    -webkit-transform: translate(-50%, -60%);
+    -moz-transform: translate(-50%, -60%);
+    -o-transform: translate(-50%, -60%);
+    -ms-transform: translate(-50%, -60%);
+    transform: translate(-50%, -60%);
+}
+
+div.tab div#about-me-gallery label[data-tooltip]:after,
+div.tab div#about-me-gallery label[data-tooltip]:before {
+    transform: translate(-50%, -10px);
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+div.tab div#about-me-gallery div.image-gallery-content-about-me {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-bottom: 50px;
+        z-index: -1;
+        opacity: 0;
+        -webkit-transition: opacity .6s;
+        -moz-transition: opacity .6s;
+        -o-transition: opacity .6s;
+        -ms-transition: opacity .6s;
+        transition: opacity .6s;
+        width: 100%;
+        padding: 3%;
+        background: radial-gradient(circle at 70% 70%, rgba(211, 211, 211, 0.21), rgba(169, 169, 169, 0.56));
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+}
+
+div.tab div#about-me-gallery img {
+    width: 100%;
+    margin-bottom: -5px;
+    padding-top: 100px;
+}
+
+div.tab div#about-me-gallery label[data-tooltip]:after {
+    background: rgba(0, 0, 0, .9);
+    font-weight: 900;
+}
+
+div.tab div#about-me-gallery input[type="radio"]:checked ~ div.image-gallery-content-about-me {
+    opacity: 1;
+}
+
+div.tab div#about-me-gallery input[type="radio"]:checked + label {
+    border: 2px solid #f94c0c;
+    border-radius: 0;
+}
+
+div#about-me-text {
+    float: right;
+    width: 50%;
+    text-align: left;
+    margin-top: 23px;
+}
+
+div.tab #about-me-text p {
+    margin: 0 0 25px;
+    font-size: .95em;
+    width: 97%;
+    line-height: 1.4;
+}
+
+.tap {
+    display: none;
+}
+.click {
+    display: inline;
+}
+
+
+/*in-app projects*/
+div#projects-tabs div.project-tab label.project-open-label {
+    width: 48%;
+    border: 13px solid rgba(1,1,56,.8);
+    margin: 105px auto;
+    display: flex;
+    height: 40%;
+    padding: 0 3% 0;
+    color: rgba(1,1,56,.8);
+    background: white;
+    font-size: 1.9em;
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+    -o-transition: all .25s;
+    -ms-transition: all .25s;
+    font-weight: bold;
+    letter-spacing: 0;
+    /*box-shadow: 0px 0px 15px 1px rgba(1,1,56,.3) inset;*/
+    border-radius: 3px;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+
+div#projects-tabs div.project-tab label.project-open-label:hover {
+    /*border-color: rgba(249, 76, 12, 0.65);
+    color: rgba(249, 76, 12, 0.65);*/
+    color: #f94c0c;
+    border-color: #f94c0c;
+    box-shadow: 0px 0px 15px 1px rgba(249, 76, 12, 0.3) inset;
+    padding-bottom: 6%;
+}
+
+
+div#projects-tabs div.project-tab label.project-open-label::before,
+div#projects-tabs div.project-tab label.project-open-label::after {
+    content: none;
+}
+
+div#projects-tabs div.project-tab label.project-open-label::after {
+    content: "";
+    background-image: url("./misc-images/open.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: -50px;
+    -webkit-transition: top .3s;
+    -moz-transition: top .3s;
+    -o-transition: top .3s;
+    -ms-transition: top .3s;
+    transition: top .3s;
+    right: 50%;
+    top: 150%;
+}
+
+div#projects-tabs div.project-tab label.project-open-label:hover::after {
+    top: 64%;
+}
+
+
+
+/*Contact panel styling*/
+div#contact-panel {
+    margin: 5% auto;
+    width: 93%;
+    height: 62%;
+    /*padding-left: 10px;*/
+    padding-left: 1.5%;
+    font-size: 1.05em;
+    font-weight: lighter;
+}
+
+div.contact-info-panel div#contact-panel-contact-details {
+    color: white;
+    width: 60%;
+    cursor: default;
+    float: left;
+    padding: 5% 5% 3%;
+    /*background-color: #4686e6;*/
+    background: linear-gradient(to right top, #4686e6, #185abd);
+    text-align: left;
+    height: 100%;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-left: 6px solid rgba(1, 1, 56, 0.70);
+}
+
+div.contact-info-panel div#contact-panel-description {
+    width: 40%;
+    float: right;
+    background-color: white;
+    height: 100%;
+    padding: 6%;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    border-right: 6px solid rgba(1, 1, 56, 0.70);
+}
+
+
+div.contact-info-panel div#contact-panel-contact-details h1#contact-panel-name {
+    font-size: 1.9rem;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+div.contact-info-panel div#contact-panel-contact-details h4#contact-panel-position {
+    font-size: 1rem;
+    margin-top: 5px;
+    color: rgba(255, 255, 255, .7);
+    margin-bottom: 5%;
+}
+
+div.contact-info-panel div#contact-panel-description p.contact-panel-description {
+    font-size: .9em;
+    line-height: 1.8;
+    /*color: rgb(248, 146, 229);*/
+    color: rgba(1, 1, 56, 0.68);
+    width: 100%;
+    text-align: left;
+    margin: 22% auto;
+}
+
+div.contact-info-panel div#contact-panel-contact-details p.contact-panel-email {
+    margin: 15px 0 20px;
+    width: 100%;
+    font-size: .9em;
+    padding-left: 5%;
+    padding-right: 2%;
+}
+
+div.contact-info-panel div#contact-panel-contact-details p.contact-panel-email:hover {
+    color: white;
+}
+
+div.contact-info-panel div#contact-panel-contact-details p.contact-panel-email a {
+    color: inherit;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    -ms-transition: all .2s;
+    transition: all .2s;
+}
+
+div.contact-info-panel div#contact-panel-contact-details p.contact-panel-email a:hover {
+    color: white;
+}
+
+
+
+img.contact-panel-encyclopedia-icon {
+    margin-top: 11px;
+    width: 50px;
+    float: left;
+    position: relative;
+    z-index: 100;
+}
+
+
+#contact-panel-contact-details .contact-panel-encyclopedia-text {
+    width: auto;
+    float: left;
+    padding: 5px;
+    font-size: .9em;
+    margin-top: 3px;
+    color: white;
+    z-index: 100;
+    position: relative;
+    margin-bottom: 1%;
+}
+
+
+div.contact-info-panel div#contact-panel-contact-details img.contact-panel-encyclopedia-icon:hover ~ #contact-panel-contact-details .contact-panel-encyclopedia-text h4,
+div.contact-info-panel div#contact-panel-contact-details img.contact-panel-encyclopedia-icon:hover ~ #contact-panel-contact-details .contact-panel-encyclopedia-text p,
+#contact-panel-contact-details .contact-panel-encyclopedia-text:hover h4,
+#contact-panel-contact-details .contact-panel-encyclopedia-text:hover p,
+#contact-panel-contact-details .contact-panel-encyclopedia-text:hover,
+div.contact-info-panel div#contact-panel-contact-details a:hover p,
+div.contact-info-panel div#contact-panel-contact-details a:hover h4 {
+    color: white;
+}
+
+#contact-panel-contact-details .contact-panel-encyclopedia-text:after{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: transparent;
+    -webkit-transition: width .5s ease, background-color .3s ease;
+    -moz-transition: width .5s ease, background-color .3s ease;
+    -o-transition: width .5s ease, background-color .3s ease;
+    -ms-transition: width .5s ease, background-color .3s ease;
+    transition: width .5s ease, background-color .3s ease;
+    position: relative;
+    right: 2px;
+    top: 9px;
+    border-radius: 4px;
+}
+
+img.contact-panel-encyclopedia-icon:hover ~ #contact-panel-contact-details .contact-panel-encyclopedia-text::after,
+#contact-panel-contact-details .contact-panel-encyclopedia-text:hover::after,
+div.contact-info-panel div#contact-panel-contact-details a:hover .contact-panel-encyclopedia-text:after {
+    width: 101%;
+    background: #f94c0c;
+}
+
+
+#contact-panel-contact-details .contact-panel-encyclopedia-text h4,
+#contact-panel-contact-details .contact-panel-encyclopedia-text h4 {
+    margin: 5px 10px;
+    font-size: .9em;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+    color: rgb(248, 146, 229);
+}
+
+#contact-panel-contact-details .contact-panel-encyclopedia-text p {
+    margin: 5px 10px;
+    color: rgb(248, 146, 229);
+    font-size: .9em;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+
+
+div#contact-panel-contact-details ul.contact-panel-icons {
+    padding-left: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    width: 10%;
+    margin: 0;
+    float: left;
+    height: 58%;
+}
+
+div#contact-panel-contact-details ul.contact-panel-icons li[data-tooltip] {
+    display: inline-block;
+    margin-left: 5%;
+    position: relative;
+    width: 40px;
+}
+
+div#contact-panel-contact-details ul.contact-panel-icons li[data-tooltip] img.icon {
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+div#contact-panel-contact-details ul.contact-panel-icons li[data-tooltip="Facebook"]::before,
+div#contact-panel-contact-details ul.contact-panel-icons li[data-tooltip="Facebook"]:after {
+    left: 50%;
+}
+
+div#contact-panel-contact-details ul.contact-panel-icons li[data-tooltip="GitHub"]::before,
+div#contact-panel-contact-details ul.contact-panel-icons li[data-tooltip="GitHub"]:after {
+    left: 51%;
+}
+
+div#contact-panel-contact-details ul.contact-panel-icons li[data-tooltip="LinkedIn"]::before,
+div#contact-panel-contact-details ul.contact-panel-icons li[data-tooltip="LinkedIn"]:after {
+    left: 52%;
+}
+
+div#contact-panel-contact-details ul.contact-panel-icons li.contact-panel-icon:hover:after,
+div#contact-panel-contact-details ul.contact-panel-icons li.contact-panel-icon:hover:before {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+    position: absolute;
+}
+
+div#contact-panel-email-and-encyclopedia {
+    width: 80%;
+    margin: 2% 3% 3%;
+    height: auto;
+    display: inline-block;
+    float: left;
+    font-size: 1.1em;
+}
+
+div#contact-panel-email-and-encyclopedia .contact-panel-email-and-encyclopedia-section {
+    width: 100%;
+    margin: 1%;
+    height: auto;
+    display: inline-block;
+    margin-bottom: 6%;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*embedded projects and modals*/
+
+header#main-header div.modal div.component-wrapper {
+    margin: 30px auto;
+    width: 100%;
+    height: 0;
+    background: white;
+    opacity: 1;
+    overflow: auto;
+    -webkit-transition: opacity .4s;
+    -moz-transition: opacity .4s;
+    -o-transition: opacity .4s;
+    -ms-transition: opacity .4s;
+    transition: opacity .4s;
+}
+
+header#main-header input[type="checkbox"]:checked + div.modal div.component-wrapper {
+    height: 630px;
+    -webkit-transition: opacity .4s, height .5s;
+    -moz-transition: opacity .4s, height .5s;
+    -o-transition: opacity .4s, height .5s;
+    -ms-transition: opacity .4s, height .5s;
+    transition: opacity .4s, height .5s;
+    box-shadow: -2px 0 11px 1px darkgray inset;
+}
+
+/*drawer and mobile menu styles*/
+div#mobile-menu {
+    margin: 7% auto 0;
+    border-top: 3px solid #03034a;
+/*    border-bottom: 3px solid #03034a;*/
+    background: linear-gradient(to right, rgba(1, 1, 56, 0.4), rgba(1, 1, 56, .1)), url(../images/label-background-gradient.jpg) no-repeat;
+    width: 100%;
+    height: 60px;
+    display: none;
+/*    position: relative;*/
+    padding: 1%;
+}
+
+div#mobile-menu label.drawer-label {
+    height: 90%;
+    width: 45px;
+    background-color: transparent;
+    display: block;
+    padding: 1% 2%;
+    cursor: pointer;
+    position: relative;
+    left: 0;
+ /*   -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -o-transition: all .6s;
+    -ms-transition: all .6s;
+    transition: all .6s;*/
+    transition: left .6s;
+/*    transition-delay: left .8s;*/
+    top: 0;
+}
+
+div#mobile-menu label.drawer-label .mobile-menu-label-lines {
+    height: 3px;
+    background: #f94c0c;
+    display: block;
+    width: 100%;
+    margin: 25% auto 20%;
+}
+
+div#mobile-menu div#mobile-menu-drawer {
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -o-transition: all .6s;
+    -ms-transition: all .6s;
+    transition: all .6s;
+    position: absolute;
+    width: 75%;
+    height: auto;
+    background: rgba(1,1,56,.7);
+    left: -100%;
+    top: 0;
+    z-index: 2000;
+    border-top: 2px solid #f94c0c;
+    border-right: 2px solid #f94c0c;
+    border-bottom: 2px solid #f94c0c;
+    border-radius: 0;
+    padding: 5%;
+    font-size: 1.4em;
+/*    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;*/
+}
+
+div#mobile-menu  input[type="checkbox"]:checked + label.drawer-label {
+    left: 82%;
+    z-index: 1070;
+    height: 55px;
+    width: 55px;
+    position: absolute;
+    padding: 0;
+    top: 17px;
+}
+
+div#mobile-menu div.mobile-menu-label-lines {
+    opacity: 1;
+/*    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -o-transition: all .4s;
+    -ms-transition: all .4s;
+    transition: all .4s;*/
+    width: 20px;
+    -webkit-transition: transform .2s;
+    -moz-transition: transform .2s;
+    -o-transition: transform .2s;
+    -ms-transition: transform .2s;
+    transition: transform .2s;
+}
+
+div#mobile-menu input[type="checkbox"]:checked + label.drawer-label div.mobile-menu-label-lines {
+    margin: 0;
+    -webkit-transition: transform .2s;
+    -moz-transition: transform .2s;
+    -o-transition: transform .2s;
+    -ms-transition: transform .2s;
+    transition: transform .2s;
+}
+
+div#mobile-menu input[type="checkbox"]:checked + label.drawer-label div.mobile-menu-label-lines:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 10px;
+    width: 30px;
+}
+
+div#mobile-menu input[type="checkbox"]:checked + label.drawer-label div.mobile-menu-label-lines:nth-child(2) {
+    opacity: 0;
+    display: none;
+}
+
+div#mobile-menu input[type="checkbox"]:checked + label.drawer-label div.mobile-menu-label-lines:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 10px;
+    width: 30px;
+}
+
+div#mobile-menu input[type="checkbox"]:checked ~ div#mobile-menu-drawer {
+    left: 0;
+}
+
+div#mobile-menu ul#mobile-menu-drawer-list {
+    list-style: none;
+    padding: 2%;
+    height: 100%;
+    margin: 0;
+}
+
+div#mobile-menu ul#mobile-menu-drawer-list li {
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin: 3%;
+    cursor: pointer;
+    text-align: center;
+    transition: all .1s;
+}
+
+div#mobile-menu ul#mobile-menu-drawer-list li > label:hover {
+    color: #f94c0c;
+    border: 3px solid #f94c0c;
+}
+
+div#mobile-menu ul#mobile-menu-drawer-list li > label {
+    cursor: pointer;
+    padding: 5%;
+    width: 100%;
+    height: 100%;
+    display: block;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    -ms-transition: all .2s;
+    transition: all .2s;
+    border: 3px solid #bdbbbb;
+    color: rgba(1,1,56,1);
+    background: white;
+}
+
+div#mobile-menu ul#mobile-menu-drawer-list li:not(:last-child) {
+    margin-bottom: 11%;
+}
+
+div#mobile-menu ul#mobile-menu-drawer-list li input[type="checkbox"]:checked + label {
+    margin-top: 4%;
+    border-bottom: 0;
+}
+
+
+
+div#mobile-menu ul#mobile-menu-drawer-list article.mobile-menu-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    -webkit-transition: max-height .4s ease-out, margin-top .3s, box-shadow .3s, border .3s;
+    -moz-transition: max-height .4s ease-out, margin-top .3s, box-shadow .3s, border .3s;
+    -o-transition: max-height .4s ease-out, margin-top .3s, box-shadow .3s, border .3s;
+    -ms-transition: max-height .4s ease-out, margin-top .3s, box-shadow .3s, border .3s;
+    transition: max-height .4s ease-out, margin-top .3s, box-shadow .3s, border .3s;
+    transition-delay: 0s;
+    /*background: radial-gradient(circle, darkgray, whitesmoke);*/
+    background: linear-gradient(to top right, #8e8d8d, whitesmoke);
+    padding: 0;
+    box-shadow: 0 0 8px 3px darkgray inset;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+div#mobile-menu ul#mobile-menu-drawer-list input[type="checkbox"]:checked ~ article.mobile-menu-accordion-content {
+    max-height: 400px;
+    margin-bottom: 4%;
+    padding: 2% 0;
+    border-bottom: 4px solid #bdbbbb;
+    border-left: 4px solid #bdbbbb;
+    border-right: 4px solid #bdbbbb;
+}
+
+div#mobile-menu ul#mobile-menu-drawer-list article.mobile-menu-accordion-content label ul {
+    padding: 0;
+    transition: all .3s;
+}
+
+div#mobile-menu ul#mobile-menu-drawer-list article.mobile-menu-accordion-content label ul li {
+    border: none;
+    -webkit-transition: background .4s, color .3s, border .3s;
+    -moz-transition: background .4s, color .3s, border .3s;
+    -o-transition: background .4s, color .3s, border .3s;
+    -ms-transition: background .4s, color .3s, border .3s;
+    transition: background .4s, color .3s, border .3s;
+    padding: 10px;
+    margin: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    font-size: .9em;
+}
+
+div#mobile-menu ul#mobile-menu-drawer-list article.mobile-menu-accordion-content label ul li:hover {
+    color: #f94c0c;
+    border-left: 4px solid #f94c0c;
+}
+
+/*div#mobile-menu ul#mobile-menu-drawer-list li:nth-child(2):hover input[type="checkbox"]:checked ~ article.mobile-menu-accordion-content {
+    border-bottom: 4px solid #f94c0c;
+    border-left: 4px solid #f94c0c;
+    border-right: 4px solid #f94c0c;
+}*/
+
+
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+
+/*MEDIA QUERIES*/
+
+
+@media only screen and (min-width: 1200px) {
+    div.tab label {
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (max-width: 1240px) {
+    /*Open project labels*/
+    div#projects-tabs div.project-tab label.project-open-label {
+        width: 54%;
+    }
+    /*contact panel stuff*/
+    div#contact-panel-contact-details ul.contact-panel-icons {
+        margin: 4% 0 0;
+        height: 55%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    div.tab {
+        width: 23%;
+    }
+    div.tab div.content {
+        left: 5%;
+        width: 90%;
+        padding: 40px 35px 40px 20px;
+    }
+    div.tab div.content p {
+        width: 93%;
+    }
+    div.tab div.content {
+        padding: 40px 35px;
+    }
+
+    header div.search-container {
+        width: 27%;
+        padding: 20px 0 15px;
+    }
+    /*contact panel*/}
+
+@media only screen and (max-width: 1160px) {
+    /*images in carousel*/
+    div.tab div.content .carousel .carousel-item img {
+        width: auto;
+        height: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1060px) {
+    /*Open project labels*/
+    div#projects-tabs div.project-tab label.project-open-label {
+        font-size: 1.65em;
+    }
+    div#contact-panel-email-and-encyclopedia {
+        margin: 5% 2.5% 3%;
+    }
+    /*contact panel breaks around here*/
+    div#contact-panel-contact-details ul.contact-panel-icons {
+        margin: 4% 0 0;
+        height: 53%;
+    }
+    div#contact-panel {
+        height: 57%;
+        font-size: .95em;
+    }
+    div#contact-panel-contact-details ul.contact-panel-icons li[data-tooltip] img.icon {
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+    }
+    div.tab label[for="contact-radio"] ~ div.content {
+        height: 85%;
+    }
+    div#contact-panel {
+        height: 65%;
+    }
+    img.contact-panel-encyclopedia-icon {
+        width: 43px;
+    }
+    /*section labels*/
+    div.tab label {
+        -webkit-transition: background-position .8s;
+        -moz-transition: background-position .8s;
+        -o-transition: background-position .8s;
+        -ms-transition: background-position .8s;
+        transition: background-position .8s;
+    }
+    div.tab input[type="radio"]:checked + label {
+        -webkit-transition: background-position 1.3s, color .3s, box-shadow .4s;
+        -moz-transition: background-position 1.3s, color .3s, box-shadow .4s;
+        -o-transition: background-position 1.3s, color .3s, box-shadow .4s;
+        -ms-transition: background-position 1.3s, color .3s, box-shadow .4s;
+        transition: background-position 1.3s, color .3s, box-shadow .4s;
+    }
+    div.tab {
+        width: 24%;
+        padding: 20px 9px;
+    }
+}
+
+@media only screen and (max-width: 1020px) {
+    /*Fix About me, projects, business card, and search box*/
+    div#projects-tabs div.project-tab label.project-open-label {
+        border: 11px solid rgba(1,1,56,.8);
+    }
+    div.contact-info-panel div#contact-panel-contact-details h1#contact-panel-name {
+        font-size: 1.8rem;
+    }
+    div.contact-info-panel div#contact-panel-contact-details h4#contact-panel-position {
+        font-size: .9rem;
+
+    }
+}
+
+@media only screen and (max-width: 1100px) and (min-width: 901px) {
+    div.tab div.content {
+        left: 4%;
+        width: 92%;
+        padding: 40px 30px 40px 20px;
+    }
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 901px) {
+    div.contact-info-panel div#contact-panel-contact-details h4#contact-panel-position  {
+
+    }
+    div.tab label[for="about-radio"] ~ div.content {
+        padding-left: 3%;
+        padding-right: 2%;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    /*Fix about me image overlap*/
+    div.tab div#about-me-gallery label {
+        min-width: 68px;
+    }
+    div.contact-info-panel div#contact-panel-contact-details h1#contact-panel-name {
+        font-size: 1.7rem;
+    }
+}
+
+@media only screen and (max-width: 950px) and (min-width: 901px) {
+    div#contact-panel-contact-details ul.contact-panel-icons li[data-tooltip] img.icon {
+        width: 85%;
+    }
+    img.contact-panel-encyclopedia-icon {
+        width: 45px;
+    }
+    div#contact-panel-email-and-encyclopedia .contact-panel-email-and-encyclopedia-section {
+        width: 100%;
+    }
+    #contact-panel-contact-details .contact-panel-encyclopedia-text {
+        font-size: .85em;
+    }
+
+}
+
+@media only screen and (max-width: 970px) and (min-width: 901px) {
+    div.contact-info-panel div#contact-panel-contact-details h1#contact-panel-name {
+        font-size: 1.65rem;
+    }
+}
+
+
+@media only screen and (max-width: 980px) and (min-width: 769px) {
+    div#projects-tabs div.project-tab label {
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 901px) {
+    div.tab #about-me-text p {
+        font-size: .87em;
+    }
+    div#projects-tabs div.project-tab label {
+        font-size: 1em;
+        letter-spacing: .5px
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    div.tab div.content .carousel .project-description-container h3,
+    div.tab div.content .carousel .project-description-container p {
+        width: 78%;
+    }
+    .carousel .project-description-container {
+        font-size: .93em;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    /*Project tabs*/
+    div#projects-tabs {
+        margin: 25px auto 0;
+    }
+    div#projects-tabs div.project-tab {
+        display: block;
+        width: 100%;
+        text-align: auto;
+    }
+    div#projects-tabs div.project-tab label {
+        width: 100%;
+        border-left: 4px solid transparent;
+    }
+    div#projects-tabs div.project-tab input[type="radio"]:checked + label {
+        border-left: 4px solid #010138;
+    }
+    div#projects-tabs div.project-tab div.content {
+        left: 0;
+        width: 100%;
+        padding: 1% 2%;
+        top: 57%;
+        height: 400px;
+        margin-top: 14%;
+    }
+    div#projects-tabs div.project-tab label::before {
+        content: none;
+    }
+    div.tab div.content p {
+        margin: 15px auto 7%;
+    }
+    div.tab div.content h3 {
+        font-size: 1.52em;
+    }
+    div#projects-tabs div.project-tab input[type="radio"]:checked + label::after {
+        content: none;
+    }
+    div#projects-tabs div.project-tab .carousel {
+        margin-top: 5px;
+    }
+    div.sections {
+        padding: 20px;
+    }
+    div.tab {
+        padding: 20px 5px;
+    }
+    div.tab input[type="radio"]:checked + label {
+        border-radius: 4px;
+    }
+    div.tab div.content h3 {
+        margin: 4% auto 5px;
+    }
+    /*Carousel styles*/
+    .carousel-inner {
+        height: 94%;
+    }
+    /*Header styles*/
+    header {
+        margin-bottom: 0;
+        height: 215px;
+    }
+    header div.name {
+        padding: 23px 10px;
+        background: rgba(1,1,56,.7);
+        letter-spacing: 1px;
+        text-align: center;
+        width: 100%;
+    }
+    header div.name h1 {
+        margin-bottom: 1.5%;
+    }
+    header div.search-container {
+        padding: 10px 0;
+        box-sizing: inherit;
+        width: 100%;
+        top: 145px;
+        background: transparent;
+    }
+    header div.search-container label[for="search-box"] {
+        right: 73%;
+    }
+    header div.search-container input#search-box:focus + label,
+    header div.search-container input#search-box:valid + label {
+        right: 76%;
+        top: 7%;
+        opacity: 0;
+    }
+    header div.search-container #modal h3 {
+        margin-top: 40%;
+    }
+    header div.search-container #modal label[for="modal-check"],
+    header#main-header div.modal label[for*="modal-project"] {
+        background-size: 25px;
+    }
+    header div.search-container label[for="modal-check"] {
+        font-size: .8em;
+    }
+    footer {
+        top: 53%;
+    }
+    div.tab div.content {
+        /*padding: 20px;*/
+        padding: 2%;
+        width: 100%;
+        left: 0;
+        border-radius: 0;
+    }
+    div.tab label[for="about-radio"] ~ div.content {
+        min-height: 775px;
+        padding: 20px 15px;
+    }
+    div.tab div.content p {
+        width: 100%;
+    }
+    div#about-me-text {
+        width: 100%;
+    }
+    /*About me section*/
+    div.tab div#about-me-gallery div.tab-about-me-gallery {
+        width: 16%;
+    }
+    div.sections div.tab div#about-me-gallery {
+        margin: 10px auto;
+        width: 97%;
+        float: none;
+        display: block;
+    }
+    div#about-me-text {
+        float: none;
+        margin-top: 77%;
+        text-align: justify;
+    }
+    div.tab #about-me-text p {
+        width: 100%;
+    }
+    div.tab div#about-me-gallery label {
+        border-radius: 0;
+    }
+    /*Section labels*/
+    label.section-label:after {
+        content: none;
+    }
+    label.section-label:hover:after {
+        content: none;
+    }
+    div.sections {
+        text-align: center;
+        padding: 25px 5px;
+        display: flex;
+        justify-content: space-around;
+        flex-flow: row wrap;
+    }
+    div.tab {
+        display: inline-block;
+        width: 23%;
+        padding: 20px 0;
+        text-align: center;
+    }
+    div.tab label {
+        margin-right: 0;
+        width: 100%;
+        padding: 14px 10px 8px;
+        background: #010138;
+        border-radius: 4px;
+        border: none;;
+        color: white;
+        border-bottom: 5px solid transparent;
+        cursor: pointer;
+    }
+    div.arrow {
+        display: none;
+    }
+    div.tab input[type="radio"]:checked + label {
+        border: none;
+        border-bottom: 5px solid #f94c0c;
+        color: white;
+    }
+    header div.search-container label[for="search-box"] {
+        top: 20%;
+    }
+    div.tab label[for="projects-radio"] ~ div.content {
+        min-height: 1090px;
+    }
+    /*Skills charts*/
+    .skills-line-chart {
+        width: 90%;
+        font-size: .8em;
+    }
+    .skills-bar-charts {
+        flex-flow: column wrap;
+        justify-content: space-around;
+        margin: 3rem auto 1rem;
+    }
+    .bar-chart-backend, .bar-chart-frontend {
+        width: 70%;
+        margin: 10% auto 29%;
+    }
+    .bar-chart-backend {
+        margin-bottom: 20%;
+    }
+    .skills-line-chart {
+        margin: 0 auto 3rem;
+    }
+    div.tab label[for="skills-radio"] ~ div.content {
+        padding-bottom: 0;
+    }
+    /*Hide all tooltips*/
+    [data-tooltip]::after,
+    [data-tooltip]::before {
+        display: none;
+    }
+    [data-tooltip]:hover {
+        cursor: auto;
+    }
+    /*open project label*/
+    div#projects-tabs div.project-tab label.project-open-label {
+        margin-top: 95px;
+        width: 51%;
+    }
+    /*Contact panel*/
+    div#contact-panel {
+        height: 39%;
+        padding-left: 0;
+    }
+    div.contact-info-panel div#contact-panel-contact-details {
+        border-radius: 0;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+    }
+    div.contact-info-panel div#contact-panel-description {
+        border-radius: 0;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+    div.contact-info-panel div#contact-panel-contact-details,
+    div.contact-info-panel div#contact-panel-description {
+        width: 100%;
+        float: none;
+    }
+    div.tab label[for="contact-radio"] ~ div.content {
+        height: 960px;
+    }
+    /*contact panel break*/
+    div.contact-info-panel div#contact-panel-contact-details h1#contact-panel-name {
+        margin-bottom: 0;
+    }
+    div.contact-info-panel div#contact-panel-contact-details h4#contact-panel-position {
+        margin-bottom: 2%;
+    }
+    div#contact-panel-email-and-encyclopedia {
+        margin: 0 3%;
+    }
+    div#contact-panel-email-and-encyclopedia {
+        font-size: 1.2em;
+    }
+    div#contact-panel-contact-details ul.contact-panel-icons {
+        margin: -7% 0 0;
+        height: 75%;
+    }
+    div#contact-panel-contact-details ul.contact-panel-icons li[data-tooltip] img.icon {
+        width: 100%;
+    }
+    div.contact-info-panel div#contact-panel-description {
+        font-size: 1.1em;
+        height: 80%;
+        border-right: none;
+        border-bottom: 4px solid #010138;
+    }
+    div.contact-info-panel div#contact-panel-contact-details {
+        border-left: none;
+        border-top: 4px solid #010138;
+    }
+    div.contact-info-panel div#contact-panel-description p.contact-panel-description {
+        line-height: 1.9;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    /*Fix about me image overlap*/
+    div.tab div#about-me-gallery label {
+        min-width: 55px;
+    }
+}
+
+@media only screen and (max-width: 850px) and (min-width: 769px) {
+    div.tab div#about-me-gallery label {
+        min-width: 72px;
+    }
+}
+
+@media only screen and (min-width: 901px) {
+    .bar-chart-backend table th, .bar-chart-frontend table th {
+        left: -15px;
+    }
+}
+
+
+@media only screen and (max-width: 900px) and (min-width: 601px) {
+    footer {
+        top: 73%;
+    }
+    div.tab div.content .carousel .carousel-item img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@media only screen and (max-width: 900px) and (min-width: 769px) {
+    div#about-me-text {
+        margin-top: 67%;
+    }
+    div.sections div.tab div#about-me-gallery {
+        width: 84%;
+    }
+    div.tab div.content {
+        margin-top: 6%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /*Make about me images big again*/
+    div.tab div#about-me-gallery label {
+        min-width: 70px;
+    }
+    .tap {
+        display: inline;
+    }
+    .click {
+        display: none;
+    }
+    div.tab div.content {
+        margin-top: 7%;
+    }
+    /*Business card works up until here -- needs further adjustment*/
+    /*project carousels*/
+    div.tab div.content .carousel .project-description-container p.link-to-github {
+        margin-top: 20px;
+    }
+    footer {
+        top: 80%;
+    }
+    div.tab {
+        width: 24%;
+    }
+    /*contact panel*/
+    div#contact-panel {
+        width: 100%;
+    }
+    div#contact-panel-contact-details ul.contact-panel-icons li[data-tooltip] img.icon {
+        width: 95%;
+    }
+    div#contact-panel-contact-details ul.contact-panel-icons {
+        height: 70%;
+    }
+    div#contact-panel-email-and-encyclopedia {
+        margin: 2% 3% 0;
+    }
+    #contact-panel-contact-details .contact-panel-encyclopedia-text:after {
+        content: none;
+    }
+    /*skills stuff*/
+    .bar-chart-backend table th, .bar-chart-frontend table th {
+        left: -20%;
+    }
+}
+
+@media only screen and (max-width: 768px) and (max-width: 640px) {
+    .carousel .project-description-container {
+        font-size: .9em;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 601px) {
+    div.tab #about-me-text p {
+        font-size: .9em;
+    }
+    div.tab label {
+        font-size: 1.05em;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    div#contact-panel-contact-details ul.contact-panel-icons {
+        height: 57%;
+        margin: 2% 0 0;
+    }
+    div#contact-panel-contact-details ul.contact-panel-icons li[data-tooltip] img.icon {
+        width: 90%;
+    }
+    img.contact-panel-encyclopedia-icon {
+        width: 45px;
+    }
+    div.contact-info-panel div#contact-panel-description {
+        font-size: 1.15em;
+    }
+    div.contact-info-panel div#contact-panel-contact-details {
+        height: 95%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: .9em;
+    }
+    div.tab label {
+        letter-spacing: 2px;
+    }
+    div#projects-tabs div.project-tab label {
+        font-size: 1.1em;
+    }
+    header div.search-container label[for="search-box"] {
+        right: 73%;
+        top: 23%;
+    }
+    header div.search-container input#search-box {
+        font-size: 1em;
+    }
+    header div.name h1 {
+        font-size: 1.85em;
+    }
+    /*Project Tabs*/
+    div.tab div.content .carousel .project-description-container h3 {
+        margin: 10px auto;
+    }
+    div.tab div.content {
+        font-size: 1.1em;
+    }
+    /*About me section*/
+    div.tab div#about-me-gallery div.tab-about-me-gallery {
+        width: 22%;
+    }
+    /*Skills charts*/
+    .bar-chart-backend {
+        margin-top: 28%;
+    }
+    header div.search-container #modal h3 {
+        font-size: 1.8em;
+    }
+    img.icon {
+        width: 30px;
+    }
+    footer {
+        top: 57%;
+    }
+    div.tab label[for="projects-radio"] ~ div.content {
+        min-height: 1025px;
+    }
+    div#projects-tabs div.project-tab .carousel label.carousel-control {
+        height: 30px;
+        width: 30px;
+    }
+    div#projects-tabs div.project-tab .carousel label.carousel-control.next {
+        background-position: 40% 50%;
+    }
+    div#projects-tabs div.project-tab .carousel label.carousel-control.prev {
+        background-position: 20% 50%;
+    }
+
+    /*Skills stuff*/
+    .line-chart-backend {
+        padding-right: .4em;
+    }
+    div#about-me-text {
+        margin-top: 80%;
+    }
+    /*carousel styles*/
+    div#projects-tabs div.project-tab .carousel .carousel-bullet {
+        padding-top: 1px;
+    }
+    div#projects-tabs div.project-tab .carousel .carousel-indicators {
+        height: 42px;
+    }
+    .carousel-inner {
+        height: 96%;
+    }
+    /*open project label*/
+    div#projects-tabs div.project-tab label.project-open-label {
+        border: 10px solid rgba(1,1,56,.8);
+        font-size: 1.6em;
+    }
+    /*github link in projects*/
+    div.tab div.content .carousel .project-description-container p a {
+        background-size: 25px;
+        padding: 15px 20px 15px 30px;
+    }
+    /*contact panel*/
+    div#contact-panel {
+        font-size: 1.15em;
+        height: 42%;
+    }
+    div#contact-panel-email-and-encyclopedia {
+        margin: 3% 0 3% 3%;
+    }
+    div.contact-info-panel div#contact-panel-description {
+        font-size: 1em;
+        height: 71%;
+    }
+    div.tab label[for="contact-radio"] ~ div.content {
+        height: 920px;
+    }
+    div.contact-info-panel div#contact-panel-contact-details p.contact-panel-email {
+        margin: 6% 0 20px;
+    }
+    header#main-header div.modal label[for*="modal-project"] {
+        right: 10px;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    div#contact-panel-email-and-encyclopedia {
+        font-size: 1.05em;
+    }
+    div#contact-panel-contact-details ul.contact-panel-icons {
+        height: 53%;
+        margin: 5% 0 0;
+    }
+    div#contact-panel-contact-details ul.contact-panel-icons {
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        width: 100%;
+        height: 0;
+    }
+    div#contact-panel-contact-details ul.contact-panel-icons li[data-tooltip] {
+        width: 9%;
+    }
+    div#contact-panel-contact-details ul.contact-panel-icons li[data-tooltip] img.icon {
+        width: 93%;
+    }
+    div.contact-info-panel div#contact-panel-contact-details {
+        height: 93%;
+    }
+    div#contact-panel-email-and-encyclopedia .contact-panel-email-and-encyclopedia-section,
+    div#contact-panel-email-and-encyclopedia {
+        width: 100%;
+    }
+    div#contact-panel-contact-details ul.contact-panel-icons li[data-tooltip] {
+        margin-left: 0;
+    }
+    div#contact-panel-email-and-encyclopedia {
+        margin: 0;
+        margin-left: 2%;
+    }
+    div#contact-panel-email-and-encyclopedia .contact-panel-email-and-encyclopedia-section {
+        margin: 2% 1% -3%;
+        font-size: 1.1em;
+    }
+    header div.search-container #modal label[for="modal-check"],
+    header#main-header div.modal label[for*="modal-project"] {
+        background-size: 18px;
+    }
+    /*skills stuff*/
+    .bar-chart-backend table th, .bar-chart-frontend table th {
+        left: -35%;
+    }
+}
+
+@media only screen and (max-width: 515px) {
+    div#contact-panel {
+        margin: 11% auto;
+    }
+    div.contact-info-panel div#contact-panel-contact-details h4#contact-panel-position {
+        font-size: .80em;
+    }
+    div.contact-info-panel div#contact-panel-contact-details h1#contact-panel-name {
+        font-size: 1.5em;
+    }
+    div.contact-info-panel div#contact-panel-contact-details {
+        padding: 8% 8% 3%;
+    }
+    div#contact-panel-email-and-encyclopedia {
+        font-size: 1.05em;
+    }
+    div.contact-info-panel div#contact-panel-description p.contact-panel-description {
+        font-size: .95em;
+    }
+    div#contact-panel-contact-details ul.contact-panel-icons li[data-tooltip] {
+        width: 11%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    div#contact-panel-email-and-encyclopedia {
+        font-size: .96em;
+    }
+    div#contact-panel-email-and-encyclopedia .contact-panel-email-and-encyclopedia-section {
+        margin: 2% 1% -1%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    div#projects-tabs div.project-tab .carousel .carousel-bullet {
+        padding-top: 0;
+    }
+    div#projects-tabs div.project-tab .carousel .carousel-indicators {
+        height: 40px;
+    }
+    /*open project label*/
+    div#projects-tabs div.project-tab label.project-open-label {
+        border: 9px solid rgba(1,1,56,.8);
+        font-size: 1.6em;
+        width: 65%;
+    }
+    /*skills stuff*/
+    .bar-chart-backend table th, .bar-chart-frontend table th {
+        left: -40%;
+    }
+    .skills-line-chart {
+        font-size: .7em;
+    }
+    /*mobile menu stuff*/
+    div.sections,
+    div.tab {
+        height: 0;
+        padding: 0;
+    }
+    div.tab label.section-label {
+        display: none;
+    }
+    div.tab div.content {
+        margin-top: 0;
+    }
+    div#mobile-menu {
+        display: block;
+    }
+    div.tab div.content h3 {
+        font-size: 1.4em;
+        margin: 5% auto 5px;
+    }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 451px) {
+    header {
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .bar-chart-backend {
+        margin-top: 32%;
+        margin-bottom: 23%;
+    }
+    div.tab div.content .carousel .project-description-container {
+        font-size: .83em;
+    }
+    div.tab div.content .carousel .project-description-container h3,
+    div.tab div.content .carousel .project-description-container p {
+        width: 85%;
+    }
+    div#projects-tabs div.project-tab .carousel label.carousel-control {
+        height: 24px;
+        width: 24px;
+    }
+    /*contact panel*/
+    img.contact-panel-encyclopedia-icon {
+        width: 35px;
+    }
+    div.contact-info-panel div#contact-panel-contact-details h1#contact-panel-name {
+        font-size: 1.4em;
+    }
+    div.contact-info-panel div#contact-panel-contact-details h4#contact-panel-position {
+        font-size: .77em;
+    }
+    div.contact-info-panel div#contact-panel-contact-details {
+        height: 91%;
+    }
+    div.contact-info-panel div#contact-panel-contact-details {
+        padding: 7% 7% 3%;
+    }
+    div.contact-info-panel div#contact-panel-contact-details h1#contact-panel-name {
+        font-size: 1.2em;
+    }
+    div.contact-info-panel div#contact-panel-contact-details h4#contact-panel-position {
+        font-size: .7em;
+    }
+    /*contact panel*/
+    div#contact-panel-contact-details ul.contact-panel-icons li[data-tooltip] {
+        width: 12%;
+        min-width: 33px;
+    }
+    header div.name h3 {
+        font-size: 1.3em;
+    }
+}
+
+
+@media only screen and (max-width: 415px) {
+    /*skills stuff*/
+    .bar-chart-backend table th, .bar-chart-frontend table th {
+        left: -60%;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    div.tab label {
+        padding: 12px 5px 8px;
+        font-size: 1em;
+        font-weight: bold;
+    }
+    div.tab div#about-me-gallery label {
+        min-width: 65px;
+    }
+    div.tab label[for="skills-radio"] ~ div.content {
+        padding-bottom: 20px;
+    }
+    .line-chart-backend {
+        padding-right: .2em;
+    }
+    footer {
+        top: 55%;
+    }
+    div.tab div.content h3 {
+        font-size: 1.3em;
+    }
+    contact-details ul.contact-panel-icons li[data-tooltip] img.icon {
+        width: 95%;
+    }
+    div.tab div#about-me-gallery label {
+        min-width: 60px;
+    }
+    div.contact-info-panel div#contact-panel-contact-details h4#contact-panel-position {
+        margin-bottom: 3%;
+    }
+    /*contact panel*/
+    div.contact-info-panel div#contact-panel-contact-details h4#contact-panel-position {
+        font-size: .58em;
+    }
+    footer {
+        top: 61%;
+    }
+    /*header*/
+    header div.name h1 {
+        font-size: 1.7em;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    div.contact-info-panel div#contact-panel-contact-details h4#contact-panel-position {
+        font-size: .64em;
+    }
+    div.contact-info-panel div#contact-panel-contact-details {
+        height: 86%;
+    }
+    header div.name h1 {
+        font-size: 1.6em;
+        font-weight: 500;
+    }
+}
+
+
+@media only screen and (max-width: 360px) {
+
+}

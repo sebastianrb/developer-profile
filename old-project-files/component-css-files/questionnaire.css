@@ -1,0 +1,377 @@
+div#questionnaire-wrapper {
+    font-size: .9em;
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    background: url(../component-images/city_and_water-large.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+    background-size: cover;
+    padding: 2% 0;
+    text-align: left;
+}
+
+div#questionnaire-wrapper  select {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    font-family: inherit;
+    background: url(../component-images/down_arrow.png) no-repeat right #fff;
+    background-size: 10px;
+    background-position: 98.5%;
+    height: 34px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1;
+    border: 1px solid rgba(128, 128, 128, 0.6);
+    border-radius: 0;
+    padding: 5px;
+}
+
+/*radio button and checkbox styling*/
+
+div#questionnaire-wrapper label.radio-label, label.checkbox-label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    color: black;
+}
+
+div#questionnaire-wrapper input[type=radio], input[type=checkbox] {
+    display: none;
+}
+
+div#questionnaire-wrapper label.radio-label:before, label.checkbox-label:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    position: absolute;
+    left: 0px;
+    bottom: 2px;
+    background-color: #CCC;
+}
+
+div#questionnaire-wrapper label.radio-label:before {
+    border-radius: 8px;
+}
+
+div#questionnaire-wrapper input[type=radio]:checked + label.radio-label:before {
+    content: "\2022";
+    color: #696969;
+    font-size: 30px;
+    text-align: center;
+    line-height: 18px;
+}
+
+div#questionnaire-wrapper input[type=checkbox]:checked + label.checkbox-label:before {
+    content: "\2714";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    font-size: 15px;
+    color: #696969;
+    text-align: center;
+    line-height: 16px;
+}
+
+/*class and ID-related styles*/
+
+div#questionnaire-wrapper fieldset.questionnaire-card {
+    background-color: #F5F2F2;
+    position: relative;
+    width: 700px;
+    margin: 7% auto;
+    border: none;
+    border-radius: 2.5px;
+    padding: 40px 90px 50px;
+    box-shadow: 0 0 8px 3px rgba(43, 42, 42, 0.45);
+}
+
+div#questionnaire-wrapper .submit {
+    background-color: #BA0077;
+}
+
+div#questionnaire-wrapper .button {
+    background-color: #975bcc;
+}
+
+div#questionnaire-wrapper .button,
+div#questionnaire-wrapper .submit {
+    color: white;
+    font: 100 14px Roboto;
+    letter-spacing: .04em;
+    min-width: 130px;
+    margin: 45px auto 0;
+    border: none;
+    padding: 18px;
+    display: block;
+    cursor: pointer;
+    transition: .2s;
+    width: 33%;
+}
+
+div#questionnaire-wrapper h2.title {
+    color: #6B08AD;
+    margin-bottom: 30px;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.23);
+    padding-bottom: 30px;
+    font-size: 2.3em;
+    font-weight: 200;
+}
+
+div#questionnaire-wrapper .multiple-choice-header {
+    margin-bottom: 3px;
+}
+
+div#questionnaire-wrapper .question, .multiple-choice-header, .select-label {
+    font-weight: 600;
+    color: rgba(28, 55, 68, 0.84);
+    font-size: 1.2em;
+    display: block;
+    padding: 17px 0 19px;
+}
+
+div#questionnaire-wrapper .short-answer {
+    height: 45px;
+}
+
+div#questionnaire-wrapper .short-answer, .long-answer  {
+    font-size: 1.18em;
+    display: block;
+    width: 100%;
+    -webkit-transition: all 0.40s;
+       -moz-transition: all 0.40s;
+        -ms-transition: all 0.40s;
+         -o-transition: all 0.40s;
+    margin-bottom: 23px;
+    border: none;
+    border-bottom: 4px solid #6B08AD;
+    padding: 10px 7px;
+    outline: none;
+}
+
+div#questionnaire-wrapper p.description {
+    color: rgba(116, 145, 166, 0.90);
+    font-size: 1rem;
+    margin-top: 5px 0 25px;
+}
+
+div#questionnaire-wrapper h2 + p.description {
+    margin-top: -5px;
+}
+
+div#questionnaire-wrapper .multiple-choice {
+    margin-left: 0;
+    border: none;
+    padding-left: 0;
+}
+
+div#questionnaire-wrapper .multiple-choice label {
+    display: block;
+    margin: 0 0 19px;
+    font-size: 1.15em;
+}
+
+div#questionnaire-wrapper .disabled-gray {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(14, 13, 13, 0.4);
+    border-radius: 2px;
+}
+
+div#questionnaire-wrapper .disabled h2 {
+    color: rgba(128, 128, 128, 0.74);
+    font-weight: 100;
+    font-size: 2.1em;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.23);
+    padding-bottom: 25px;
+}
+
+div#questionnaire-wrapper img.form-image {
+    width: 100%;
+    margin: 20px 0 26px;
+    display: block;
+}
+
+div#questionnaire-wrapper ::-webkit-input-placeholder, div#questionnaire-wrapper :-ms-input-placeholder {
+    font-size: .8rem;
+    color: #9e9e9e;
+    font-family: Roboto;
+}
+
+div#questionnaire-wrapper :-moz-placeholder, div#questionnaire-wrapper ::-moz-placeholder {
+    color: #9e9e9e;
+    font-family: Roboto;
+    opacity:  1;
+}
+
+/*pseudo elements and styles*/
+
+div#questionnaire-wrapper label.question.required:after,
+div#questionnaire-wrapper label.select-label.required:after {
+    content: "Required";
+    float: right;
+    color: #B50014;
+    font-size: .72em;
+    text-transform: uppercase;
+    padding-top: 1%;
+}
+
+div#questionnaire-wrapper .short-answer:focus,
+div#questionnaire-wrapper .long-answer:focus  {
+    box-shadow: 0 0 5px 2px rgba(146, 144, 144, 0.8);
+}
+
+div#questionnaire-wrapper button:active,
+div#questionnaire-wrapper .submit:active {
+    position: relative;
+    top: 3px;
+    outline: none;
+}
+
+div#questionnaire-wrapper input:focus,
+div#questionnaire-wrapper button:focus,
+div#questionnaire-wrapper select:focus {
+    outline: none;
+}
+
+div#questionnaire-wrapper button:hover {
+    background-color: #6B08AD;
+}
+
+div#questionnaire-wrapper .submit:hover {
+    background-color: #920860;
+}
+
+div#questionnaire-wrapper button:hover,
+div#questionnaire-wrapper .submit:hover {
+    transition: .2s;
+}
+
+div#questionnaire-wrapper .disabled button:hover {
+    background-color: #9F48D2;
+    cursor: default;
+}
+
+/*validation bubbles*/
+div#questionnaire-wrapper .invalid::before {
+    content: "!";
+    display: block;
+    color: #ad0808;
+    width: 29px;
+    position: absolute;
+    right: 631px;
+    padding: 5px 10px 5px 1px;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.74);
+    font-size: .9em;
+    border: 1px solid #ad0808;
+    background-image: url("./images/right_arrow.png");
+    background-size: 37%;
+    background-repeat: no-repeat;
+    background-position: 94%;
+    text-align: center;
+}
+
+div#questionnaire-wrapper fieldset.disabled .invalid::before {
+    display: none;
+}
+
+
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+
+/*MEDIA QUERIES*/
+
+@media only screen and (max-width: 900px) {
+    div#questionnaire-wrapper fieldset.questionnaire-card {
+        width: 86%;
+        margin: 9% auto;
+    }
+    div#questionnaire-wrapper .invalid::before {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        margin: 0;
+    }
+    div#questionnaire-wrapper fieldset.questionnaire-card {
+        width: 100%;
+        border-radius: 0;
+        padding: 7% 12% 9%;
+    }
+    div#questionnaire-wrapper .button,
+    div#questionnaire-wrapper .submit {
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    div#questionnaire-wrapper fieldset.questionnaire-card {
+        padding: 6% 11% 9%;
+        font-size: .9em;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    div#questionnaire-wrapper fieldset.questionnaire-card {
+        padding: 5% 11% 9%;
+        font-size: .85em;
+    }
+    div#questionnaire-wrapper .short-answer {
+        height: 40px;
+    }
+    div#questionnaire-wrapper  select {
+        font-size: 1.15em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    div#questionnaire-wrapper fieldset.questionnaire-card {
+        padding: 5% 9% 9%;
+    }
+    div#questionnaire-wrapper .short-answer {
+        height: 35px;
+    }
+
+}
+
+@media only screen and (max-width: 440px) {
+    div#questionnaire-wrapper fieldset.questionnaire-card {
+       font-size: .76em;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    div#questionnaire-wrapper fieldset.questionnaire-card {
+        padding: 5% 8.5% 10%;
+    }
+    div#questionnaire-wrapper fieldset.questionnaire-card {
+       font-size: .70em;
+    }
+    div#questionnaire-wrapper label.question.required:after, label.select-label.required:after {
+        font-size: .76em;
+    }
+}

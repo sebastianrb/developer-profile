@@ -1,0 +1,29 @@
+.footer {
+    width: 100%;
+    min-height: 100px;
+    background: rgba(2, 0, 36, 0.9);
+    background: radial-gradient(circle, rgba(2, 0, 36, 0.9), #020024);
+    padding: 110px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 20px 2px grey;
+
+    h4.footer_header {
+        margin: 10px;
+    }
+
+    @media screen and (max-width: $breakpoint-medium) {
+        font-size: .95em;
+        // padding: 90px;
+    }
+
+    @media screen and (max-width: $breakpoint-small) {
+        font-size: .85em;
+        padding: 95px 20px;
+    }
+
+    @media screen and (max-width: $breakpoint-smallest) {
+        font-size: .80em;
+        padding: 80px 17px;
+    }
+}

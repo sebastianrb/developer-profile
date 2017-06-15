@@ -1,0 +1,195 @@
+div#accordion-wrapper {
+    width: 100%;
+}
+
+div#accordion {
+    margin: 7% auto;
+    width: 65%;
+    max-width: 800px;
+    min-width: 740px;
+    text-align: left;
+}
+
+div#accordion ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+div#accordion ul li input[type="checkbox"] {
+    display: none;
+}
+
+div#accordion ul li label {
+        padding: 2%;
+        position: relative;
+        z-index: 20;
+        display: block;
+        cursor: pointer;
+        line-height: 33px;
+        color: white;
+        border: 6px solid #03034a;
+        background-color: #03034a;
+        text-align: center;
+        font-size: 1.5em;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -o-transition: all .3s;
+        -ms-transition: all .3s;
+}
+
+div#accordion ul li label:not(:first-child) {
+    margin-top: 1%;
+}
+
+div#accordion ul li input[type="checkbox"]:checked + label {
+    background: white;
+    color: #f94c0c;
+    border: 6px solid #f94c0c;
+}
+
+div#accordion ul li input[type="checkbox"]:checked + label:not(:first-child) {
+    margin-top: 3%;
+}
+
+
+div#accordion ul li label:hover {
+    background: white;
+    color: #03034a;
+    border: 6px solid #03034a;
+}
+
+div#accordion ul li article {
+    /*background: #f3f3f3;*/
+    /*background-color: #e2e1e1;*/
+    background: radial-gradient(circle, darkgray, #e2e1e1);
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    margin-top: -1px;
+    -webkit-transition: max-height .4s ease-out, box-shadow .5s linear, padding .8s;
+    -moz-transition: max-height .4s ease-out, box-shadow .5s linear, padding .8s;
+    -o-transition: max-height .4s ease-out, box-shadow .5s linear, padding .8s;
+    -ms-transition: max-height .4s ease-out, box-shadow .5s linear, padding .8s;
+    transition: max-height .4s ease-out, box-shadow .5s linear, padding .8s;
+    box-shadow: 0 0 9px 1px darkgray inset;
+}
+
+div#accordion ul li input[type="checkbox"]:checked ~ article {
+    -webkit-transition:
+            max-height .7s ease-in-out,
+            box-shadow 0.1s linear,
+            padding .3s;
+    -moz-transition:
+            max-height .7s ease-in-out,
+            box-shadow 0.1s linear,
+            padding .3s;
+    -o-transition:
+            max-height .7s ease-in-out,
+            box-shadow 0.1s linear,
+            padding .3s;
+    -ms-transition:
+            max-height .7s ease-in-out,
+            box-shadow 0.1s linear,
+            padding .3s;
+    transition:
+            max-height .7s ease-in-out,
+            box-shadow 0.1s linear,
+            padding .3s;
+    margin-bottom: 3%;
+    border-bottom: 4px solid #f94c0c;
+}
+
+div#accordion ul li article p {
+    font-size: .9em;
+    /*color: rgba(3, 3, 74, 0.5);*/
+    color: rgba(78, 77, 77, 0.82);
+    /*margin: 15px 0 25px;*/
+    margin: 4% 0;
+    text-align: justify;
+}
+
+div#accordion ul li article img {
+    width: 85%;
+    border: 2px solid #03034a;
+    margin: 8% auto 7%;
+    display: block;
+}
+
+
+div#accordion ul li input[type="checkbox"]:checked + label:hover:after {
+    content: "";
+    width: 25px;
+    height: 20px;
+    right: 25px;
+    top: 15px;
+    position: absolute;
+    background: transparent url(../images/upArrow.svg) no-repeat center 50%;
+}
+
+div#accordion ul li input[type="checkbox"]:checked ~ article.ac-content {
+    /*padding: 20px 40px 40px;*/
+    padding: 1% 5%;
+    max-height: 900px;
+}
+
+
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+/*Mobile*/
+
+/*MEDIA QUERIES*/
+
+@media only screen and (max-width: 900px) {
+    div#accordion {
+        min-width: 0;
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    div#accordion {
+        width: 100%;
+    }
+    div#accordion ul li article img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    /*div#accordion ul li label {
+        font-size: 1.3em;
+    }*/
+    div#accordion-wrapper {
+        font-size: .9em;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    div#accordion-wrapper {
+        font-size: .9em;
+    }
+    div#accordion ul li input[type="checkbox"]:checked ~ article.ac-content {
+        padding: 2% 6%;
+    }
+    div#accordion ul li label {
+        font-size: 1.25em;
+    }
+}

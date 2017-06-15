@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Interactive Portfolio</title>
+        <link rel="stylesheet" href="../projectHomepage.css">
+        <link rel="stylesheet" href="main.css"/>
+<!--         <link rel="stylesheet" type="text/css" href="./test-output.css">
+ -->        <link rel="stylesheet" type="text/css" href="component-css-files/calculator.css">
+        <link rel="stylesheet" type="text/css" href="component-css-files/accordion.css">
+        <link rel="stylesheet" type="text/css" href="component-css-files/products.css">
+        <link rel="stylesheet" type="text/css" href="component-css-files/tabs.css">
+        <link rel="stylesheet" type="text/css" href="component-css-files/business-card.css">
+        <link rel="stylesheet" type="text/css" href="component-css-files/image-gallery.css">
+        <link rel="stylesheet" type="text/css" href="component-css-files/questionnaire.css">
+        <link href="https://fonts.googleapis.com/css?family=Gudea|Hind+Madurai:300|Libre+Franklin:200|Pontano+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Hind+Madurai:400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,400" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script defer src="component-js-files/calculator.js"></script>
+        <script defer src="component-js-files/products.js"></script>
+        <script defer src="component-js-files/questionnaire-validator.js"></script>
+        <script defer src="component-js-files/questionnaire-validation.js"></script>
+        <script defer src="component-js-files/questionnaire-main.js"></script>
+        <script defer src="../JS Files/portfolio-footer.js"></script>
+    </head>
+    <body>
+    <header id="main-header">
+        <div class="name">
+            <h1>Sebastian Ramirez-Brunner</h1>
+            <h3>Fullstack Developer</h3>
+        </div>
+        <div class="search-container">
+            <input type="text" name="search" id="search-box" required>
+            <label for="search-box">Search</label>
+            <input type="checkbox" name="modal-check" id="modal-check">
+            <label for="modal-check">Submit</label>
+            <div id="modal">
+                <label for="modal-check" id="modal-close"></label>
+                <h3>Search Temporarily Unavailable</h3>
+            </div>
+            <!-- project 1 modal -->
+            <input type="checkbox" name="modal-project-1" id="modal-project-1" class="modal-project-check">
+            <div class="modal">
+                <label for="modal-project-1" class="modal-project-close"></label>
+                <h3>Image Gallery</h3>
+                <div class="component-wrapper">
+                    <div id="image-gallery-wrapper">
+                        <div class="image-gallery clearfix">
+                            <div class="thumbnails-background">
+                            </div>
+                            <div class="image-gallery-tab">
+                                <input type="radio" name="scotch-input" id="islay-image-gallery" checked>
+                                <label for="islay-image-gallery"><img src="./component-images/islay2-thumbnail.jpg" alt="Image 1" class="image-thumbnail"></label>
+                                <div class="content">
+                                    <img src="./component-images/islay2.jpg" sizes="80vw" srcset="./component-images/islay2.jpg 800w, ./component-images/islay2-medium.jpg 600w, ./component-images/islay2-small.jpg 400w" alt="Image 1" class="image-displayed">
+                                </div>
+                            </div>
+                            <div class="image-gallery-tab">
+                                <input type="radio" name="scotch-input" id="speyside-image-gallery">
+                                <label for="speyside-image-gallery"><img src="./component-images/speyside2-thumbnail.jpg" alt="Image 2" class="image-thumbnail"></label>
+                                <div class="content">
+                                    <img src="./component-images/speyside2.jpg" sizes="80vw" srcset="./component-images/speyside2.jpg 800w, ./component-images/speyside2-medium.jpg 600w, ./component-images/speyside2-small.jpg 400w" alt="Image 1" class="image-displayed">
+                                </div>
+                            </div>
+                            <div class="image-gallery-tab">
+                                <input type="radio" name="scotch-input" id="highland-image-gallery">
+                                <label for="highland-image-gallery"><img src="./component-images/highland2-thumbnail.jpg" alt="Image 3" class="image-thumbnail"></label>
+                                <div class="content">
+                                    <img src="./component-images/highland2.jpg" sizes="80vw" srcset="./component-images/highland2.jpg 800w, ./component-images/highland2-medium.jpg 600w, ./component-images/highland2-small.jpg 400w" alt="Image 2" class="image-displayed">
+                                </div>
+                            </div>
+                            <div class="image-gallery-tab">
+                                <input type="radio" name="scotch-input" id="campbeltown-image-gallery">
+                                <label for="campbeltown-image-gallery"><img src="./component-images/campbeltown2-thumbnail.jpg" alt="Image 4" class="image-thumbnail"></label>
+                                <div class="content">
+                                    <img src="./component-images/campbeltown2.jpg" sizes="80vw" srcset="./component-images/campbeltown2.jpg 800w, ./component-images/campbeltown2-medium.jpg 600w, ./component-images/campbeltown2-small.jpg 400w" alt="Image 3" class="image-displayed">
+                                </div>
+                            </div>
+                            <div class="image-gallery-tab">
+                                <input type="radio" name="scotch-input" id="skye-image-gallery">
+                                <label for="skye-image-gallery"> <img src="./component-images/skye-thumbnail.jpg" alt="Image 4" class="image-thumbnail"></label>
+                                <div class="content">
+                                    <img src="./component-images/skye.jpg" sizes="80vw" srcset="./component-images/skye.jpg 800w, ./component-images/skye-medium.jpg 600w, ./component-images/skye-small.jpg 400w" alt="Image 4" class="image-displayed">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- project 2 modal -->
+            <input type="checkbox" name="modal-project-2" id="modal-project-2" class="modal-project-check">
+            <div class="modal">
+                <label for="modal-project-2" class="modal-project-close"></label>
+                <h3>Accordion</h3>
+                <div class="component-wrapper">
+                    <div id="accordion-wrapper">
+                        <div id="accordion">
+                            <ul>
+                                <li>
+                                    <input id="islay" type="checkbox" name="scotches">
+                                    <label for="islay">Islay</label>
+                                    <article class="ac-content">
+                                        <p class="description">Islay is the southernmost island of the Inner Hebrides of Scotland. Known as "The Queen of the Hebrides", it lies in Argyll just south west of Jura and around 40 kilometres (25 mi) north of the Irish coast. The island's capital is Bowmore where the distinctive round Kilarrow Parish Church and a distillery are located. Port Ellen is the main port.</p>
+                                        <p>Islay is one of five whisky distilling localities and regions in Scotland whose identity is protected by law. There are eight active distilleries and the industry is the island's second largest employer after agriculture. Those on the south of the island produce malts with a very strong peaty flavour, considered to be the most intensely flavoured of all whiskies.</p>
+                                        <img src="./component-images/islay2.jpg" sizes="(max-width: 768px) 85vw, 50vw" srcset="./component-images/islay2.jpg 800w, ./component-images/islay2-medium.jpg 600w, ./component-images/islay2-small.jpg 400w" alt="Image 1" class="image-displayed">
+                                    </article>
+                                </li>
+                                <li>
+                                    <input id="speyside" type="checkbox" name="scotches">
+                                    <label for="speyside">Speyside</label>
+                                    <article class="ac-content">
+                                        <p class="description">Speyside single malts are single malt Scotch whiskies, distilled in Strathspey, the area around the River Spey in Moray and Badenoch and Strathspey, in northeastern Scotland.</p>
+                                        <p>The two best-selling single malt whiskies in the world, The Glenlivet and Glenfiddich, come from Speyside. Speyside has the greatest number of distilleries of any of the whisky-producing areas of Scotland.</p>
+                                        <p>Speyside whiskies can generally be classified as light and grassy (e.g. Glenlivet) or rich and sweet (e.g. Macallan).</p>
+                                        <img src="./component-images/speyside2.jpg" sizes="(max-width: 768px) 85vw, 50vw" srcset="./component-images/speyside2.jpg 800w, ./component-images/speyside2-medium.jpg 600w, ./component-images/speyside2-small.jpg 400w" alt="Image 2" class="image-displayed">
+                                    </article>
+                                </li>
+                                <li>
+                                    <input id="highland" type="checkbox" name="scotches">
+                                    <label for="highland">Highland</label>
+                                    <article class="ac-content">
+                                        <p class="description">Highland single malts are single malt Scotch whiskies produced in the Highland region of Scotland. This categorization includes the whiskies produced on the islands around the perimeter of Scotland (the Island single malts), except for Islay (see Islay whisky). Incongruously, the area also includes certain lowland areas in the North-East of the country such as Banffshire and Aberdeenshire.</p>
+                                        <p>The Highlands is by far the largest region in Scotland both in area and in whisky production. Given the expansive area, there is a reasonably wide range of styles from this region from the light and fruity styles of the Southern Highlands to the more Spicy and Full Bodied styles of the North.</p>
+                                        <img src="./component-images/highland2.jpg" sizes="(max-width: 768px) 85vw, 50vw" srcset="./component-images/highland2.jpg 800w, ./component-images/highland2-medium.jpg 600w, ./component-images/highland2-small.jpg 400w" alt="Image 3" class="image-displayed">
+                                    </article>
+                                </li>
+                                <li>
+                                    <input id="campbeltown" type="checkbox" name="scotches">
+                                    <label for="campbeltown">Campbeltown</label>
+                                    <article class="ac-content">
+                                        <p class="description">Campbeltown single malts are single malt Scotch whiskies distilled in the burgh of Campbeltown, on the Kintyre peninsula in Scotland. Once a major producer of whisky with as many as 28 distilleries, and claiming the title "whisky capital of the world", its production has markedly declined. Most of the distilleries have gone out of business and little trace of them remains.</p>
+                                        <p>There are only three remaining distilleries that are active in this region- Glengyle, Glen Scotia, and Springbank. Scotches from this region have a heavy sea influence and one can detect the salt and brine as well as the peat that’s used in the whisky production here.</p>
+                                        <p></p>
+                                        <img src="./component-images/campbeltown2.jpg" sizes="(max-width: 768px) 85vw, 50vw" srcset="./component-images/campbeltown2.jpg 800w, ./component-images/campbeltown2-medium.jpg 600w, ./component-images/campbeltown2-small.jpg 400w" alt="Image 4" class="image-displayed">
+                                    </article>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- project 3 modal -->
+            <input type="checkbox" name="modal-project-3" id="modal-project-3" class="modal-project-check">
+            <div class="modal">
+                <label for="modal-project-3" class="modal-project-close"></label>
+                <h3>Tabs</h3>
+                <div class="component-wrapper">
+                    <div id="tabs-wrapper">
+                         <div id="tabs-component">
+                             <div class="tab-component-tab">
+                                 <input type="radio" id="islay-tabs" name="tab-group" checked>
+                                 <label for="islay-tabs">Islay</label>
+                                 <div class="content">
+                                     <!-- <img src="../images/islay.jpg"> -->
+                                     <img src="./component-images/islay2.jpg" sizes="75vw" srcset="./component-images/islay2.jpg 800w, ./component-images/islay2-medium.jpg 600w, ./component-images/islay2-small.jpg 400w" alt="Image 1" class="image-displayed">
+                                 </div>
+                             </div>
+                             <div class="tab-component-tab">
+                                 <input type="radio" id="speyside-tabs" name="tab-group">
+                                 <label for="speyside-tabs">Speyside</label>
+                                 <div class="content">
+                                     <!-- <img src="../images/speyside.jpg"> -->
+                                     <img src="./component-images/speyside2.jpg" sizes="75vw" srcset="./component-images/speyside2.jpg 800w, ./component-images/speyside2-medium.jpg 600w, ./component-images/speyside2-small.jpg 400w" alt="Image 2" class="image-displayed">
+                                 </div>
+                             </div>
+                             <div class="tab-component-tab">
+                                 <input type="radio" id="highland-tabs" name="tab-group">
+                                 <label for="highland-tabs">Highland</label>
+                                 <div class="content">
+                                     <!-- <img src="../images/highland.jpg"> -->
+                                     <img src="./component-images/highland2.jpg" sizes="75vw" srcset="./component-images/highland2.jpg 800w, ./component-images/highland2-medium.jpg 600w, ./component-images/highland2-small.jpg 400w" alt="Image 3" class="image-displayed">
+                                 </div>
+                             </div>
+                             <div class="tab-component-tab">
+                                 <input type="radio" id="campbeltown-tabs" name="tab-group">
+                                 <label for="campbeltown-tabs">Campbeltown</label>
+                                 <div class="content">
+                                     <!-- <img src="../images/campbeltown.jpg"> -->
+                                     <img src="./component-images/campbeltown2.jpg" sizes="75vw" srcset="./component-images/campbeltown2.jpg 800w, ./component-images/campbeltown2-medium.jpg 600w, ./component-images/campbeltown2-small.jpg 400w" alt="Image 4" class="image-displayed">
+                                 </div>
+                             </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+            <!-- project 4 modal -->
+            <input type="checkbox" name="modal-project-4" id="modal-project-4" class="modal-project-check">
+            <div class="modal">
+                <label for="modal-project-4" class="modal-project-close"></label>
+                <h3>Calculator</h3>
+                <div class="component-wrapper">
+                    <div id="calculator-wrapper">
+                        <div id="calculator">
+                            <div id="calculator-top">
+                                <button class="clear calculator-button">Clear</button>
+                                <input id="screen" type="text">
+                            </div>
+                            <div id="calculator-bottom">
+                                <div class="calculator-container">
+                                    <button class="calculator-button to-screen" value="7">7</button>
+                                    <button class="calculator-button to-screen" value="8">8</button>
+                                    <button class="calculator-button to-screen" value="9">9</button>
+                                    <button class="calculator-button to-screen operation" value="+">+</button>
+                                </div>
+                                <div class="calculator-container">
+                                    <button class="calculator-button to-screen" value="4">4</button>
+                                    <button class="calculator-button to-screen" value="5">5</button>
+                                    <button class="calculator-button to-screen" value="6">6</button>
+                                    <button class="calculator-button to-screen operation" value="-">-</button>
+                                </div>
+                                <div class="calculator-container">
+                                    <button class="calculator-button to-screen" value="1">1</button>
+                                    <button class="calculator-button to-screen" value="2">2</button>
+                                    <button class="calculator-button to-screen" value="3">3</button>
+                                    <button class="calculator-button to-screen operation" value="/">&divide;</button>
+                                </div>
+                                <div class="calculator-container">
+                                    <button class="calculator-button to-screen" value="0">0</button>
+                                    <button class="calculator-button to-screen" value=".">.</button>
+                                    <button class="calculator-button equals">=</button>
+                                    <button class="calculator-button to-screen operation" value="*">&times;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- project 5 modal -->
+            <input type="checkbox" name="modal-project-5" id="modal-project-5" class="modal-project-check">
+            <div class="modal">
+                <label for="modal-project-5" class="modal-project-close"></label>
+                <h3>Product Listing</h3>
+                <div class="component-wrapper">
+                    <div id="products-wrapper">
+                        <h1>The Scotch Store!</h1>
+                        <div class="product" id="0">
+                            <div class="description">
+                                <h3>Laphroaig 10 Year</h3>
+                                <p>"The original Laphroaig, distilled the same way today as when Ian Hunter invented it over 75 years ago." A classic. Smokey, complex and smooth.</p>
+                                <p class="itemPrice"><strong>Price: </strong></p>
+                            </div>
+                            <img class="productImage" src="./component-images/scotch-images/laphroaig-10.jpg">
+                            <div class="buy">
+                                <p class="quantCaption">Quantity:</p>
+                                <input type="text" class="quantity">
+                                <button class="button add itemButton">Add to Cart</button>
+                                <button class="button delete-button itemButton">Remove All from Cart</button>
+                            </div>
+                        </div>
+                        <div class="product" id="1">
+                            <div class="description">
+                                <h3>Laphroaig 18 Year</h3>
+                                <p>"Laphroaig 18yo was introduced in 2009 as a replacement for the old 15 Year Old (Prince Charles' sorely missed favourite whisky, lest we forget). This is a stronger, altogether gutsier affair at 48%."</p>
+                                <p class="itemPrice"><strong>Price: </strong></p>
+                            </div>
+                            <img class="productImage" src="./component-images/scotch-images/laphroaig-18.jpg">
+                            <div class="buy">
+                                <p class="quantCaption">Quantity:</p>
+                                <input type="text" class="quantity">
+                                <button class="button add itemButton">Add to Cart</button>
+                                <button class="button delete-button itemButton">Remove All from Cart</button>
+                            </div>
+                        </div>
+                        <div class="product" id="2">
+                            <div class="description">
+                                <h3>Laphroaig 32 Year</h3>
+                                <p>"Laphroaig's 200th anniversary celebrations have been leading up to this extraordinary bottling of rare single malt Scotch whisky from Islay all through 2015. Just 5,880 bottles of this exclusively first-fill Oloroso Sherry cask matured 32 year old Laphroaig have been produced."</p>
+                                <p class="itemPrice"><strong>Price: </strong></p>
+                            </div>
+                            <img class="productImage" src="./component-images/scotch-images/laphroaig-32.jpg">
+                            <div class="buy">
+                                <p class="quantCaption">Quantity:</p>
+                                <input type="text" class="quantity">
+                                <button class="button add itemButton">Add to Cart</button>
+                                <button class="button delete-button itemButton">Remove All from Cart</button>
+                            </div>
+                        </div>
+                        <div class="product" id="3">
+                            <div class="description">
+                                <h3>Oban 14 Year</h3>
+                                <p>"The nose is rich and smokey. There are notes of cut hay and wood smoke rising with a gentle estery sweetness. The palate is thick and full. Notes of citrus with smooth sweetness. The smoke wafts with notes of seaweed. The oak is quite rich with grist and cereal and malt. The finish is of good length with fruit and dry oak."</p>
+                                <p class="itemPrice"><strong>Price: </strong></p>
+                            </div>
+                            <img class="productImage" src="./component-images/scotch-images/oban-14.jpg">
+                            <div class="buy">
+                                <p class="quantCaption">Quantity:</p>
+                                <input type="text" class="quantity">
+                                <button class="button add itemButton">Add to Cart</button>
+                                <button class="button delete-button itemButton">Remove All from Cart</button>
+                            </div>
+                        </div>
+                        <div class="product" id="4">
+                            <div class="description">
+                                <h3>Oban 18 Year</h3>
+                                <p>"Those extra four years give Oban 18-Year-Old a rounder, more developed flavour. The sweeter notes such as banana and toasted teacake, found subtly in Oban 14-Year-Old,are amplified. The rich sweetness of Oban 18-Year-Old is perfectly balanced with the most mysterious of flavours: a dry hint of Sea Salt."</p>
+                                <p class="itemPrice"><strong>Price: </strong></p>
+                            </div>
+                            <img class="productImage" src="./component-images/scotch-images/oban-18.jpg">
+                            <div class="buy">
+                                <p class="quantCaption">Quantity:</p>
+                                <input type="text" class="quantity">
+                                <button class="button add itemButton">Add to Cart</button>
+                                <button class="button delete-button itemButton">Remove All from Cart</button>
+                            </div>
+                        </div>
+                        <div class="product" id="5">
+                            <div class="description">
+                                <h3>Lagavulin 12 Year</h3>
+                                <p>"Vatted from refill American Oak casks, each at least 12 years old and bottled at natural cask strength 55.1%. Unpredictable and energetic; among the most appetizing and savory of all whiskies. A fine, punchy expression of Lagavulin with all the Islay genes, refined and at an advanced state of evolution."</p>
+                                <p class="itemPrice"><strong>Price: </strong></p>
+                            </div>
+                            <img class="productImage" src="./component-images/scotch-images/lagavulin-12.jpg">
+                            <div class="buy">
+                                <p class="quantCaption">Quantity:</p>
+                                <input type="text" class="quantity">
+                                <button class="button add itemButton">Add to Cart</button>
+                                <button class="button delete-button itemButton">Remove All from Cart</button>
+                            </div>
+                        </div>
+                        <div class="product" id="6">
+                            <div class="description">
+                                <h3>Lagavulin 16 Year</h3>
+                                <p>"A much sought-after single malt with the massive peat-smoke that's typical of southern Islay - but also offering richness and a dryness that turns it into a truly interesting dram. The 16 year old has become a benchmark Islay dram from the Lagavulin distillery."</p>
+                                <p class="itemPrice"><strong>Price: </strong></p>
+                            </div>
+                            <img class="productImage" src="./component-images/scotch-images/lagavulin-16.jpg">
+                            <div class="buy">
+                                <p class="quantCaption">Quantity:</p>
+                                <input type="text" class="quantity">
+                                <button class="button add itemButton">Add to Cart</button>
+                                <button class="button delete-button itemButton">Remove All from Cart</button>
+                            </div>
+                        </div>
+                        <div class="product" id="7">
+                            <div class="description">
+                                <h3>Monkey Shoulder</h3>
+                                <p>"A superb blended malt whisky from William Grant, made with single malts from the company's three neighbouring distilleries in Dufftown. The result is a smooth, creamy, supple and very malty Scotch which works superbly well neat, over ice, or in whisky cocktails (where it really excels)."</p>
+                                <p class="itemPrice"><strong>Price: </strong></p>
+                            </div>
+                            <img class="productImage" src="./component-images/scotch-images/monkey-shoulder.jpg">
+                            <div class="buy">
+                                <p class="quantCaption">Quantity:</p>
+                                <input type="text" class="quantity">
+                                <button class="button add itemButton">Add to Cart</button>
+                                <button class="button delete-button itemButton">Remove All from Cart</button>
+                            </div>
+                        </div>
+                        <div class="product" id="8">
+                            <div class="description">
+                                <h3>Bowmore 12 Year</h3>
+                                <p>"The heart of the Bowmore range, the 12 year old exhibits some beautiful coastal notes with a gentle peat, it is the balance that the floral element presents that makes this a great entry bottling for Bowmore."</p>
+                                <p class="itemPrice"><strong>Price: </strong></p>
+                            </div>
+                            <img class="productImage" src="./component-images/scotch-images/bowmore-12.jpg">
+                            <div class="buy">
+                                <p class="quantCaption">Quantity:</p>
+                                <input type="text" class="quantity">
+                                <button class="button add itemButton">Add to Cart</button>
+                                <button class="button delete-button itemButton">Remove All from Cart</button>
+                            </div>
+                        </div>
+                        <div class="product" id="9">
+                            <div class="description">
+                                <h3>Bowmore 15 Year</h3>
+                                <p>"A 15 year old released in January of 2007 from the legendary Bowmore distillery in Islay. This single malt has enjoyed maturation in Oloroso sherry casks."</p>
+                                <p class="itemPrice"><strong>Price: </strong></p>
+                            </div>
+                            <img class="productImage" src="./component-images/scotch-images/bowmore-15.jpg">
+                            <div class="buy">
+                                <p class="quantCaption">Quantity:</p>
+                                <input type="text" class="quantity">
+                                <button class="button add itemButton">Add to Cart</button>
+                                <button class="button delete-button itemButton">Remove All from Cart</button>
+                            </div>
+                        </div>
+                        <button id="toggle" class="button">Toggle Cart</button>
+                        <div id="basket" tabindex="-1">
+                            <div id="basketTotal" class="basketTotal">
+                                <img src="./component-images/basket.png">
+                                <h4>Number of Items in Basket:</h4>
+                                <p id="cartList">Cart is empty</p>
+                                <h4>You have selected the following Scotches:</h4>
+                                <div id ="scotchBasketList"><p>No items selected</p></div>
+                                <h4>Order Total:</h4>
+                                <p id="cartTotal">Cart is empty</p>
+                            </div>
+                            <div class="basketButtons">
+                                <p class="promoCaption">Enter Promo Code</p>
+                                <input id="codeField" type="text" class="promoCode">
+                                <button id="enterCode" class="button">Apply Promo Code</button>
+                                <button class="button keepShopping">Keep Shopping</button>
+                                <button class="button checkOut">Check Out</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- project 6 modal -->
+            <input type="checkbox" name="modal-project-6" id="modal-project-6" class="modal-project-check">
+            <div class="modal">
+                <label for="modal-project-6" class="modal-project-close"></label>
+                <h3>Questionnaire</h3>
+                <div class="component-wrapper">
+                    <div id="questionnaire-wrapper">
+                        <form action="" class="questionnaire">
+                            <fieldset class="questionnaire-card" id="card1">
+                                <h2 class="title">
+                                    <strong>Questionnaire</strong> Mockup
+                                </h2>
+                                <label for="card1-name" class="question required">What are your first and last names?</label>
+                                <input type="text" id="card1-name" class="short-answer" placeholder="John Wayne">
+                                <label for="card1-email" class="question required">What is your email address?</label>
+                                <input type="text" id="card1-email" class="short-answer" placeholder="whatsup@moderndeveloper.com">
+                                <label for="card1-color" class="question">What is your favorite color?</label>
+                                <input type="text" id="card1-color" class="short-answer" placeholder="">
+                                <button class="button">Continue</button>
+                            </fieldset>
+
+                            <fieldset class="questionnaire-card" id="card2">
+                                <h2 class="title">
+                                        Section Title
+                                </h2>
+                                <label for="card2-question1" class="question">Question</label>
+                                <input type="text" id="card2-question1" class="short-answer" placeholder="Answer">
+                                <label for="card2-question2" class="question">Question</label>
+                                <input type="text" id="card2-question2" class="short-answer" placeholder="Answer">
+                                <label for="card2-question3" class="question">Question</label>
+                                <textarea name="" id="card2-question3" class="long-answer" cols="30" rows="5" placeholder="Long Response, using &lt;textarea&gt;"></textarea>
+                                <button class="button">Continue</button>
+                            </fieldset>
+
+                            <fieldset class="questionnaire-card disabled" id="card3">
+                                <div class="disabled-gray"></div>
+                                <h2>This section is disabled</h2>
+                                <label class="question" for="card3-question1">Question</label>
+                                <input id="card3-question1" class ="short-answer" type="text" placeholder="Your Answer" disabled>
+                                <button class="button" disabled>Continue</button>
+                            </fieldset>
+
+                            <fieldset class="questionnaire-card" id="card4">
+                                <h2 class="title">
+                                    <strong>Strong</strong> Section Title
+                                </h2>
+                                <p class="description">Description paragraph.</p>
+                                <!-- <img class="form-image" src="component-images/city_and_sun-large.jpeg" alt="City and Sun"> -->
+                                <img class="form-image" src="component-images/city_and_sun-large.jpeg" sizes="(max-width: 800px) 70vw, 2000px" srcset="./component-images/city_and_sun-large.jpeg 2000w, ./component-images/city_and_sun-medium.jpeg 600w" alt="City and Sun">
+                                <label class="question" for="card4-question1">Question</label>
+                                <p class="description">Description paragraph.</p>
+                                <input id="card4-question1" class="short-answer" type="text" placeholder="Your Answer">
+                                <label class="question" for="card4-question2">Question</label>
+                                <textarea name="" id="card4-question2" class="long-answer" cols="30" rows="5" placeholder="Long response using &lt;textarea&gt;"></textarea>
+                                <button class="button">Continue</button>
+                            </fieldset>
+
+                            <fieldset class="questionnaire-card" id="card5">
+                                <h2 class="title">Section Title w/ Form Elements</h2>
+                                <p class="description">Description paragraph.</p>
+                                <fieldset class="multiple-choice">
+                                <legend class="multiple-choice-header">Multiple Choice w/ Radio Inputs</legend>
+                                    <input id="card5-radio1" type="radio" name="radio" class="radio" value="Option A">
+                                    <label for="card5-radio1" class="radio-label">I like option A
+                                    </label>
+                                    <input id="card5-radio2" type="radio" name="radio" class="radio" value="Option B">
+                                    <label for="card5-radio2" class="radio-label">I like option B
+                                    </label>
+                                    <input id="card5-radio3" type="radio" name="radio" class="radio" value="Option C">
+                                    <label for="card5-radio3" class="radio-label">I like option C
+                                    </label>
+                                </fieldset>
+                                <fieldset class="multiple-choice">
+                                <legend class="multiple-choice-header">Multiple Choice w/ Checkbox Inputs</legend>
+                                    <input id="card5-checkbox1" type="checkbox" value="Option A">
+                                    <label for="card5-checkbox1" class="checkbox-label">I like option A</label>
+                                    <input id="card5-checkbox2" type="checkbox" value="Option B">
+                                    <label for="card5-checkbox2" class="checkbox-label">I like option B</label>
+                                    <input id="card5-checkbox3" type="checkbox" value="Option C">
+                                    <label for="card5-checkbox3" class="checkbox-label">I like option C</label>
+                                </fieldset>
+                                <label for="card5-select1" class="select-label required">Dropdown Select from the list below:</label>
+                                <p class="description">Description paragraph.</p>
+                                <div class="select">
+                                    <select name="" id="card5-select1" class="dropdown">
+                                        <option selected disabled value="">Please select an option</option>
+                                        <option value="Option 1">Option 1</option>
+                                        <option value="Option 2">Option 2</option>
+                                    </select>
+                                </div>
+                                <input type="submit" class="submit">
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- project 7 modal -->
+            <input type="checkbox" name="modal-project-7" id="modal-project-7" class="modal-project-check">
+            <div class="modal">
+                <label for="modal-project-7" class="modal-project-close"></label>
+                <h3>Business Card</h3>
+                <div class="component-wrapper">
+                    <div id="business-card-wrapper">
+                        <div class="business-card">
+                            <input type="checkbox" name="card-check" id="card-check">
+                            <label for="card-check">
+                                <article class="content front">
+                                    <div class="text1">
+                                        <h1 id="name">Sebastian Ramirez-Brunner</h1>
+                                        <h4 id="position">Student at Modern Developer, Career Path 5</h4>
+                                        <p class="description">I am an aspiring fullstack developer and student at Modern Developer. After graduation, I hope to work on applications that incorporate geolocation functionality and APIs.</p>
+                                        <p class="contact email"><a href="mailto:sebastian.r.rb@gmail.com?Subject=Hey">sebastian.r.rb@gmail.com</a></p>
+                                    </div>
+                                    <img id="flip-icon" src="./Business-Card-Assets/DigitalBusinessCard_Assets/flip-icon.svg">
+                                    <div id="business-card-encyclopedia">
+                                        <a href="https://encyclopedia.moderndeveloper.com/author/sebastian-ramirez-brunner/" target="_blank" id="encyclopedia-container-link">
+                                            <img id="encyclopedia-icon" src="./Business-Card-Assets/DigitalBusinessCard_Assets/enc1.png">
+                                            <div id="encyclopedia-text">
+                                                <h4>Sebastian Ramirez-Brunner</h4>
+                                                <p>On Encyclopedia.MD</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div id="icons">
+                                        <div data-tooltip="Facebook"><a href="https://www.facebook.com/sebastian.ramirezbrunner" target="_blank"><img src="./Business-Card-Assets/DigitalBusinessCard_Assets/facebook.png" alt="Facebook" class="icon"></a></div>
+                                        <div data-tooltip="GitHub"><a href="https://github.com/sebastianrb" target="_blank"><img src="./Business-Card-Assets/DigitalBusinessCard_Assets/github1.png" alt="GitHub" class="icon"></a></div>
+                                        <div data-tooltip="LinkedIn"><a href="https://www.linkedin.com/in/sebastian-ramirez-brunner-7544b08a?trk=hp-identity-name" target="_blank"><img src="./Business-Card-Assets/DigitalBusinessCard_Assets/linkedin.png" alt="Linkedin" class="icon"></a></div>
+                                    </div>
+                                </article>
+                                <article class="content back"></article>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id="main-content">
+        <div id="mobile-menu">
+            <input type="checkbox" name="drawer-check" id="drawer-check">
+            <label for="drawer-check" class="drawer-label">
+                <div class="mobile-menu-label-lines"></div>
+                <div class="mobile-menu-label-lines"></div>
+                <div class="mobile-menu-label-lines"></div>
+            </label>
+            <div id="mobile-menu-drawer">
+                <ul id="mobile-menu-drawer-list">
+                    <li class="mobile-menu-drawer-list-item">
+                        <label for="about-radio" class="mobile-menu-section-label">About</label>
+                    </li>
+                    <li class="mobile-menu-drawer-list-item">
+                        <input type="checkbox" id="mobile-menu-projects-accordion-checkbox">
+                        <label for="mobile-menu-projects-accordion-checkbox" class="mobile-menu-section-label">Projects</label>
+                        <article class="mobile-menu-accordion-content">
+                            <label for="projects-radio">
+                                <ul>
+                                    <li class="mobile-menu-projects-item">Image Gallery</li>
+                                    <li class="mobile-menu-projects-item">Business Card</li>
+                                    <li class="mobile-menu-projects-item">Accordion</li>
+                                    <li class="mobile-menu-projects-item">Tabs</li>
+                                    <li class="mobile-menu-projects-item">Calculator</li>
+                                    <li class="mobile-menu-projects-item">Product Listing</li>
+                                    <li class="mobile-menu-projects-item">Questionnaire</li>
+                                </ul>
+                            </label>
+                        </article>
+                    </li>
+                    <li class="mobile-menu-drawer-list-item">
+                        <label for="skills-radio" class="mobile-menu-section-label">Skills</label>
+                    </li>
+                    <li class="mobile-menu-drawer-list-item">
+                        <label for="contact-radio" class="mobile-menu-section-label">Contact</label>
+                    </li>
+                </ul>
+            </div>
+            <div id="mobile-menu-drawer-modal" class="modal"></div>
+        </div>
+        <div class="sections">
+            <div class="tab">
+                <input type="radio" name="sections" id="about-radio" checked>
+                <label class="section-label" for="about-radio">About</label>
+                <div class="arrow"></div>
+                <div class="content">
+                    <h3>About</h3>
+                    <p>In this section you'll find some personal information. On the left you'll see an image gallery, and on the right you can read a little about me and my life.</p>
+                    <div class="about-me-content">
+                        <div id="about-me-gallery">
+                            <div class="image-gallery-about-me clearfix">
+                                <div class="thumbnails-background">
+                                </div>
+                                <div class="tab-about-me-gallery">
+                                    <input type="radio" name="about-me-gallery-input" id="about-me-picture-1" checked>
+                                    <label for="about-me-picture-1" data-tooltip="Me and my girlfriend on a hike"></label>
+                                    <div class="image-gallery-content-about-me">
+                                        <img src="./about-me-images/about-me-image-1.jpg" alt="Image 1" class="image-displayed">
+                                    </div>
+                                </div>
+                                <div class="tab-about-me-gallery">
+                                    <input type="radio" name="about-me-gallery-input" id="about-me-picture-2">
+                                    <label for="about-me-picture-2" data-tooltip="Me and my brother on a hike"></label>
+                                    <div class="image-gallery-content-about-me">
+                                        <img src="./about-me-images/about-me-image-2.jpg" alt="Image 2" class="image-displayed">
+                                    </div>
+                                </div>
+                                <div class="tab-about-me-gallery">
+                                    <input type="radio" name="about-me-gallery-input" id="about-me-picture-3">
+                                    <label for="about-me-picture-3" data-tooltip="Me and my friends after a race"></label>
+                                    <div class="image-gallery-content-about-me">
+                                        <img src="./about-me-images/about-me-image-3.jpg" alt="Image 3" class="image-displayed">
+                                    </div>
+                                </div>
+                                <div class="tab-about-me-gallery">
+                                    <input type="radio" name="about-me-gallery-input" id="about-me-picture-4">
+                                    <label for="about-me-picture-4" data-tooltip="Me in Spain"></label>
+                                    <div class="image-gallery-content-about-me">
+                                        <img src="./about-me-images/about-me-image-4.jpg" alt="Image 4" class="image-displayed" id="about-me-img-4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="about-me-text">
+                            <p>I am an aspiring fullstack web developer based in New York City. Before becoming a full-time student at Modern Developer, I worked for three years as Business Analyst and Junior Front-end Developer for Afinium, a tech startup. I am passionate about travel and geography, and after graduating from Modern Developer I hope to work on web applications that utilize geolocation technologies and mapping.</p>
+                            <p>I was born in London but raised in the suburbs of New York City. My family moved to Colorado when I was in high school, which cultivated my interest in the outdoors, skiing, and nature photography. I attended Dartmouth College where I studied Economics and Arabic, and was fortunate enough to study both Arabic and Spanish abroad in Morocco and Mexico, respectively. Outside of web development, my interests and passions include photography (the header image of mountains is one of my photos), travel, cooking, languages, running, skiing, weightlifting, and Scotch.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" name="sections" id="projects-radio">
+                <label class="section-label" for="projects-radio">Projects</label>
+                <div class="arrow"></div>
+                <div class="content">
+                    <h3>Projects</h3>
+                    <p>Below is a selection of projects I have built thus far in the program. <span class="click">Click</span><span class="tap">Tap</span> on a project in the lefthand list to see images and brief descriptions of each one, as well as a button that will enable you to access the project from within this portfolio.</p>
+                    <div id="projects-tabs">
+                        <div class="project-tab">
+                            <input type="radio" id="project-1" name="project-tabs" checked>
+                            <label for="project-1" class="project-label">Image Carousel</label>
+                            <div class="content">
+                                <div class="carousel">
+                                    <div class="carousel-inner">
+                                        <input class="carousel-open" type="radio" id="carousel-1-project-1" name="carousel-project-1" aria-hidden="true" hidden="" checked="true">
+                                        <div class="carousel-item">
+                                            <label class="project-open-label" for="modal-project-1">Open Project</label>
+                                        </div>
+                                        <input class="carousel-open" type="radio" id="carousel-2-project-1" name="carousel-project-1" aria-hidden="true" hidden="">
+                                        <div class="carousel-item">
+                                            <div class="project-description-container">
+                                                <h3 class="project-title">Image Gallery</h3>
+                                                <p class="project-description">The images in the gallery are aligned as thumbnails at the top. Clicking on one of the images at the top will highlight its thumbnail in a white border and display that image prominently below the thumbnails.</p>
+                                                <p class="project-description">This image gallery was built using HTML and pure CSS (no JavaScript). The component utilizes radio inputs and labels to create the tab layout. Importantly, absolute positioning is used to stack the content areas on top of one another.</p>
+                                                <p class="link-to-github"><a href="https://github.com/moderndeveloper-students/coursework-sebastianrb/tree/master/Course-06-Mastering-Javascript-and-Modern-Web-Development/Chapter-04-Mastering-CSS/Project%205%20-%20Create%20Your%20Non-JavaScript%20Interactive%20Portfolio" target="_blank">View this project on GitHub</a></p>
+                                            </div>
+                                        </div>
+                                        <input class="carousel-open" type="radio" id="carousel-3-project-1" name="carousel-project-1" aria-hidden="true" hidden="">
+                                        <div class="carousel-item">
+                                            <img src="./carousel-images/image-gallery2-image.png" class="carousel-image">
+                                        </div>
+                                        <!-- TEST -->
+                                        <input class="carousel-open" type="radio" id="carousel-4-project-1" name="carousel-project-1" aria-hidden="true" hidden="">
+                                        <div class="carousel-item">
+                                            <img src="./carousel-images/image-gallery-image.png" class="carousel-image">
+                                        </div>
+                                        <!-- TEST -->
+                                        <label for="carousel-3-project-1" class="carousel-control prev control-4"></label>
+                                        <label for="carousel-1-project-1" class="carousel-control next control-4"></label>
+                                        <label for="carousel-4-project-1" class="carousel-control prev control-1"></label>
+                                        <label for="carousel-2-project-1" class="carousel-control next control-1"></label>
+                                        <label for="carousel-1-project-1" class="carousel-control prev control-2"></label>
+                                        <label for="carousel-3-project-1" class="carousel-control next control-2"></label>
+                                        <label for="carousel-2-project-1" class="carousel-control prev control-3"></label>
+                                        <label for="carousel-4-project-1" class="carousel-control next control-3"></label>
+                                        <ol class="carousel-indicators">
+                                            <li>
+                                                <label for="carousel-1-project-1" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                            <li>
+                                                <label for="carousel-2-project-1" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                            <li>
+                                                <label for="carousel-3-project-1" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                            <li>
+                                                <label for="carousel-4-project-1" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-tab">
+                            <input type="radio" id="project-7" name="project-tabs">
+                            <label for="project-7" class="project-label">3D Business Card</label>
+                            <div class="content">
+                                <div class="carousel">
+                                    <div class="carousel-inner">
+                                        <input class="carousel-open" type="radio" id="carousel-1-project-7" name="carousel-project-7" aria-hidden="true" hidden="" checked="true">
+                                        <div class="carousel-item">
+                                            <label class="project-open-label" for="modal-project-7">Open Project</label>
+                                        </div>
+                                        <input class="carousel-open" type="radio" id="carousel-2-project-7" name="carousel-project-7" aria-hidden="true" hidden="">
+                                        <div class="carousel-item">
+                                            <div class="project-description-container">
+                                                <h3 class="project-title">3D Business Card</h3>
+                                                <p class="project-description">Here, you'll see a Modern Developer student "business card" that shows some information about me. The most salient aspect of this project is the fact that the business card is three-dimensional; it will tilt when hovered over, and flip over when clicked. On the back, you'll see a picture of me and my friends skiing.</p>
+                                                <p class="project-description">This project was built using HTML and pure CSS (no JavaScript).</p>
+                                                <p class="link-to-github"><a href="https://github.com/moderndeveloper-students/coursework-sebastianrb/tree/master/Course-06-Mastering-Javascript-and-Modern-Web-Development/Chapter-04-Mastering-CSS/Project%205%20-%20Create%20Your%20Non-JavaScript%20Interactive%20Portfolio" target="_blank">View this project on GitHub</a></p>
+                                            </div>
+                                        </div>
+                                        <input class="carousel-open" type="radio" id="carousel-3-project-7" name="carousel-project-7" aria-hidden="true" hidden="">
+                                        <div class="carousel-item">
+                                            <img src="./carousel-images/business-card-back-image.png" class="carousel-image">
+                                        </div>
+                                        <!-- TEST -->
+                                        <input class="carousel-open" type="radio" id="carousel-4-project-7" name="carousel-project-7" aria-hidden="true" hidden="">
+                                        <div class="carousel-item">
+                                            <img src="./carousel-images/business-card-front-image.png" class="carousel-image">
+                                        </div>
+                                        <!-- TEST -->
+                                        <label for="carousel-3-project-7" class="carousel-control prev control-4"></label>
+                                        <label for="carousel-1-project-7" class="carousel-control next control-4"></label>
+                                        <label for="carousel-4-project-7" class="carousel-control prev control-1"></label>
+                                        <label for="carousel-2-project-7" class="carousel-control next control-1"></label>
+                                        <label for="carousel-1-project-7" class="carousel-control prev control-2"></label>
+                                        <label for="carousel-3-project-7" class="carousel-control next control-2"></label>
+                                        <label for="carousel-2-project-7" class="carousel-control prev control-3"></label>
+                                        <label for="carousel-4-project-7" class="carousel-control next control-3"></label>
+                                        <ol class="carousel-indicators">
+                                            <li>
+                                                <label for="carousel-1-project-7" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                            <li>
+                                                <label for="carousel-2-project-7" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                            <li>
+                                                <label for="carousel-3-project-7" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                            <li>
+                                                <label for="carousel-4-project-7" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-tab">
+                            <input type="radio" id="project-2" name="project-tabs">
+                            <label for="project-2" class="project-label">Accordion</label>
+                            <div class="content">
+                                <div class="carousel">
+                                    <div class="carousel-inner">
+                                        <input class="carousel-open" type="radio" id="carousel-1-project-2" name="carousel-project-2" aria-hidden="true" hidden="" checked="checked">
+                                        <div class="carousel-item">
+                                            <label class="project-open-label" for="modal-project-2">Open Project</label>
+                                        </div>
+                                        <input class="carousel-open" type="radio" id="carousel-2-project-2" name="carousel-project-2" aria-hidden="true" hidden="">
+                                        <div class="carousel-item">
+                                            <div class="project-description-container">
+                                                <h3 class="project-title">Accordion</h3>
+                                                <p class="project-description">The accordion consists of three sections which can be collapsed and expanded. Clicking on a section header will expand and collapse its corresponding section.</p>
+                                                <p class="project-description">The accordion was built using HTML and pure CSS (no JavaScript). The component utilizes checkbox inputs and labels to hide and expand the sections.</p>
+                                                <p class="link-to-github"><a href="https://github.com/moderndeveloper-students/coursework-sebastianrb/tree/master/Course-06-Mastering-Javascript-and-Modern-Web-Development/Chapter-04-Mastering-CSS/Project%205%20-%20Create%20Your%20Non-JavaScript%20Interactive%20Portfolio" target="_blank">View this project on GitHub</a></p>
+                                            </div>
+                                        </div>
+                                        <input class="carousel-open" type="radio" id="carousel-3-project-2" name="carousel-project-2" aria-hidden="true" hidden="">
+                                        <div class="carousel-item">
+                                            <img src="./carousel-images/accordion-open-image.png" class="carousel-image">
+                                        </div>
+                                        <!-- TEST -->
+                                        <input class="carousel-open" type="radio" id="carousel-4-project-2" name="carousel-project-2" aria-hidden="true" hidden="">
+                                        <div class="carousel-item">
+                                            <img src="./carousel-images/accordion-closed-image.png" class="carousel-image accordion-image1">
+                                        </div>
+                                        <!-- TEST -->
+                                        <label for="carousel-3-project-2" class="carousel-control prev control-4"></label>
+                                        <label for="carousel-1-project-2" class="carousel-control next control-4"></label>
+                                        <label for="carousel-4-project-2" class="carousel-control prev control-1"></label>
+                                        <label for="carousel-2-project-2" class="carousel-control next control-1"></label>
+                                        <label for="carousel-1-project-2" class="carousel-control prev control-2"></label>
+                                        <label for="carousel-3-project-2" class="carousel-control next control-2"></label>
+                                        <label for="carousel-2-project-2" class="carousel-control prev control-3"></label>
+                                        <label for="carousel-4-project-2" class="carousel-control next control-3"></label>
+                                        <ol class="carousel-indicators">
+                                            <li>
+                                                <label for="carousel-1-project-2" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                            <li>
+                                                <label for="carousel-2-project-2" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                            <li>
+                                                <label for="carousel-3-project-2" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                            <li>
+                                                <label for="carousel-4-project-2" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-tab">
+                            <input type="radio" id="project-3" name="project-tabs">
+                            <label for="project-3" class="project-label">Tabs</label>
+                            <div class="content">
+                                <div class="carousel">
+                                    <div class="carousel-inner">
+                                        <input class="carousel-open" type="radio" id="carousel-1-project-3" name="carousel-project-3" aria-hidden="true" hidden="" checked="true">
+                                        <div class="carousel-item">
+                                            <label class="project-open-label" for="modal-project-3">Open Project</label>
+                                        </div>
+                                        <input class="carousel-open" type="radio" id="carousel-2-project-3" name="carousel-project-3" aria-hidden="true" hidden="">
+                                        <div class="carousel-item">
+                                            <div class="project-description-container">
+                                                <h3 class="project-title">Tabs</h3>
+                                                <p class="project-description">This is a simple tab component that allows the user to bring a section into view by selecting its corresponding tab from the row of tabs at the top.</p>
+                                                <p class="project-description">This component was built using HTML and pure CSS (no JavaScript). Like the image gallery, this simple tabs component utilizes radio inputs and labels to create the tab functionality. Importantly, absolute positioning is used to stack the content areas on top of one another.</p>
+                                                <p class="link-to-github"><a href="https://github.com/moderndeveloper-students/coursework-sebastianrb/tree/master/Course-06-Mastering-Javascript-and-Modern-Web-Development/Chapter-04-Mastering-CSS/Project%205%20-%20Create%20Your%20Non-JavaScript%20Interactive%20Portfolio" target="_blank">View this project on GitHub</a></p>
+                                            </div>
+                                        </div>
+                                        <input class="carousel-open" type="radio" id="carousel-3-project-3" name="carousel-project-3" aria-hidden="true" hidden="">
+                                        <div class="carousel-item">
+                                            <img src="./carousel-images/tabs2-image.png" class="carousel-image">
+                                        </div>
+                                        <!-- TEST -->
+                                        <input class="carousel-open" type="radio" id="carousel-4-project-3" name="carousel-project-3" aria-hidden="true" hidden="">
+                                        <div class="carousel-item">
+                                            <img src="./carousel-images/tabs-image.png" class="carousel-image">
+                                        </div>
+                                        <!-- TEST -->
+                                        <label for="carousel-3-project-3" class="carousel-control prev control-4"></label>
+                                        <label for="carousel-1-project-3" class="carousel-control next control-4"></label>
+                                        <label for="carousel-4-project-3" class="carousel-control prev control-1"></label>
+                                        <label for="carousel-2-project-3" class="carousel-control next control-1"></label>
+                                        <label for="carousel-1-project-3" class="carousel-control prev control-2"></label>
+                                        <label for="carousel-3-project-3" class="carousel-control next control-2"></label>
+                                        <label for="carousel-2-project-3" class="carousel-control prev control-3"></label>
+                                        <label for="carousel-4-project-3" class="carousel-control next control-3"></label>
+                                        <ol class="carousel-indicators">
+                                            <li>
+                                                <label for="carousel-1-project-3" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                            <li>
+                                                <label for="carousel-2-project-3" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                            <li>
+                                                <label for="carousel-3-project-3" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                            <li>
+                                                <label for="carousel-4-project-3" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-tab">
+                            <input type="radio" id="project-4" name="project-tabs">
+                            <label for="project-4" class="project-label">Calculator</label>
+                            <div class="content">
+                                <div class="carousel">
+                                    <div class="carousel-inner">
+                                        <input class="carousel-open" type="radio" id="carousel-1-project-4" name="carousel-project-4" aria-hidden="true" hidden="" checked="true">
+                                        <div class="carousel-item">
+                                            <label class="project-open-label" for="modal-project-4">Open Project</label>
+                                        </div>
+                                        <input class="carousel-open" type="radio" id="carousel-2-project-4" name="carousel-project-4" aria-hidden="true" hidden="">
+                                        <div class="carousel-item">
+                                            <div class="project-description-container">
+                                                <h3 class="project-title">Calculator</h3>
+                                                <p class="project-description">This is a semi-functional calculator. All of the buttons work; thus, the user can add, subtract, multiply, and divide values using the interface. The user can also clear the screen using the "Clear" button.</p>
+                                                <p class="project-description">This calculator was built using HTML, CSS, and vanilla JavaScript.</p>
+                                                <p class="link-to-github"><a href="https://github.com/moderndeveloper-students/coursework-sebastianrb/tree/master/Course-06-Mastering-Javascript-and-Modern-Web-Development/Chapter-04-Mastering-CSS/Project%205%20-%20Create%20Your%20Non-JavaScript%20Interactive%20Portfolio" target="_blank">View this project on GitHub</a></p>
+                                            </div>
+                                        </div>
+                                        <!-- TEST -->
+                                        <input class="carousel-open" type="radio" id="carousel-3-project-4" name="carousel-project-4" aria-hidden="true" hidden="">
+                                        <div class="carousel-item">
+                                            <img src="./carousel-images/calculator-image.png" class="carousel-image calculator">
+                                        </div>
+                                        <!-- TEST -->
+                                        <label for="carousel-2-project-4" class="carousel-control prev control-3"></label>
+                                        <label for="carousel-1-project-4" class="carousel-control next control-3"></label>
+                                        <label for="carousel-3-project-4" class="carousel-control prev control-1"></label>
+                                        <label for="carousel-2-project-4" class="carousel-control next control-1"></label>
+                                        <label for="carousel-1-project-4" class="carousel-control prev control-2"></label>
+                                        <label for="carousel-3-project-4" class="carousel-control next control-2"></label>
+                                        <ol class="carousel-indicators">
+                                            <li>
+                                                <label for="carousel-1-project-4" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                            <li>
+                                                <label for="carousel-2-project-4" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                            <li>
+                                                <label for="carousel-3-project-4" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-tab">
+                            <input type="radio" id="project-5" name="project-tabs">
+                            <label for="project-5" class="project-label">Product Listing</label>
+                            <div class="content">
+                                <div class="carousel">
+                                    <div class="carousel-inner">
+                                        <input class="carousel-open" type="radio" id="carousel-1-project-5" name="carousel-project-5" aria-hidden="true" hidden="" checked="true">
+                                        <div class="carousel-item">
+                                            <label class="project-open-label" for="modal-project-5">Open Project</label>
+                                        </div>
+                                        <input class="carousel-open" type="radio" id="carousel-2-project-5" name="carousel-project-5" aria-hidden="true" hidden="">
+                                        <div class="carousel-item">
+                                            <div class="project-description-container">
+                                                <h3 class="project-title">Product Listing</h3>
+                                                <p class="project-description">This project is a model of an online store. It comprises a list of Scotches (the products), and enables the user to add items to and remove them from the shopping cart as desired. As users add and remove items, the application shows the products in the shopping cart, as well as the order total, total number of items, and the discount applied (if applicable).</p>
+                                                <p class="project-description">This application was built using HTML, CSS, and vanilla JavaScript.</p>
+                                                <p class="link-to-github"><a href="https://github.com/moderndeveloper-students/coursework-sebastianrb/tree/master/Course-06-Mastering-Javascript-and-Modern-Web-Development/Chapter-04-Mastering-CSS/Project%205%20-%20Create%20Your%20Non-JavaScript%20Interactive%20Portfolio" target="_blank">View this project on GitHub</a></p>
+                                            </div>
+                                        </div>
+                                        <input class="carousel-open" type="radio" id="carousel-3-project-5" name="carousel-project-5" aria-hidden="true" hidden="">
+                                        <div class="carousel-item">
+                                            <img src="./carousel-images/products3-image.png" class="carousel-image">
+                                        </div>
+                                        <!-- TEST -->
+                                        <input class="carousel-open" type="radio" id="carousel-4-project-5" name="carousel-project-5" aria-hidden="true" hidden="">
+                                        <div class="carousel-item">
+                                            <img src="./carousel-images/products1-image.png" class="carousel-image">
+                                        </div>
+                                        <!-- TEST -->
+                                        <label for="carousel-3-project-5" class="carousel-control prev control-4"></label>
+                                        <label for="carousel-1-project-5" class="carousel-control next control-4"></label>
+                                        <label for="carousel-4-project-5" class="carousel-control prev control-1"></label>
+                                        <label for="carousel-2-project-5" class="carousel-control next control-1"></label>
+                                        <label for="carousel-1-project-5" class="carousel-control prev control-2"></label>
+                                        <label for="carousel-3-project-5" class="carousel-control next control-2"></label>
+                                        <label for="carousel-2-project-5" class="carousel-control prev control-3"></label>
+                                        <label for="carousel-4-project-5" class="carousel-control next control-3"></label>
+                                        <ol class="carousel-indicators">
+                                            <li>
+                                                <label for="carousel-1-project-5" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                            <li>
+                                                <label for="carousel-2-project-5" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                            <li>
+                                                <label for="carousel-3-project-5" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                            <li>
+                                                <label for="carousel-4-project-5" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-tab">
+                            <input type="radio" id="project-6" name="project-tabs">
+                            <label for="project-6" class="project-label">Questionnaire</label>
+                            <div class="content">
+                                <div class="carousel">
+                                    <div class="carousel-inner">
+                                        <input class="carousel-open" type="radio" id="carousel-1-project-6" name="carousel-project-6" aria-hidden="true" hidden="" checked="true">
+                                        <div class="carousel-item">
+                                            <label class="project-open-label" for="modal-project-6">Open Project</label>
+                                        </div>
+                                        <input class="carousel-open" type="radio" id="carousel-2-project-6" name="carousel-project-6" aria-hidden="true" hidden="">
+                                        <div class="carousel-item">
+
+                                            <div class="project-description-container">
+                                                <h3 class="project-title">Questionnaire</h3>
+                                                <p class="project-description">This project is a mockup of a questionnaire form. Validation logic is used under the hood to capture all user input in a JavaScript object. Additionally, alerts pop up should the user try to submit the form without answering a required question. This was a team project; my partner was Brent Guffens (and an excellent partner he was!).</p>
+                                                <p class="project-description">This questionnaire form was built using HTML, CSS, and vanilla JavaScript.</p>
+                                                <p class="link-to-github"><a href="https://github.com/moderndeveloper-students/coursework-sebastianrb/tree/master/Course-06-Mastering-Javascript-and-Modern-Web-Development/Chapter-04-Mastering-CSS/Project%205%20-%20Create%20Your%20Non-JavaScript%20Interactive%20Portfolio" target="_blank">View this project on GitHub</a></p>
+                                            </div>
+                                        </div>
+                                        <input class="carousel-open" type="radio" id="carousel-3-project-6" name="carousel-project-6" aria-hidden="true" hidden="">
+                                        <div class="carousel-item">
+                                            <img src="./carousel-images/questionnaire2-image.png" class="carousel-image">
+                                        </div>
+                                        <!-- TEST -->
+                                        <input class="carousel-open" type="radio" id="carousel-4-project-6" name="carousel-project-6" aria-hidden="true" hidden="">
+                                        <div class="carousel-item">
+                                            <img src="./carousel-images/questionnaire1-image.png" class="carousel-image">
+                                        </div>
+                                        <!-- TEST -->
+                                        <label for="carousel-3-project-6" class="carousel-control prev control-4"></label>
+                                        <label for="carousel-1-project-6" class="carousel-control next control-4"></label>
+                                        <label for="carousel-4-project-6" class="carousel-control prev control-1"></label>
+                                        <label for="carousel-2-project-6" class="carousel-control next control-1"></label>
+                                        <label for="carousel-1-project-6" class="carousel-control prev control-2"></label>
+                                        <label for="carousel-3-project-6" class="carousel-control next control-2"></label>
+                                        <label for="carousel-2-project-6" class="carousel-control prev control-3"></label>
+                                        <label for="carousel-4-project-6" class="carousel-control next control-3"></label>
+                                        <ol class="carousel-indicators">
+                                            <li>
+                                                <label for="carousel-1-project-6" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                            <li>
+                                                <label for="carousel-2-project-6" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                            <li>
+                                                <label for="carousel-3-project-6" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                            <li>
+                                                <label for="carousel-4-project-6" class="carousel-bullet">&bull;</label>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" name="sections" id="skills-radio">
+                <label class="section-label" for="skills-radio">Skills</label>
+                <div class="arrow"></div>
+                <div class="content">
+                    <h3>Skills</h3>
+                    <p>This sections provides information about my technical skillset via an array of sexy charts and metrics.</p>
+                    <div class="skills-graphs">
+                        <div class="skills-line-chart">
+                            <div class="line-chart-frontend">90%</div>
+                            <div class="line-chart-backend">10%</div>
+                        </div>
+                        <div class="skills-bar-charts">
+                            <div class="bar-chart-frontend">
+                                <table>
+                                    <caption>Frontend Development</caption>
+                                    <tbody>
+                                        <tr>
+                                            <th>JavaScript</th>
+                                            <td data-tooltip="Competent"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>HTML5/CSS3</th>
+                                            <td data-tooltip="Expert"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>ReactJS</th>
+                                            <td data-tooltip="Learning"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>jQuery</th>
+                                            <td data-tooltip="Learning"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Lodash</th>
+                                            <td data-tooltip="Learning"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="bar-chart-frontend-y-axis">
+                                    <div>
+                                        <p>Expert</p>
+                                    </div>
+                                    <div>
+                                        <p>Proficient</p>
+                                    </div>
+                                    <div>
+                                        <p>Competent</p>
+                                    </div>
+                                    <div>
+                                        <p>Learning</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bar-chart-backend">
+                                <table>
+                                    <caption id="backend-caption">Backend Development</caption>
+                                    <tbody>
+                                        <tr>
+                                            <th>NodeJS</th>
+                                            <td data-tooltip="Learning"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>MySQL</th>
+                                            <td data-tooltip="Learning"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Python</th>
+                                            <td data-tooltip="Learning"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>PHP</th>
+                                            <td data-tooltip="Learning"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Others</th>
+                                            <td data-tooltip="Learning"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="bar-chart-backend-y-axis">
+                                    <div>
+                                        <p>Expert</p>
+                                    </div>
+                                    <div>
+                                        <p>Proficient</p>
+                                    </div>
+                                    <div>
+                                        <p>Competent</p>
+                                    </div>
+                                    <div>
+                                        <p>Learning</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" name="sections" id="contact-radio">
+                <label class="section-label" for="contact-radio">Contact</label>
+                <div class="arrow"></div>
+                <div class="content">
+                    <h3>Contact</h3>
+                    <!-- <p>See below for my Modern Developer student business card, which contains my email address, a link to my Encyclopedia articles, links to social networking profiles, and some other contact information. Click the card to flip it over.</p> -->
+                    <p>See below for some contact information, including my email address, a link to my Modern Developer Encyclopedia articles, links to social networking profiles, and some other details.</p>
+                    <!-- look at line 1049 in css for business card styling-->
+                    <div class="contact-info-panel" id="contact-panel">
+                        <div id="contact-panel-contact-details">
+                            <h1 id="contact-panel-name">Sebastian Ramirez-Brunner</h1>
+                            <h4 id="contact-panel-position">Student at Modern Developer, Fullstack Career Path</h4>
+                            <div id="contact-panel-email-and-encyclopedia">
+                                <div class="contact-panel-email-and-encyclopedia-section clearfix">
+                                    <a href="mailto:sebastian.r.rb@gmail.com?Subject=Hey">
+                                        <img class="contact-panel-encyclopedia-icon" src="./misc-images/email.svg">
+                                        <div class="contact-panel-encyclopedia-text">
+                                            <p class="contact-panel-email">sebastian.r.rb@gmail.com</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="contact-panel-email-and-encyclopedia-section clearfix">
+                                    <a href="https://encyclopedia.moderndeveloper.com/author/sebastian-ramirez-brunner/" target="_blank" id="contact-panel-encyclopedia-block">
+                                        <img class="contact-panel-encyclopedia-icon" src="./Business-Card-Assets/DigitalBusinessCard_Assets/enc1.png">
+                                        <div class="contact-panel-encyclopedia-text">
+                                            <h4>Sebastian Ramirez-Brunner</h4>
+                                            <p>On Encyclopedia.MD</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <ul class="contact-panel-icons">
+                                <li class="contact-panel-icon" data-tooltip="Facebook"><a href="https://www.facebook.com/sebastian.ramirezbrunner" target="_blank"><img src="./Business-Card-Assets/DigitalBusinessCard_Assets/facebook.png" alt="Facebook" class="icon"></a></li>
+                                <li class="contact-panel-icon" data-tooltip="GitHub"><a href="https://github.com/sebastianrb" target="_blank"><img src="./Business-Card-Assets/DigitalBusinessCard_Assets/github1.png" alt="GitHub" class="icon"></a></li>
+                                <li class="contact-panel-icon" data-tooltip="LinkedIn"><a href="https://www.linkedin.com/in/sebastian-ramirez-brunner-7544b08a?trk=hp-identity-name" target="_blank"><img src="./Business-Card-Assets/DigitalBusinessCard_Assets/linkedin.png" alt="Linkedin" class="icon"></a></li>
+                            </ul>
+                        </div>
+                        <div id="contact-panel-description">
+                            <p class="contact-panel-description">I am an aspiring fullstack developer and student at Modern Developer. After graduation, I hope to work on applications that incorporate geolocation functionality and APIs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- <div class="spacer"></div> -->
+    <footer id="footer">&copy; Sebastian Ramirez-Brunner</footer>
+    </body>
+</html>

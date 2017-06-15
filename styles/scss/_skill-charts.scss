@@ -1,0 +1,516 @@
+/*SKILS GRAPH STYLING*/
+
+.skills-graphs {
+    width: 100%;
+    margin: 0rem auto 20px;
+    position: relative;
+}
+
+.skills-line-chart {
+    color: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    width: 70%;
+    height: 1.8rem;
+    margin: 0 auto 7rem;
+    display: none;
+}
+
+.line-chart-backend, .line-chart-frontend {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.line-chart-frontend {
+    padding-left: .6rem;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    width: 90%;
+    background-color: rgb(1, 1, 56);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.line-chart-backend {
+    padding-right: .6rem;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    width: 10%;
+    background-color: #f94c0c;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.skills-bar-charts {
+    width: 90%;
+    height: 100%;
+    margin: 6rem auto 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+div.tab div.content .bar-chart-backend-y-axis>div p, div.tab div.content .bar-chart-frontend-y-axis>div p,  div.tab div.content .bar-chart-other-y-axis>div p{
+    width: 200px;
+    text-align: right;
+    position: absolute;
+    left: -13rem;
+    top: 0;
+}
+
+.bar-chart-backend, .bar-chart-frontend, .bar-chart-other {
+    width: 50%;
+    position: relative;
+    margin: 50px;
+    min-height: 300px;
+    min-width: 450px;
+}
+
+// .bar-chart-other {
+//     margin: 200px auto 0;
+// }
+
+.skills-graphs table caption {
+    font-size: 1.1em;
+    font-weight: bold;
+    width: 100%;
+    caption-side: top;
+    // position: relative;
+    position: absolute;
+    top: -75px;
+
+    @media screen and (max-width: $breakpoint-medium) {
+          padding-left: 15px;
+    }
+
+    @media screen and (max-width: $breakpoint-extra-small) {
+          font-size: 1.05em;
+          font-weight: bold;
+    }
+}
+
+.skills-graphs table caption#backend-caption {
+    color: #f94c0c;
+}
+
+.bar-chart-backend table, .bar-chart-frontend table, .bar-chart-other table {
+    position: relative;
+    width: 100%;
+    height: 175px;
+
+    @media screen and (max-width: $breakpoint-extra-small) {
+          width: 90%;
+    }
+}
+
+// .bar-chart-other table {
+//     left: 10%;
+// }
+
+.bar-chart-backend table tr, .bar-chart-frontend table tr, .bar-chart-other table tr {
+    height: 180px;
+    border-bottom: 1px solid silver;
+}
+
+.bar-chart-backend table tr:nth-child(1), .bar-chart-frontend table tr:nth-child(1),
+.bar-chart-other table tr:nth-child(1) {
+    left: 0;
+}
+
+.bar-chart-backend table tr:nth-child(2), .bar-chart-frontend table tr:nth-child(2),
+.bar-chart-other table tr:nth-child(2) {
+    left: 20%;
+}
+
+.bar-chart-frontend table tr:nth-child(2) {
+    @media screen and (max-width: $breakpoint-small) {
+        left: 16%
+    }
+}
+
+.bar-chart-backend table tr:nth-child(3), .bar-chart-frontend table tr:nth-child(3),
+.bar-chart-other table tr:nth-child(3) {
+    left: 40%;
+}
+
+.bar-chart-frontend table tr:nth-child(3) {
+    @media screen and (max-width: $breakpoint-small) {
+        left: 32%
+    }
+}
+
+.bar-chart-backend table tr:nth-child(4), .bar-chart-frontend table tr:nth-child(4),
+.bar-chart-other table tr:nth-child(4) {
+    left: 60%;
+}
+
+.bar-chart-frontend table tr:nth-child(4) {
+    @media screen and (max-width: $breakpoint-small) {
+        left: 48%;
+    }
+}
+
+.bar-chart-backend table tr:nth-child(5), .bar-chart-frontend table tr:nth-child(5),
+.bar-chart-other table tr:nth-child(5) {
+    left: 80%;
+}
+
+.bar-chart-frontend table tr:nth-child(5) {
+    @media screen and (max-width: $breakpoint-small) {
+        left: 64%;
+    }
+}
+
+.bar-chart-backend table th, .bar-chart-frontend table th,
+.bar-chart-other table th {
+    bottom: 5%;
+    text-align: left;
+    -webkit-transform: rotate(40deg) translateX(3rem);
+    -moz-transform: rotate(40deg) translateX(3rem);
+    -o-transform: rotate(40deg) translateX(3rem);
+    -ms-transform: rotate(40deg) translateX(3rem);
+    transform: rotate(40deg) translateX(3rem);
+    font-weight: 400;
+    color: rgba(0,0,0,.8);
+    font-size: .7500000002rem;
+}
+
+
+.bar-chart-frontend table tr td,
+.bar-chart-other table tr td {
+    transition: height .7s ease-out .1s;
+}
+
+
+.bar-chart-frontend table tr:nth-child(1) td {
+    height: 100%;
+    // background-color: $primary-color;
+    background-color: $secondary-color-muted;
+}
+
+.bar-chart-frontend table tr:nth-child(2) td {
+    height: 100%;
+    // background-color: $primary-color;
+    background-color: $secondary-color-muted;
+}
+
+.bar-chart-frontend table tr:nth-child(3) td {
+    height: 75%;
+    // background-color: $primary-color;
+    background-color: $secondary-color-muted;
+}
+
+.bar-chart-frontend table tr:nth-child(4) td {
+    height: 75%;
+    // background-color: $primary-color;
+    background-color: $secondary-color-muted;
+}
+
+.bar-chart-frontend table tr:nth-child(5) td {
+    height: 25%;
+    background-color: $secondary-color-muted;
+}
+
+.bar-chart-backend table tr:nth-child(1) td {
+    height: 25%;
+    // background-color: $primary-color;
+    background-color: $secondary-color-muted;
+}
+
+.bar-chart-backend table tr:nth-child(2) td {
+    height: 25%;
+    // background-color: $primary-color;
+    background-color: $secondary-color-muted;
+}
+
+.bar-chart-backend table tr:nth-child(3) td {
+    height: 25%;
+    // background-color: $primary-color;
+    background-color: $secondary-color-muted;
+}
+
+.bar-chart-backend table tr:nth-child(4) td {
+    height: 25%;
+    // background-color: $primary-color;
+    background-color: $secondary-color-muted;
+}
+
+// .bar-chart-backend table tr:nth-child(5) td {
+//     height: 25%;
+//     background-color: $primary-color;
+// }
+
+.bar-chart-other table tr:nth-child(1) td {
+    height: 100%;
+    // background-color: $primary-color;
+    background-color: $secondary-color-muted;
+}
+
+.bar-chart-other table tr:nth-child(2) td {
+    height: 100%;
+    // background-color: $primary-color;
+    background-color: $secondary-color-muted;
+}
+
+.bar-chart-other table tr:nth-child(3) td {
+    height: 75%;
+    // background-color: $primary-color;
+    background-color: $secondary-color-muted;
+}
+
+.bar-chart-other table tr:nth-child(4) td {
+    height: 50%;
+    // background-color: $primary-color;
+    background-color: $secondary-color-muted;
+}
+
+
+.bar-chart-backend table td, .bar-chart-backend table th, .bar-chart-backend table tr, .bar-chart-frontend table td, .bar-chart-frontend table th, .bar-chart-frontend table tr,
+.bar-chart-other table td, .bar-chart-other table th, .bar-chart-other table tr {
+    position: absolute;
+    bottom: 0;
+    width: 25%;
+    font-weight: bold;
+    color: rgba(1, 1, 56, 0.701961);
+    margin-left: 25px;
+
+    @media screen and (max-width: $breakpoint-small) {
+          margin-left: 15px;
+    }
+
+    @media screen and (max-width: $breakpoint-extra-small) {
+          margin-left: 28px;
+    }
+}
+
+.bar-chart-frontend table tr th, .bar-chart-backend table tr th, .bar-chart-other table tr th {
+    overflow: visible;
+    width: 100px;
+    bottom: -30px;
+
+    @media screen and (max-width: $breakpoint-small) {
+          left: -15px;
+    }
+
+    @media screen and (max-width: $breakpoint-extra-small) {
+          left: -17px;
+    }
+}
+
+.bar-chart:last-child {
+    margin-bottom: 0
+}
+
+.bar-chart-backend table td, .bar-chart-frontend table td, .bar-chart-other table td {
+    z-index: 3;
+    width: 35%;
+    left: 25%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    cursor: help;
+
+    @media screen and (max-width: $breakpoint-small-medium) {
+          width: 34%;
+          // margin-left: 15px;
+    }
+
+    @media screen and (max-width: $breakpoint-small) {
+          width: 30%;
+          // margin-left: 15px;
+    }
+}
+
+[data-tooltip]:after {
+    background: rgba(0, 0, 0, .9);
+    border-radius: 3px;
+    color: white;
+    content: attr(data-tooltip);
+    font-size: 12px;
+    padding: .5em 1em;
+    white-space: nowrap;
+    margin-bottom: 11px;
+}
+
+[data-tooltip]:before {
+    background: url('../images/down-arrow.svg') no-repeat;
+    background-size: 17px;
+    background-position: 50% 50%;
+    height: 30px;
+    width: 18px;
+    content: "";
+    top: -25px;
+    margin-top: -1px;
+}
+
+[data-tooltip]:after, [data-tooltip]:before
+ {
+    opacity: 0;
+    -webkit-transition: all .18s ease-out .05s;
+    -moz-transition: all .18s ease-out .05s;
+    -o-transition: all .18s ease-out .05s;
+    -ms-transition: all .18s ease-out .05s;
+    transition: all .18s ease-out .05s;
+    bottom: 100%;
+    position: absolute;
+    -webkit-transform: translate(-50%, 10px);
+    -moz-transform: translate(-50%, 10px);
+    -o-transform: translate(-50%, 10px);
+    -ms-transform: translate(-50%, 10px);
+    transform: translate(-50%, 10px);
+    left: 50%;
+}
+
+[data-tooltip]:hover:after, [data-tooltip]:hover:before {
+    opacity: 1;
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+}
+
+.bar-chart-frontend-y-axis,
+.bar-chart-backend-y-axis,
+.bar-chart-other-y-axis {
+    font-size: .8em;
+    position: absolute;
+    width: 20%;
+    height: 175px;
+    top: -13%;
+    left: -20%;
+
+    @media screen and (max-width: $breakpoint-small-medium) {
+        left: -10%;
+    }
+
+    @media screen and (max-width: $breakpoint-small) {
+        left: -13px;
+        top: -15%;
+        font-size: .75em;
+        display: none;
+    }
+
+    @media screen and (max-width: $breakpoint-extra-small) {
+        left: 0%;
+        top: -15%;
+        display: none;
+    }
+}
+
+.bar-chart-backend-y-axis>div, .bar-chart-frontend-y-axis>div, .bar-chart-other-y-axis>div {
+    position: relative;
+    height: 45px;
+}
+
+
+//overlays
+.bar-chart__coming-soon-overlay {
+    height: 105%;
+    width: 150%;
+    position: absolute;
+    background: rgba(1,1,56,.6);
+    left: -25%;
+    top: -35px;
+    z-index: 50;
+
+    @media screen and (max-width: $breakpoint-small-medium) and  (min-width: $breakpoint-small){
+        left: -17%;
+        width: 134%;
+    }
+
+    @media screen and (max-width: $breakpoint-small) {
+        top: -45px;
+        height: 105%;
+        width: 140%;
+    }
+}
+
+.bar-chart__coming-soon-text,
+.bar-chart__coming-soon-text-mobile {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: transparentize($secondary-color, .0);
+    font-size: 1.8em;
+    padding: 0px;
+    border: 3px solid transparentize($secondary-color, .0);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all .3s;
+
+    @media screen and (max-width: $breakpoint-small) {
+       display: none;
+    }
+}
+
+.bar-chart__coming-soon-text-mobile {
+    display: none;
+    border: none;
+    font-size: 1.2em;
+    width: 100%;
+    font-weight: bold;
+    padding-left: 35px;
+
+    @media screen and (max-width: $breakpoint-small) {
+       display: block;
+    }
+}
+
+.bar-chart__coming-soon-popup {
+    opacity: 0;
+    // transform: translateX(20px);
+    transition: all .3s;
+    background: $secondary-color-muted;
+    color: white;
+    padding: 10px 70px 53px;
+    // min-width: 200px;
+    // max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    // border-radius: 5px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    padding-bottom: 40px;
+}
+
+
+.bar-chart__coming-soon-text:hover {
+    color: white;
+    border-color: white;
+}
+
+.bar-chart__coming-soon-text:hover + .bar-chart__coming-soon-popup {
+    opacity: 1;
+    // transform: translate(0, 0);
+}
+
+
+//animations effects
+
+.skills-graphs .skills-bar-charts .skill-collapsed {
+    height: 0;
+}
+
