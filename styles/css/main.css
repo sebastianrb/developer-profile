@@ -148,7 +148,7 @@ body {
   transition: all .4s;
   height: 65px;
   padding: 0 5px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.5);
   z-index: 110;
   font-size: 1em; }
   .header__nav-bar-container.slide-in .header__nav-link {
