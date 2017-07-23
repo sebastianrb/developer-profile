@@ -1953,7 +1953,8 @@ div#business-card-wrapper div.business-card .business-card__overlay {
   margin: 0 auto 7rem;
   display: none; }
 
-.line-chart-backend, .line-chart-frontend {
+.line-chart-backend,
+.line-chart-frontend {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -1990,14 +1991,18 @@ div#business-card-wrapper div.business-card .business-card__overlay {
   align-items: center;
   flex-flow: column nowrap; }
 
-div.tab div.content .bar-chart-backend-y-axis > div p, div.tab div.content .bar-chart-frontend-y-axis > div p, div.tab div.content .bar-chart-other-y-axis > div p {
+div.tab div.content .bar-chart-backend-y-axis > div p,
+div.tab div.content .bar-chart-frontend-y-axis > div p,
+div.tab div.content .bar-chart-other-y-axis > div p {
   width: 200px;
   text-align: right;
   position: absolute;
   left: -13rem;
   top: 0; }
 
-.bar-chart-backend, .bar-chart-frontend, .bar-chart-other {
+.bar-chart-backend,
+.bar-chart-frontend,
+.bar-chart-other {
   width: 50%;
   position: relative;
   margin: 50px;
@@ -2022,23 +2027,31 @@ div.tab div.content .bar-chart-backend-y-axis > div p, div.tab div.content .bar-
 .skills-graphs table caption#backend-caption {
   color: #f94c0c; }
 
-.bar-chart-backend table, .bar-chart-frontend table, .bar-chart-other table {
+.bar-chart-backend table,
+.bar-chart-frontend table,
+.bar-chart-other table {
   position: relative;
   width: 100%;
   height: 175px; }
   @media screen and (max-width: 500px) {
-    .bar-chart-backend table, .bar-chart-frontend table, .bar-chart-other table {
+    .bar-chart-backend table,
+    .bar-chart-frontend table,
+    .bar-chart-other table {
       width: 90%; } }
 
-.bar-chart-backend table tr, .bar-chart-frontend table tr, .bar-chart-other table tr {
+.bar-chart-backend table tr,
+.bar-chart-frontend table tr,
+.bar-chart-other table tr {
   height: 180px;
   border-bottom: 1px solid silver; }
 
-.bar-chart-backend table tr:nth-child(1), .bar-chart-frontend table tr:nth-child(1),
+.bar-chart-backend table tr:nth-child(1),
+.bar-chart-frontend table tr:nth-child(1),
 .bar-chart-other table tr:nth-child(1) {
   left: 0; }
 
-.bar-chart-backend table tr:nth-child(2), .bar-chart-frontend table tr:nth-child(2),
+.bar-chart-backend table tr:nth-child(2),
+.bar-chart-frontend table tr:nth-child(2),
 .bar-chart-other table tr:nth-child(2) {
   left: 20%; }
 
@@ -2046,7 +2059,8 @@ div.tab div.content .bar-chart-backend-y-axis > div p, div.tab div.content .bar-
   .bar-chart-frontend table tr:nth-child(2) {
     left: 16%; } }
 
-.bar-chart-backend table tr:nth-child(3), .bar-chart-frontend table tr:nth-child(3),
+.bar-chart-backend table tr:nth-child(3),
+.bar-chart-frontend table tr:nth-child(3),
 .bar-chart-other table tr:nth-child(3) {
   left: 40%; }
 
@@ -2054,7 +2068,8 @@ div.tab div.content .bar-chart-backend-y-axis > div p, div.tab div.content .bar-
   .bar-chart-frontend table tr:nth-child(3) {
     left: 32%; } }
 
-.bar-chart-backend table tr:nth-child(4), .bar-chart-frontend table tr:nth-child(4),
+.bar-chart-backend table tr:nth-child(4),
+.bar-chart-frontend table tr:nth-child(4),
 .bar-chart-other table tr:nth-child(4) {
   left: 60%; }
 
@@ -2062,7 +2077,8 @@ div.tab div.content .bar-chart-backend-y-axis > div p, div.tab div.content .bar-
   .bar-chart-frontend table tr:nth-child(4) {
     left: 48%; } }
 
-.bar-chart-backend table tr:nth-child(5), .bar-chart-frontend table tr:nth-child(5),
+.bar-chart-backend table tr:nth-child(5),
+.bar-chart-frontend table tr:nth-child(5),
 .bar-chart-other table tr:nth-child(5) {
   left: 80%; }
 
@@ -2070,7 +2086,8 @@ div.tab div.content .bar-chart-backend-y-axis > div p, div.tab div.content .bar-
   .bar-chart-frontend table tr:nth-child(5) {
     left: 64%; } }
 
-.bar-chart-backend table th, .bar-chart-frontend table th,
+.bar-chart-backend table th,
+.bar-chart-frontend table th,
 .bar-chart-other table th {
   bottom: 5%;
   text-align: left;
@@ -2088,7 +2105,7 @@ div.tab div.content .bar-chart-backend-y-axis > div p, div.tab div.content .bar-
   transition: height .7s ease-out .1s; }
 
 .bar-chart-frontend table tr:nth-child(1) td {
-  height: 100%;
+  height: 90%;
   background-color: #d4643b; }
 
 .bar-chart-frontend table tr:nth-child(2) td {
@@ -2096,15 +2113,15 @@ div.tab div.content .bar-chart-backend-y-axis > div p, div.tab div.content .bar-
   background-color: #d4643b; }
 
 .bar-chart-frontend table tr:nth-child(3) td {
-  height: 90%;
+  height: 80%;
   background-color: #d4643b; }
 
 .bar-chart-frontend table tr:nth-child(4) td {
-  height: 75%;
+  height: 80%;
   background-color: #d4643b; }
 
 .bar-chart-frontend table tr:nth-child(5) td {
-  height: 75%;
+  height: 70%;
   background-color: #d4643b; }
 
 .bar-chart-backend table tr:nth-child(1) td {
@@ -2139,8 +2156,15 @@ div.tab div.content .bar-chart-backend-y-axis > div p, div.tab div.content .bar-
   height: 50%;
   background-color: #d4643b; }
 
-.bar-chart-backend table td, .bar-chart-backend table th, .bar-chart-backend table tr, .bar-chart-frontend table td, .bar-chart-frontend table th, .bar-chart-frontend table tr,
-.bar-chart-other table td, .bar-chart-other table th, .bar-chart-other table tr {
+.bar-chart-backend table td,
+.bar-chart-backend table th,
+.bar-chart-backend table tr,
+.bar-chart-frontend table td,
+.bar-chart-frontend table th,
+.bar-chart-frontend table tr,
+.bar-chart-other table td,
+.bar-chart-other table th,
+.bar-chart-other table tr {
   position: absolute;
   bottom: 0;
   width: 25%;
@@ -2148,29 +2172,51 @@ div.tab div.content .bar-chart-backend-y-axis > div p, div.tab div.content .bar-
   color: rgba(1, 1, 56, 0.701961);
   margin-left: 25px; }
   @media screen and (max-width: 600px) {
-    .bar-chart-backend table td, .bar-chart-backend table th, .bar-chart-backend table tr, .bar-chart-frontend table td, .bar-chart-frontend table th, .bar-chart-frontend table tr,
-    .bar-chart-other table td, .bar-chart-other table th, .bar-chart-other table tr {
+    .bar-chart-backend table td,
+    .bar-chart-backend table th,
+    .bar-chart-backend table tr,
+    .bar-chart-frontend table td,
+    .bar-chart-frontend table th,
+    .bar-chart-frontend table tr,
+    .bar-chart-other table td,
+    .bar-chart-other table th,
+    .bar-chart-other table tr {
       margin-left: 15px; } }
   @media screen and (max-width: 500px) {
-    .bar-chart-backend table td, .bar-chart-backend table th, .bar-chart-backend table tr, .bar-chart-frontend table td, .bar-chart-frontend table th, .bar-chart-frontend table tr,
-    .bar-chart-other table td, .bar-chart-other table th, .bar-chart-other table tr {
+    .bar-chart-backend table td,
+    .bar-chart-backend table th,
+    .bar-chart-backend table tr,
+    .bar-chart-frontend table td,
+    .bar-chart-frontend table th,
+    .bar-chart-frontend table tr,
+    .bar-chart-other table td,
+    .bar-chart-other table th,
+    .bar-chart-other table tr {
       margin-left: 28px; } }
 
-.bar-chart-frontend table tr th, .bar-chart-backend table tr th, .bar-chart-other table tr th {
+.bar-chart-frontend table tr th,
+.bar-chart-backend table tr th,
+.bar-chart-other table tr th {
   overflow: visible;
   width: 100px;
   bottom: -30px; }
   @media screen and (max-width: 600px) {
-    .bar-chart-frontend table tr th, .bar-chart-backend table tr th, .bar-chart-other table tr th {
+    .bar-chart-frontend table tr th,
+    .bar-chart-backend table tr th,
+    .bar-chart-other table tr th {
       left: -15px; } }
   @media screen and (max-width: 500px) {
-    .bar-chart-frontend table tr th, .bar-chart-backend table tr th, .bar-chart-other table tr th {
+    .bar-chart-frontend table tr th,
+    .bar-chart-backend table tr th,
+    .bar-chart-other table tr th {
       left: -17px; } }
 
 .bar-chart:last-child {
   margin-bottom: 0; }
 
-.bar-chart-backend table td, .bar-chart-frontend table td, .bar-chart-other table td {
+.bar-chart-backend table td,
+.bar-chart-frontend table td,
+.bar-chart-other table td {
   z-index: 3;
   width: 35%;
   left: 25%;
@@ -2178,10 +2224,14 @@ div.tab div.content .bar-chart-backend-y-axis > div p, div.tab div.content .bar-
   border-top-right-radius: 3px;
   cursor: help; }
   @media screen and (max-width: 750px) {
-    .bar-chart-backend table td, .bar-chart-frontend table td, .bar-chart-other table td {
+    .bar-chart-backend table td,
+    .bar-chart-frontend table td,
+    .bar-chart-other table td {
       width: 34%; } }
   @media screen and (max-width: 600px) {
-    .bar-chart-backend table td, .bar-chart-frontend table td, .bar-chart-other table td {
+    .bar-chart-backend table td,
+    .bar-chart-frontend table td,
+    .bar-chart-other table td {
       width: 30%; } }
 
 [data-tooltip]:after {
@@ -2204,7 +2254,8 @@ div.tab div.content .bar-chart-backend-y-axis > div p, div.tab div.content .bar-
   top: -25px;
   margin-top: -1px; }
 
-[data-tooltip]:after, [data-tooltip]:before {
+[data-tooltip]:after,
+[data-tooltip]:before {
   opacity: 0;
   -webkit-transition: all .18s ease-out .05s;
   -moz-transition: all .18s ease-out .05s;
@@ -2220,7 +2271,8 @@ div.tab div.content .bar-chart-backend-y-axis > div p, div.tab div.content .bar-
   transform: translate(-50%, 10px);
   left: 50%; }
 
-[data-tooltip]:hover:after, [data-tooltip]:hover:before {
+[data-tooltip]:hover:after,
+[data-tooltip]:hover:before {
   opacity: 1;
   -webkit-transform: translate(-50%);
   -moz-transform: translate(-50%);
@@ -2258,7 +2310,9 @@ div.tab div.content .bar-chart-backend-y-axis > div p, div.tab div.content .bar-
       top: -15%;
       display: none; } }
 
-.bar-chart-backend-y-axis > div, .bar-chart-frontend-y-axis > div, .bar-chart-other-y-axis > div {
+.bar-chart-backend-y-axis > div,
+.bar-chart-frontend-y-axis > div,
+.bar-chart-other-y-axis > div {
   position: relative;
   height: 45px; }
 
