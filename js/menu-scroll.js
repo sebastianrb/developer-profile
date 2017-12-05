@@ -6,8 +6,8 @@ $(document).ready(function($) {
     var $topArrow = $('.top-arrow');
     var headerHeight = $('.header').height();
     var $mobileMenuButton = $('.mobile-menu-button');
-    var $skillsSection = $('.normal-section--skills');
-    var $skillsBars = $('.skill-collapsed');
+    // var $skillsSection = $('.normal-section--skills');
+    // var $skillsBars = $('.skill-collapsed');
 
     var stickyHeaderBreakpoint = 750;
 
@@ -70,9 +70,9 @@ $(document).ready(function($) {
         }
 
         //expand skills
-        if(document.body.scrollTop > $skillsSection.offset().top - 150 || $(document).scrollTop() > $skillsSection.offset().top - 150) {
-           $skillsBars.removeClass('skill-collapsed');
-        }
+        // if(document.body.scrollTop > $skillsSection.offset().top - 150 || $(document).scrollTop() > $skillsSection.offset().top - 150) {
+        //    $skillsBars.removeClass('skill-collapsed');
+        // }
     }
 
     //sticky menu
