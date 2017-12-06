@@ -124,7 +124,8 @@ body {
   top: -200px;
   align-items: center;
   padding-bottom: 15px;
-  z-index: 10000000; }
+  z-index: 10000000;
+  position: static; }
   @media screen and (max-width: 900px) {
     .header__nav-bar-container {
       padding-bottom: 20px; } }
@@ -150,7 +151,8 @@ body {
   padding: 0 5px;
   background: rgba(255, 255, 255, 0.5);
   z-index: 110;
-  font-size: 1em; }
+  font-size: 1em;
+  position: fixed; }
   .header__nav-bar-container.slide-in .header__nav-link {
     padding: 14px 20px 10px;
     background: #010138; }

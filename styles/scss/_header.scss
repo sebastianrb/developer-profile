@@ -132,6 +132,7 @@
   align-items: center;
   padding-bottom: 15px;
   z-index: 10000000;
+  position: static;
 
   @media screen and (max-width: $breakpoint-medium) {
     padding-bottom: 20px;
@@ -162,6 +163,7 @@
   background: transparentize(white, .50);
   z-index: 110;
   font-size: 1em;
+  position: fixed;
 
   .header__nav-link {
 

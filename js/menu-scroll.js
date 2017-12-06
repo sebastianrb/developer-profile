@@ -46,26 +46,26 @@ $(document).ready(function($) {
         if(window.innerWidth > stickyHeaderBreakpoint) {
             if(document.body.scrollTop > headerHeight || $(document).scrollTop() > headerHeight) {
                 //make menu sticky
-                $navBar.css({
-                    position: 'fixed',
-                }).addClass('slide-in');
-                $navBar[0].style.position = "fixed";
+                // $navBar.css({
+                //     position: 'fixed',
+                // }).addClass('slide-in');
+                // $navBar[0].style.position = "fixed";
                 $navBar[0].classList.add("slide-in");
             } else {
                 //unstick menu
                 $navBar.removeClass('slide-in');
 
-                setTimeout(function() {
-                    $navBar.css({
-                        position: 'static'
-                    });
-                }, 100);
+                // setTimeout(function() {
+                //     $navBar.css({
+                //         position: 'static'
+                //     });
+                // }, 0);
             }
         } else {
             //screen is small, reset everything
-            $navBar.css({
-                position: 'fixed'
-            });
+            // $navBar.css({
+            //     position: 'fixed'
+            // });
             $navBar.removeClass('slide-in');
         }
 
