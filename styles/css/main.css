@@ -194,15 +194,8 @@ body {
   height: auto;
   min-width: 500px;
   width: 40%; }
-  @media screen and (max-width: 1200px) {
-    .header__main-nav {
-      width: 80%; } }
-  @media screen and (max-width: 900px) {
-    .header__main-nav {
-      width: 95%; } }
   @media screen and (max-width: 750px) {
     .header__main-nav {
-      width: 95%;
       height: 85%; } }
   @media screen and (max-width: 600px) {
     .header__main-nav {

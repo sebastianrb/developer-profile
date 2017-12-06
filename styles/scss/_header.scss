@@ -228,15 +228,15 @@
   width: 40%;
 
   @media screen and (max-width: $breakpoint-large) {
-    width: 80%;
+    // width: 80%;
   }
 
   @media screen and (max-width: $breakpoint-medium) {
-    width: 95%;
+    // width: 95%;
   }
 
   @media screen and (max-width:   $breakpoint-small-medium) {
-    width: 95%;
+    // width: 95%;
     height: 85%;
   }
 
