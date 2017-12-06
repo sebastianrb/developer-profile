@@ -225,11 +225,11 @@ body {
 .header__nav-item {
   width: auto;
   height: auto;
-  min-width: 145px; }
+  min-width: 160px; }
   @media screen and (max-width: 750px) {
     .header__nav-item {
       width: 75%;
-      min-width: 0;
+      min-width: 150px;
       margin: 0;
       max-width: none;
       background: transparent;

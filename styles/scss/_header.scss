@@ -274,11 +274,11 @@
 .header__nav-item {
   width: auto;
   height: auto;
-  min-width: 145px;
+  min-width: 160px;
 
   @media screen and (max-width: $breakpoint-small-medium) {
     width: 75%;
-    min-width: 0;
+    min-width: 150px;
     margin: 0;
     max-width: none;
     background: transparent;
