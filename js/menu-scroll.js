@@ -9,7 +9,7 @@ $(document).ready(function($) {
     // var $skillsSection = $('.normal-section--skills');
     // var $skillsBars = $('.skill-collapsed');
 
-    var stickyHeaderBreakpoint = 750;
+    var stickyHeaderBreakpoint = 850;
 
     $navBar.on('click', '.header__nav-item', function(event) {
         event.preventDefault();
@@ -31,7 +31,7 @@ $(document).ready(function($) {
     });
 
 
-    window.addEventListener("scroll", throttle(menuStyleCallback, 1));
+    window.addEventListener("scroll", throttle(menuStyleCallback, 35));
     window.addEventListener("resize", menuStyleCallback);
 
     function menuStyleCallback(event) {
