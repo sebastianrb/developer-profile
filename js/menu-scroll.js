@@ -9,7 +9,7 @@ $(document).ready(function($) {
     // var $skillsSection = $('.normal-section--skills');
     // var $skillsBars = $('.skill-collapsed');
 
-    var stickyHeaderBreakpoint = 850;
+    var stickyHeaderBreakpoint = 750;
 
     $navBar.on('click', '.header__nav-item', function(event) {
         event.preventDefault();
@@ -31,11 +31,11 @@ $(document).ready(function($) {
     });
 
 
-    window.addEventListener("scroll", throttle(menuStyleCallback, 35));
+    window.addEventListener("scroll", throttle(menuStyleCallback, 40));
     window.addEventListener("resize", menuStyleCallback);
 
     function menuStyleCallback(event) {
-        if(document.body.scrollTop > headerHeight || $(document).scrollTop() > headerHeight) {
+        if(document.body.scrollTop > stickyHeaderBreakpoint || $(document).scrollTop() > stickyHeaderBreakpoint) {
             //show top arrow
             $topArrow.addClass('top-arrow--shown');
         } else {

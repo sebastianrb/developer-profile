@@ -120,7 +120,7 @@ body {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
-  transition: top 0s, min-height 0s, transform .5s;
+  transition: top 0s, min-height 0s, transform .1s;
   top: -200px;
   align-items: center;
   padding-bottom: 15px; }
