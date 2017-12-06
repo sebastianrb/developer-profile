@@ -229,15 +229,15 @@ body {
   @media screen and (max-width: 750px) {
     .header__nav-item {
       width: 75%;
-      min-width: 150px;
       margin: 0;
       max-width: none;
       background: transparent;
       color: #010138; } }
   @media screen and (max-width: 600px) {
     .header__nav-item {
-      width: 90%;
-      max-width: none; } }
+      width: 95%;
+      max-width: none;
+      font-size: .85em; } }
 
 .header__nav-link {
   padding: 16px 20px 12px;
