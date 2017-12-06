@@ -71,7 +71,7 @@
     transition: width 1.2s ease .3s, opacity 1s ease .6s;
     overflow: hidden;
     margin: 0 auto 0 0;
-    font-size: 1.25em;
+    font-size: 1.4em;
     font-weight: 900;
 
     //experimental
@@ -109,7 +109,7 @@
 
 .header__main-subtitle {
     width: 100%;
-    font-size: 1.1em;
+    font-size: 1.15em;
     color: $secondary-color;
     text-align: center;
     margin: 0;
@@ -225,7 +225,7 @@
   min-width: 60%;
   height: auto;
   min-width: 500px;
-  width: 66%;
+  width: 40%;
 
   @media screen and (max-width: $breakpoint-large) {
     width: 80%;
@@ -274,7 +274,7 @@
 .header__nav-item {
   width: auto;
   height: auto;
-  min-width: 155px;
+  min-width: 145px;
 
   @media screen and (max-width: $breakpoint-small-medium) {
     width: 75%;
