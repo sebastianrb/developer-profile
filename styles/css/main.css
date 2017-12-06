@@ -1389,8 +1389,8 @@ div#business-card-wrapper div.business-card .business-card__overlay {
   height: 100%;
   top: 0;
   left: 0;
-  -webkit-transition: all 0.3s cubic-bezier(0, 0, 0.29, 0.97);
-  transition: all 0.3s cubic-bezier(0, 0, 0.29, 0.97);
+  -webkit-transition: all 0.7s cubic-bezier(0, 0, 0.29, 0.97);
+  transition: all 0.7s cubic-bezier(0, 0, 0.29, 0.97);
   /*  -webkit-transition-delay: .1s;
   transition-delay: .1s;*/
   -webkit-transition-delay: .3s;
