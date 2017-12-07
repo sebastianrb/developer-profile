@@ -489,7 +489,8 @@ section.main-section.parallax {
   align-items: center;
   margin: 40px auto;
   box-shadow: 0 0 13px 0 #908989;
-  padding: 10px; }
+  padding: 10px;
+  max-width: 1150px; }
   .section--about-me__image-grid .section--about-me__image-grid-container {
     width: 20%;
     opacity: 1;
