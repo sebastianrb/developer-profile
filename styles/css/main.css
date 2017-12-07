@@ -590,7 +590,7 @@ section.main-section.parallax {
   left: 0;
   top: 0;
   background: rgba(1, 1, 56, 0.7);
-  transition: background .4s; }
+  transition: background .1s; }
 
 .parallax-overlay.overlay-hidden {
   background: transparent; }
@@ -614,7 +614,7 @@ section.main-section.parallax {
   justify-content: center;
   cursor: pointer;
   z-index: 10;
-  transition: all .3s; }
+  transition: all .1s; }
   .parallax-overlay__info-button:hover,
   .header__photo-info-button:hover {
     color: white;

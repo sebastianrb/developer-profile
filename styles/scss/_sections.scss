@@ -232,7 +232,7 @@ h3.section--welcome__header {
     left: 0;
     top: 0;
     background: transparentize($primary-color, .3);
-    transition: background .4s;
+    transition: background .1s;
 }
 
 .parallax-overlay.overlay-hidden {
@@ -258,7 +258,7 @@ h3.section--welcome__header {
   justify-content: center;
   cursor: pointer;
   z-index: 10;
-  transition: all .3s;
+  transition: all .1s;
 
   &:hover {
     color: white;
